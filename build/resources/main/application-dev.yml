@@ -1,0 +1,35 @@
+server.port: 8080
+
+logging:
+  config: classpath:config/logback-dev.xml
+  level:
+    root: WARN
+    org.springframework.web.reactive.function.client: trace
+
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
+
+spring:
+  application:
+    name: challenger
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
+    username: root
+    password: 1111
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+challengers:
+  path:
+    prefix: ./challengers # TODO 리눅스에 올릴때 수정 필요
+    logs: /logs
+    files: /files
+  properties:
+    static:
+      path: classpath:/config/challengers.service-dev.properties

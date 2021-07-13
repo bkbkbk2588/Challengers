@@ -1,0 +1,5 @@
+project/challengers/MainApplication.java
+ project.challengers.MainApplication
+project/challengers/config/Swager2Configuration.java
+ project.challengers.config.Swager2Configuration
+ project.challengers.config.Swager2Configuration$Swagger2Config
