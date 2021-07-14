@@ -1,5 +1,25 @@
 project/challengers/MainApplication.java
  project.challengers.MainApplication
+project/challengers/config/SecurityConfig.java
+ project.challengers.config.SecurityConfig
+project/challengers/entity/Notice.java
+ project.challengers.entity.Notice
+ project.challengers.entity.Notice$NoticeBuilder
+project/challengers/entity/Auth.java
+ project.challengers.entity.Auth
+ project.challengers.entity.Auth$AuthBuilder
 project/challengers/config/Swager2Configuration.java
  project.challengers.config.Swager2Configuration
  project.challengers.config.Swager2Configuration$Swagger2Config
+project/challengers/entity/Member.java
+ project.challengers.entity.Member
+ project.challengers.entity.Member$MemberBuilder
+project/challengers/entity/Apply.java
+ project.challengers.entity.Apply
+ project.challengers.entity.Apply$ApplyBuilder
+project/challengers/entity/Point.java
+ project.challengers.entity.Point
+ project.challengers.entity.Point$PointBuilder
+project/challengers/entity/Participant.java
+ project.challengers.entity.Participant
+ project.challengers.entity.Participant$ParticipantBuilder

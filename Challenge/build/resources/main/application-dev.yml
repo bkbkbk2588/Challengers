@@ -15,19 +15,24 @@ management:
 
 spring:
   application:
-    name: challenger
+    name: challengers
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/challengers?serverTimezone=UTC
     username: root
-    password: 1111
+    password: 2588
   jpa:
+    database: mysql
     hibernate:
+      use-new-id-generator-mappings: false
       ddl-auto: update
-    show-sql: true
+      show-sql: true
+      format_sql: true
+      use_sql_comments: true
+
 
 challengers:
   path:
-    prefix: ./challengers # TODO 리눅스에 올릴때 수정 필요
+    prefix: ./challengers # TODO 나중에 올릴때 수정 필요
     logs: /logs
     files: /files
   properties:

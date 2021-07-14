@@ -21,9 +21,14 @@ spring:
     username: 계정
     password: 비밀번호
   jpa:
+    database: mysql
     hibernate:
+      use-new-id-generator-mappings: false
       ddl-auto: update
-    show-sql: true
+      show-sql: true
+      format_sql: true
+      use_sql_comments: true
+
 
 challengers:
   path:
