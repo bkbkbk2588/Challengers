@@ -1,25 +1,49 @@
-project/challengers/MainApplication.java
- project.challengers.MainApplication
-project/challengers/config/SecurityConfig.java
- project.challengers.config.SecurityConfig
-project/challengers/entity/Notice.java
- project.challengers.entity.Notice
- project.challengers.entity.Notice$NoticeBuilder
-project/challengers/entity/Auth.java
- project.challengers.entity.Auth
- project.challengers.entity.Auth$AuthBuilder
-project/challengers/config/Swager2Configuration.java
- project.challengers.config.Swager2Configuration
- project.challengers.config.Swager2Configuration$Swagger2Config
-project/challengers/entity/Member.java
- project.challengers.entity.Member
- project.challengers.entity.Member$MemberBuilder
-project/challengers/entity/Apply.java
- project.challengers.entity.Apply
- project.challengers.entity.Apply$ApplyBuilder
-project/challengers/entity/Point.java
- project.challengers.entity.Point
- project.challengers.entity.Point$PointBuilder
+project/challengers/serviceImpl/MemberServiceImpl.java
+ project.challengers.serviceImpl.MemberServiceImpl
 project/challengers/entity/Participant.java
  project.challengers.entity.Participant
  project.challengers.entity.Participant$ParticipantBuilder
+project/challengers/entity/Auth.java
+ project.challengers.entity.Auth
+ project.challengers.entity.Auth$AuthBuilder
+project/challengers/exception/ChallengersRuntimeException.java
+ project.challengers.exception.ChallengersRuntimeException
+project/challengers/repository/MemberRepository.java
+ project.challengers.repository.MemberRepository
+project/challengers/customizedRepo/CustomizedMemberRepository.java
+ project.challengers.customizedRepo.CustomizedMemberRepository
+project/challengers/MainApplication.java
+ project.challengers.MainApplication
+project/challengers/entity/Notice.java
+ project.challengers.entity.Notice
+ project.challengers.entity.Notice$NoticeBuilder
+project/challengers/config/SecurityConfig.java
+ project.challengers.config.SecurityConfig
+project/challengers/DTO/MemberIdDupCheckDTO.java
+ project.challengers.DTO.MemberIdDupCheckDTO
+ project.challengers.DTO.MemberIdDupCheckDTO$MemberIdDupCheckDTOBuilder
+project/challengers/customizedRepoImpl/CustomizedMemberRepositoryImpl.java
+ project.challengers.customizedRepoImpl.CustomizedMemberRepositoryImpl
+project/challengers/config/QuerydslConfiguration.java
+ project.challengers.config.QuerydslConfiguration
+project/challengers/service/MemberService.java
+ project.challengers.service.MemberService
+project/challengers/entity/Member.java
+ project.challengers.entity.Member
+ project.challengers.entity.Member$MemberBuilder
+project/challengers/config/Swager2Configuration.java
+ project.challengers.config.Swager2Configuration
+ project.challengers.config.Swager2Configuration$Swagger2Config
+project/challengers/DTO/MemberSignUpDto.java
+ project.challengers.DTO.MemberSignUpDto
+ project.challengers.DTO.MemberSignUpDto$MemberSignUpDtoBuilder
+project/challengers/exception/ChallengersException.java
+ project.challengers.exception.ChallengersException
+project/challengers/entity/Apply.java
+ project.challengers.entity.Apply
+ project.challengers.entity.Apply$ApplyBuilder
+project/challengers/controller/MemberController.java
+ project.challengers.controller.MemberController
+project/challengers/entity/Point.java
+ project.challengers.entity.Point
+ project.challengers.entity.Point$PointBuilder

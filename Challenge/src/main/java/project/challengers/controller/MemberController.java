@@ -6,12 +6,14 @@ import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import project.challengers.DTO.member.LoginResponseDTO;
+import project.challengers.DTO.member.MemberIdDupCheckDTO;
+import project.challengers.DTO.member.MemberLoginDTO;
+import project.challengers.DTO.member.MemberSignUpDto;
 import project.challengers.service.MemberService;
-import project.challengers.vo.MemberIdDupCheckVo;
 
 @Api(tags={"사용자"})
 @RestController
@@ -22,9 +24,22 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @ApiOperation(value="사용자아이디중복 확인", response=MemberIdDupCheckVo.class)
+    @ApiOperation(value="사용자아이디중복 확인", response= MemberIdDupCheckDTO.class)
     @GetMapping(value="/dupcheck-id/{id}")
-    public MemberIdDupCheckVo memberIdDupCheck(@ApiParam(value="사용자연락처", required=true) @PathVariable("id") String id) {
+    public MemberIdDupCheckDTO memberIdDupCheck(@ApiParam(value="사용자아이디", required=true) @PathVariable("id") String id) {
         return memberService.memberIdDupCheck(id);
+    }
+
+    @ApiOperation(value="회원가입", response= MemberSignUpDto.class)
+    @PostMapping(value="/sign-up")
+    public ResponseEntity<Void> memberIdDupCheck(@ApiParam(value="회원가입정보", required=true) @RequestBody MemberSignUpDto member) {
+        memberService.signUp(member);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    // 로그인
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody MemberLoginDTO member) {
+        return memberService.login(member);
     }
 }

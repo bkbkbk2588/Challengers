@@ -1,9 +1,13 @@
 package project.challengers.service;
 
-import org.springframework.stereotype.Service;
-import project.challengers.vo.MemberIdDupCheckVo;
+import org.springframework.http.ResponseEntity;
+import project.challengers.DTO.member.LoginResponseDTO;
+import project.challengers.DTO.member.MemberIdDupCheckDTO;
+import project.challengers.DTO.member.MemberLoginDTO;
+import project.challengers.DTO.member.MemberSignUpDto;
 
-@Service
 public interface MemberService {
-    public MemberIdDupCheckVo memberIdDupCheck(String id);
+    public MemberIdDupCheckDTO memberIdDupCheck(String id);
+    public void signUp(MemberSignUpDto member);
+    public ResponseEntity<LoginResponseDTO> login(MemberLoginDTO member);
 }

@@ -3,6 +3,8 @@ package project.challengers.customizedRepoImpl;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import project.challengers.customizedRepo.CustomizedMemberRepository;
 
+import static project.challengers.entity.QMember.member;
+
 public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepository {
     final private JPAQueryFactory jpaQueryFactory;
 
@@ -12,7 +14,9 @@ public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepositor
 
     @Override
     public String findByMemberId(String id) {
-//      jpaQueryFactory.select(Projections.fields(Member.class))
-        return null;
+        return  jpaQueryFactory.select(member.id)
+                .from(member)
+                .where(member.id.eq(id))
+                .fetchFirst();
     }
 }

@@ -35,7 +35,7 @@ public class Swager2Configuration {
     public class Swagger2Config {
 
         private ApiKey apiKey() {
-            return new ApiKey("test", "Authorization", "header");
+            return new ApiKey("Bearer", "Authorization", "header");
         }
 
         @Bean
@@ -72,7 +72,7 @@ public class Swager2Configuration {
 
             authorizationScopes[0] = new AuthorizationScope("global", "accessEverything");
 
-            return Arrays.asList(new SecurityReference("test", authorizationScopes));
+            return Arrays.asList(new SecurityReference("Bearer", authorizationScopes));
         }
 
         private ApiInfo apiInfo() {

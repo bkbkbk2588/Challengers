@@ -37,4 +37,4 @@ challengers:
     files: /files
   properties:
     static:
-      path: classpath:/config/challengers.service-dev.properties
+      path: classpath:/config/challengers-dev.properties

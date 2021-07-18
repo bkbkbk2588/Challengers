@@ -1,26 +1,27 @@
 buildscript {
     ext {
         springBootVersion = '2.4.2.RELEASE'
+        queryDslVersion = '4.4.0'
+        querydslPluginVersion = '1.0.10'
     }
     repositories {
         mavenCentral()
         jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:${querydslPluginVersion}"
     }
 }
 
 plugins {
     id 'org.springframework.boot' version '2.4.2'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    //querydsl 추가
-    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
     id 'java'
     id 'eclipse'
 }
 
-def querydslVersion = '4.3.1'
 group 'project.challengers'
 version '1.0-SNAPSHOT'
 
@@ -31,21 +32,21 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    // QueryDSL
-    implementation group: 'com.querydsl', name: 'querydsl-jpa', version: querydslVersion
-    implementation group: 'com.querydsl', name: 'querydsl-apt', version: querydslVersion
-    implementation group: 'com.querydsl', name: 'querydsl-core', version: querydslVersion
 
-    annotationProcessor group: 'com.querydsl', name: 'querydsl-apt', version: querydslVersion
-    annotationProcessor group: 'com.querydsl', name: 'querydsl-apt', version: querydslVersion, classifier: 'jpa'
-    annotationProcessor("jakarta.persistence:jakarta.persistence-api")
-    annotationProcessor("jakarta.annotation:jakarta.annotation-api")
+    // QueryDSL
+    implementation "com.querydsl:querydsl-core:${queryDslVersion}"
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+
 
     implementation 'org.springframework.boot:spring-boot-starter-logging'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'mysql:mysql-connector-java'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
@@ -59,9 +60,13 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
-clean {
-    delete file('src/main/generated') // 인텔리제이 Annotation processor 생성물 생성위치
+//querydsl 추가 시작
+task cleanGeneatedDir(type: Delete) {
+    delete file('src/main/generated')
 }
+
+
+//querydsl 추가 끝
 
 
 test {
