@@ -1,6 +1,5 @@
 package project.challengers.config;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -8,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebSession;
 import springfox.documentation.builders.ApiInfoBuilder;

@@ -2,7 +2,6 @@ package project.challengers.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -15,7 +14,7 @@ import project.challengers.component.JWTTokenComp;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {  //TODO 임시용 나중에 다시 설정
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final JWTTokenComp jwtTokenComp;
 
     public SecurityConfig(JWTTokenComp jwtTokenComp) {
@@ -37,6 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {  //TODO 임�
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //TODO 임시용 나중에 다시 설정
         http
                 .httpBasic().disable()
                 .cors().and()
@@ -45,9 +45,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {  //TODO 임�
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) //토큰 기반 인증이어서 세션 빼기
                 .and()
                 .authorizeRequests()
-                .antMatchers("/member/login").permitAll()
+                .antMatchers("/member/findMember").authenticated()
 //                .antMatchers("/**").authenticated()
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenComp),
                         UsernamePasswordAuthenticationFilter.class);

@@ -1,5 +1,6 @@
 package project.challengers.DTO.member;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -12,11 +13,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @ApiModel("사용자 회원가입")
-public class MemberSignUpDto {
+public class MemberDto {
     @ApiModelProperty(value="아이디", example="user001")
     private String id;
 
-    //@JsonIgnore
+    @JsonIgnore
     @ApiModelProperty(value="비밀번호", example="1234")
     private String pw;
 

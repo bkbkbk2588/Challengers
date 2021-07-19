@@ -26,8 +26,8 @@ public class JWTTokenComp {
     @Value("${jwt.secret}")
     private String secretKey;
 
-    // 토큰 유효시간 30분
-    private long tokenValidTime = 30 * 60 * 1000L;
+    // 토큰 유효시간 60분
+    private long tokenValidTime = 60 * 60 * 1000L;
 
     private final UserDetailsService userDetailsService;
 

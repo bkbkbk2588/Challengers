@@ -17,9 +17,9 @@ spring:
   application:
     name: challengers
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/DB명?serverTimezone=UTC
-    username: 계정
-    password: 비밀번호
+    url: jdbc:mysql://127.0.0.1:3306/challengers?serverTimezone=UTC
+    username: root
+    password: 2588
   jpa:
     database: mysql
     hibernate:

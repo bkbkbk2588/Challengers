@@ -33,7 +33,7 @@ public class Participant {
 
     @Column(nullable = true, name = "participant_id")
     @ApiModelProperty(value="참가자 명단", example="")
-    private String participantId; // TODO 나중에 리스트로 수정 필요
+    private String participantId;
 
     @Column(name = "participant_type")
     @ApiModelProperty(value="참가자 타입", example="0")

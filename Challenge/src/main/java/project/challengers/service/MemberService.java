@@ -1,13 +1,14 @@
 package project.challengers.service;
 
 import org.springframework.http.ResponseEntity;
-import project.challengers.DTO.member.LoginResponseDTO;
-import project.challengers.DTO.member.MemberIdDupCheckDTO;
-import project.challengers.DTO.member.MemberLoginDTO;
-import project.challengers.DTO.member.MemberSignUpDto;
+import org.springframework.security.core.Authentication;
+import project.challengers.DTO.member.*;
 
 public interface MemberService {
-    public MemberIdDupCheckDTO memberIdDupCheck(String id);
-    public void signUp(MemberSignUpDto member);
-    public ResponseEntity<LoginResponseDTO> login(MemberLoginDTO member);
+    MemberDupCheckDTO memberIdDupCheck(String id);
+    MemberDupCheckDTO memberPhoneDupCheck(String phone);
+    void signUp(MemberDto member);
+    ResponseEntity<LoginResponseDTO> login(MemberLoginDTO member);
+    FindIdDTO findId(String name, String phone);
+    MemberDto findMember(Authentication authentication);
 }
