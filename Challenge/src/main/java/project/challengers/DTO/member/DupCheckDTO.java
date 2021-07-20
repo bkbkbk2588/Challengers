@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor@AllArgsConstructor
 @Builder
 @ApiModel("아이디 중복확인")
-public class MemberDupCheckDTO {
+public class DupCheckDTO {
     @ApiModelProperty(value="중복체크", example="Y")
     private String dupYn;
 }

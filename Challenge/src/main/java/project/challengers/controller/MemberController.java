@@ -22,15 +22,15 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @ApiOperation(value = "사용자아이디중복 확인", response = MemberDupCheckDTO.class)
+    @ApiOperation(value = "사용자아이디중복 확인", response = DupCheckDTO.class)
     @GetMapping(value = "/dupcheck-id/{id}")
-    public MemberDupCheckDTO memberIdDupCheck(@ApiParam(value = "사용자아이디", required = true) @PathVariable("id") String id) {
+    public DupCheckDTO memberIdDupCheck(@ApiParam(value = "사용자아이디", required = true) @PathVariable("id") String id) {
         return memberService.memberIdDupCheck(id);
     }
 
-    @ApiOperation(value = "핸드폰번호 중복 확인", response = MemberDupCheckDTO.class)
+    @ApiOperation(value = "핸드폰번호 중복 확인", response = DupCheckDTO.class)
     @GetMapping(value = "/dupcheck-phone/{phone}")
-    public MemberDupCheckDTO memberPhoneDupCheck(@ApiParam(value = "핸드폰번호", required = true) @PathVariable("phone") String phone) {
+    public DupCheckDTO memberPhoneDupCheck(@ApiParam(value = "핸드폰번호", required = true) @PathVariable("phone") String phone) {
         return memberService.memberPhoneDupCheck(phone);
     }
 
@@ -43,7 +43,7 @@ public class MemberController {
 
     @ApiOperation(value = "로그인", response = LoginResponseDTO.class)
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDTO> login(@RequestBody MemberLoginDTO member) {
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginDTO member) {
         return memberService.login(member);
     }
 
@@ -58,5 +58,14 @@ public class MemberController {
     @GetMapping("/findMember")
     public MemberDto findMember(Authentication authentication) {
         return memberService.findMember(authentication);
+    }
+
+    @ApiOperation(value = "비밀번호 찾기(초기화)")
+    @GetMapping("/findPw/{id}/{name}/{phone}")
+    public int findPw(@ApiParam("사용자ID") @PathVariable("id") String id,
+                            @ApiParam("사용자이름") @PathVariable("name") String name,
+                            @ApiParam("연락처") @PathVariable("phone") String phone) {
+        memberService.resetPassword(id, name, phone);
+        return 1;
     }
 }

@@ -1,5 +1,6 @@
 package project.challengers.serviceImpl;
 
+import io.micrometer.core.instrument.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +10,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.member.*;
 import project.challengers.component.JWTTokenComp;
 import project.challengers.entity.Member;
 import project.challengers.exception.ChallengersException;
 import project.challengers.repository.MemberRepository;
 import project.challengers.service.MemberService;
-
-import java.util.Optional;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -38,15 +38,15 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public MemberDupCheckDTO memberIdDupCheck(String id) {
+    public DupCheckDTO memberIdDupCheck(String id) {
         String idDup = memberRepository.findByMemberId(id);
 
         if (idDup == null) {
-            return MemberDupCheckDTO.builder()
+            return DupCheckDTO.builder()
                     .dupYn("N")
                     .build();
         }
-        return MemberDupCheckDTO.builder()
+        return DupCheckDTO.builder()
                 .dupYn("Y")
                 .build();
     }
@@ -54,19 +54,20 @@ public class MemberServiceImpl implements MemberService {
     /**
      * 핸드폰번호 중복확인
      * 계정 1개씩만 생성 가능하게 하기위해 핸드폰 중복확인
+     *
      * @param phone
      * @return
      */
     @Override
-    public MemberDupCheckDTO memberPhoneDupCheck(String phone) {
+    public DupCheckDTO memberPhoneDupCheck(String phone) {
         String idDup = memberRepository.findByMemberPhone(phone);
 
         if (idDup == null) {
-            return MemberDupCheckDTO.builder()
+            return DupCheckDTO.builder()
                     .dupYn("N")
                     .build();
         }
-        return MemberDupCheckDTO.builder()
+        return DupCheckDTO.builder()
                 .dupYn("Y")
                 .build();
     }
@@ -95,7 +96,7 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public ResponseEntity<LoginResponseDTO> login(MemberLoginDTO member) {
+    public ResponseEntity<LoginResponseDTO> login(LoginDTO member) {
         Member memberEntity = memberRepository.findById(member.getId())
                 .orElseThrow(() -> new ChallengersException(HttpStatus.BAD_REQUEST,
                         "error.user.notfound.user.valid.E0001"));
@@ -133,7 +134,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public MemberDto findMember(Authentication authentication) {
-        UserDetails userDetails = (UserDetails)authentication.getPrincipal();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         Member member = memberRepository.findById((String) userDetails.getUsername()).get();
 
         return MemberDto.builder()
@@ -145,8 +146,46 @@ public class MemberServiceImpl implements MemberService {
                 .build();
     }
 
+    /**
+     * 비밀번호 찾기(초기화)
+     * 초기화 규칙 : 아이디 앞3자리 + 휴대전화 뒷 4자리 + !
+     *
+     * @param id
+     * @param name
+     * @param phone
+     * @return
+     */
+    @Transactional
+    @Override
+    public void resetPassword(String id, String name, String phone) {
+        //사용자ID
+        if (StringUtils.isBlank(id)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"사용자ID"});
+        }
+        //사용자이름
+        if (StringUtils.isBlank(name)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"사용자이름"});
+        }
+        //사용자연락처
+        if (StringUtils.isBlank(phone)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"연락처"});
+        }
+
+        Member member = memberRepository.findByIdAndNameAndPhone(id, name, phone)
+                .orElseThrow(() -> new ChallengersException(HttpStatus.NOT_FOUND,
+                        "error.user.notfound.user.valid.E0001"));
+
+        memberRepository.save(Member.builder()
+                .id(member.getId())
+                .pw(passwordEncoder.encode(id.substring(0, 3) + phone.substring(phone.length() - 4) + "!"))
+                .name(member.getName())
+                .nickname(member.getNickname())
+                .email(member.getEmail())
+                .phone(member.getPhone())
+                .build());
+    }
+
     // TODO
-    //  1. 비밀번호 찾기 (비밀번호 찾기 완료와 동시에 초기화 -> 초기화 규칙은 아이디앞3자리 + 휴대전화 뒷 4자리 + !)
-    //  2. 회원정보 수정
-    //  3. 회원 탈퇴
+    //  1. 회원정보 수정
+    //  2. 회원 탈퇴
 }
