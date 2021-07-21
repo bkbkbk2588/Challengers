@@ -4,6 +4,7 @@ import io.micrometer.core.instrument.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -18,6 +19,8 @@ import project.challengers.exception.ChallengersException;
 import project.challengers.repository.MemberRepository;
 import project.challengers.service.MemberService;
 
+import java.util.Locale;
+
 @Service
 public class MemberServiceImpl implements MemberService {
     Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
@@ -30,6 +33,9 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired
     private JWTTokenComp jwtComp;
+
+    @Autowired
+    MessageSource messageSource;
 
     /**
      * 아이디 중복확인
@@ -99,11 +105,11 @@ public class MemberServiceImpl implements MemberService {
     public ResponseEntity<LoginResponseDTO> login(LoginDTO member) {
         Member memberEntity = memberRepository.findById(member.getId())
                 .orElseThrow(() -> new ChallengersException(HttpStatus.BAD_REQUEST,
-                        "error.user.notfound.user.valid.E0001"));
+                        messageSource.getMessage("error.user.notfound.user.valid.E0001", null, Locale.KOREA)));
 
         if (!passwordEncoder.matches(member.getPw(), memberEntity.getPw())) {
             throw new ChallengersException(HttpStatus.UNAUTHORIZED,
-                    "error.user.login.fail.userpw.E0002");
+                    messageSource.getMessage("error.user.login.fail.userpw.E0002", null, Locale.KOREA));
         }
 
         return ResponseEntity.ok(LoginResponseDTO.builder()
@@ -127,6 +133,17 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public FindIdDTO findId(String name, String phone) {
+        //사용자이름
+        if (StringUtils.isBlank(name)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"사용자이름"}, Locale.KOREA));
+        }
+        //사용자연락처
+        if (StringUtils.isBlank(phone)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"연락처"}, Locale.KOREA));
+        }
+
         return FindIdDTO.builder()
                 .id(memberRepository.findByNameAndPhone(name, phone))
                 .build();
@@ -160,20 +177,23 @@ public class MemberServiceImpl implements MemberService {
     public void resetPassword(String id, String name, String phone) {
         //사용자ID
         if (StringUtils.isBlank(id)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"사용자ID"});
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"사용자ID"}, Locale.KOREA));
         }
         //사용자이름
         if (StringUtils.isBlank(name)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"사용자이름"});
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"사용자이름"}, Locale.KOREA));
         }
         //사용자연락처
         if (StringUtils.isBlank(phone)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST, "error.user.notfound.user.valid.E0003", new String[]{"연락처"});
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"연락처"}, Locale.KOREA));
         }
 
         Member member = memberRepository.findByIdAndNameAndPhone(id, name, phone)
                 .orElseThrow(() -> new ChallengersException(HttpStatus.NOT_FOUND,
-                        "error.user.notfound.user.valid.E0001"));
+                        messageSource.getMessage("error.user.notfound.user.valid.E0001", null, Locale.KOREA)));
 
         memberRepository.save(Member.builder()
                 .id(member.getId())

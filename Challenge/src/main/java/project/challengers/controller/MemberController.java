@@ -60,8 +60,8 @@ public class MemberController {
         return memberService.findMember(authentication);
     }
 
-    @ApiOperation(value = "비밀번호 찾기(초기화)")
-    @GetMapping("/findPw/{id}/{name}/{phone}")
+    @ApiOperation(value = "비밀번호 초기화")
+    @PutMapping("/findPw/{id}/{name}/{phone}")
     public int findPw(@ApiParam("사용자ID") @PathVariable("id") String id,
                             @ApiParam("사용자이름") @PathVariable("name") String name,
                             @ApiParam("연락처") @PathVariable("phone") String phone) {
