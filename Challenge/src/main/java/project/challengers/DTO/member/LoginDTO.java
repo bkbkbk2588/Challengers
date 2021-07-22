@@ -1,11 +1,9 @@
 package project.challengers.DTO.member;
 
+import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Getter
 @NoArgsConstructor
@@ -13,9 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @ApiModel("사용자 로그인")
 public class LoginDTO {
+    @NotNull
     @ApiModelProperty(value="아이디", example="user001")
     private String id;
 
+    @NotNull
     @ApiModelProperty(value="비밀번호", example="1234")
     private String pw;
 }

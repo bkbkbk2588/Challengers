@@ -149,6 +149,12 @@ public class MemberServiceImpl implements MemberService {
                 .build();
     }
 
+    /**
+     * 내정보 보기
+     *
+     * @param authentication
+     * @return
+     */
     @Override
     public MemberDto findMember(Authentication authentication) {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
@@ -205,7 +211,42 @@ public class MemberServiceImpl implements MemberService {
                 .build());
     }
 
+    /**
+     * 내 정보 수정
+     *
+     * @param member
+     * @param authentication
+     * @return
+     */
+    @Override
+    public int updateMember(UpdateMemberDTO member, Authentication authentication) {
+        //TODO 구현 필요
+        if (!StringUtils.isBlank(member.getPhone())) {
+            if (memberRepository.findByMemberPhone(member.getPhone()) != null) {
+                throw new ChallengersException(HttpStatus.CONFLICT,
+                        messageSource.getMessage("error.user.dublication.user.phone.E0004",
+                                new String[]{member.getPhone()}, Locale.KOREA));
+            }
+        }
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String id = memberRepository.findById((String) userDetails.getUsername()).get().getId();
+//        Member memberEntity = memberRepository.findById(id).get();
+//
+//        memberRepository.save(Member.builder()
+//                .id(id)
+//                .name(member.getName() != null && !StringUtils.isBlank(member.getName())
+//                        ? member.getName() : memberEntity.getName())
+//                .phone(member.getPhone() != null && !StringUtils.isBlank(member.getPhone())
+//                        ? member.getPhone() : memberEntity.getName())
+//                .email(member.getEmail() != null && !StringUtils.isBlank(member.getEmail())
+//                        ? member.getEmail() : memberEntity.getEmail())
+//                .nickname(member.getNickname() != null && !StringUtils.isBlank(member.getNickname())
+//                        ? member.getNickname() : memberEntity.getNickname())
+//                .build());
+
+        return memberRepository.saveMember(member, id);
+    }
+
     // TODO
-    //  1. 회원정보 수정
-    //  2. 회원 탈퇴
+    //  1. 회원 탈퇴
 }

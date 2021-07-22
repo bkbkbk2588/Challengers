@@ -12,4 +12,5 @@ public interface MemberService {
     FindIdDTO findId(String name, String phone);
     MemberDto findMember(Authentication authentication);
     void resetPassword(String id, String name, String phone);
+    int updateMember(UpdateMemberDTO member, Authentication authentication);
 }
