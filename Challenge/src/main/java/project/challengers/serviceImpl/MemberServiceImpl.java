@@ -157,15 +157,14 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public MemberDto findMember(Authentication authentication) {
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        Member member = memberRepository.findById((String) userDetails.getUsername()).get();
+        Member userDetails = (Member) authentication.getPrincipal();
 
         return MemberDto.builder()
-                .id(member.getId())
-                .name(member.getName())
-                .email(member.getEmail())
-                .nickname(member.getNickname())
-                .phone(member.getPhone())
+                .id(userDetails.getId())
+                .name(userDetails.getName())
+                .email(userDetails.getEmail())
+                .nickname(userDetails.getNickname())
+                .phone(userDetails.getPhone())
                 .build();
     }
 
@@ -173,42 +172,17 @@ public class MemberServiceImpl implements MemberService {
      * 비밀번호 찾기(초기화)
      * 초기화 규칙 : 아이디 앞3자리 + 휴대전화 뒷 4자리 + !
      *
-     * @param id
-     * @param name
-     * @param phone
+     * @param authentication
      * @return
      */
     @Transactional
     @Override
-    public void resetPassword(String id, String name, String phone) {
-        //사용자ID
-        if (StringUtils.isBlank(id)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"사용자ID"}, Locale.KOREA));
-        }
-        //사용자이름
-        if (StringUtils.isBlank(name)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"사용자이름"}, Locale.KOREA));
-        }
-        //사용자연락처
-        if (StringUtils.isBlank(phone)) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"연락처"}, Locale.KOREA));
-        }
+    public int resetPassword(Authentication authentication) {
+        Member member = (Member) authentication.getPrincipal();
 
-        Member member = memberRepository.findByIdAndNameAndPhone(id, name, phone)
-                .orElseThrow(() -> new ChallengersException(HttpStatus.NOT_FOUND,
-                        messageSource.getMessage("error.user.notfound.user.valid.E0001", null, Locale.KOREA)));
-
-        memberRepository.save(Member.builder()
-                .id(member.getId())
-                .pw(passwordEncoder.encode(id.substring(0, 3) + phone.substring(phone.length() - 4) + "!"))
-                .name(member.getName())
-                .nickname(member.getNickname())
-                .email(member.getEmail())
-                .phone(member.getPhone())
-                .build());
+        return memberRepository.saveResetPw(member.getId(),
+                passwordEncoder.encode(member.getId().substring(0, 3)
+                        + member.getPhone().substring(member.getPhone().length() - 4) + "!"));
     }
 
     /**
@@ -218,35 +192,66 @@ public class MemberServiceImpl implements MemberService {
      * @param authentication
      * @return
      */
+    @Transactional
     @Override
     public int updateMember(UpdateMemberDTO member, Authentication authentication) {
-        //TODO 구현 필요
+        Member userDetails = (Member) authentication.getPrincipal();
+
+        // 사용자 이름
+        if (StringUtils.isBlank(member.getName())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"사용자 이름"}, Locale.KOREA));
+        }
+
+        // 핸드폰 번호 중복 확인
         if (!StringUtils.isBlank(member.getPhone())) {
-            if (memberRepository.findByMemberPhone(member.getPhone()) != null) {
+            if (memberRepository.findByMemberPhone(member.getPhone()) != null
+                    && !member.getPhone().equals(userDetails.getPhone())) {
                 throw new ChallengersException(HttpStatus.CONFLICT,
                         messageSource.getMessage("error.user.dublication.user.phone.E0004",
                                 new String[]{member.getPhone()}, Locale.KOREA));
             }
+        } else { // 핸드폰 번호
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"휴대전화"}, Locale.KOREA));
         }
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        String id = memberRepository.findById((String) userDetails.getUsername()).get().getId();
-//        Member memberEntity = memberRepository.findById(id).get();
-//
-//        memberRepository.save(Member.builder()
-//                .id(id)
-//                .name(member.getName() != null && !StringUtils.isBlank(member.getName())
-//                        ? member.getName() : memberEntity.getName())
-//                .phone(member.getPhone() != null && !StringUtils.isBlank(member.getPhone())
-//                        ? member.getPhone() : memberEntity.getName())
-//                .email(member.getEmail() != null && !StringUtils.isBlank(member.getEmail())
-//                        ? member.getEmail() : memberEntity.getEmail())
-//                .nickname(member.getNickname() != null && !StringUtils.isBlank(member.getNickname())
-//                        ? member.getNickname() : memberEntity.getNickname())
-//                .build());
 
-        return memberRepository.saveMember(member, id);
+        // 이메일
+        if (StringUtils.isBlank(member.getName())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"이메일"}, Locale.KOREA));
+        }
+
+        // 닉네임
+        if (StringUtils.isBlank(member.getName())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"닉네임"}, Locale.KOREA));
+        }
+
+        return memberRepository.saveMember(UpdateMemberDTO.builder()
+                .name(member.getName())
+                .phone(member.getPhone())
+                .email(member.getEmail())
+                .nickname(member.getNickname())
+                .build(), userDetails.getId());
     }
 
-    // TODO
-    //  1. 회원 탈퇴
+    /**
+     * 회원 탈퇴
+     *
+     * @param authentication
+     * @return
+     */
+    @Transactional
+    @Override
+    public int deleteMember(Authentication authentication) {
+        Member member = (Member) authentication.getPrincipal();
+
+        return memberRepository.deleteMember(member.getId());
+    }
+
 }

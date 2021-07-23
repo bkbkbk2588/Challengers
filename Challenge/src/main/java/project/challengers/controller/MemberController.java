@@ -61,17 +61,20 @@ public class MemberController {
     }
 
     @ApiOperation(value = "비밀번호 초기화")
-    @PutMapping("/findPw/{id}/{name}/{phone}")
-    public int findPw(@ApiParam("사용자ID") @PathVariable("id") String id,
-                      @ApiParam("사용자이름") @PathVariable("name") String name,
-                      @ApiParam("연락처") @PathVariable("phone") String phone) {
-        memberService.resetPassword(id, name, phone);
-        return 1;
+    @PutMapping("/findPw")
+    public int findPw(Authentication authentication) {
+        return memberService.resetPassword(authentication);
     }
 
     @ApiOperation(value = "내 정보 수정")
     @PutMapping("/updateMember")
     public int updateMember(@RequestBody UpdateMemberDTO member, Authentication authentication) {
         return memberService.updateMember(member, authentication);
+    }
+
+    @ApiOperation(value = "회원 탈퇴")
+    @DeleteMapping("/deleteMember")
+    public int deleteMember(Authentication authentication) {
+        return memberService.deleteMember(authentication);
     }
 }

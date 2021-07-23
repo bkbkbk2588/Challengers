@@ -1,11 +1,8 @@
 package project.challengers.customizedRepoImpl;
 
-import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import io.micrometer.core.instrument.util.StringUtils;
 import project.challengers.DTO.member.UpdateMemberDTO;
 import project.challengers.customizedRepo.CustomizedMemberRepository;
-import project.challengers.entity.QMember;
 
 import static project.challengers.entity.QMember.member;
 
@@ -42,16 +39,28 @@ public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepositor
     }
 
     @Override
+    public int saveResetPw(String id, String pw) {
+        return (int) jpaQueryFactory.update(member)
+                .set(member.pw, pw)
+                .where(member.id.eq(id))
+                .execute();
+    }
+
+    @Override
     public int saveMember(UpdateMemberDTO updateMember, String id) {
-        //TODO 구현해야함
-//        BooleanBuilder builder = new BooleanBuilder();
-//
-//        if (StringUtils.isBlank(updateMember.getName())) {
-//
-//        }
-        jpaQueryFactory.update(member)
+        return (int) jpaQueryFactory.update(member)
+                .set(member.name, updateMember.getName())
                 .set(member.email, updateMember.getEmail())
-        ;
-        return 0;
+                .set(member.phone, updateMember.getPhone())
+                .set(member.nickname, updateMember.getNickname())
+                .where(member.id.eq(id))
+                .execute();
+    }
+
+    @Override
+    public int deleteMember(String id) {
+        return (int) jpaQueryFactory.delete(member)
+                .where(member.id.eq(id))
+                .execute();
     }
 }

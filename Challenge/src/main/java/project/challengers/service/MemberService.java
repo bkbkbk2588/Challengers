@@ -11,6 +11,7 @@ public interface MemberService {
     ResponseEntity<LoginResponseDTO> login(LoginDTO member);
     FindIdDTO findId(String name, String phone);
     MemberDto findMember(Authentication authentication);
-    void resetPassword(String id, String name, String phone);
+    int resetPassword(Authentication authentication);
     int updateMember(UpdateMemberDTO member, Authentication authentication);
+    int deleteMember(Authentication authentication);
 }
