@@ -36,8 +36,9 @@ CREATE TABLE NOTICE (
     max_people INT not null COMMENT "최대인원수",
     price INT not null  COMMENT "보증금",
     content VARCHAR(255) NOT NULL  COMMENT "내용",
-    start_time datetime NOT NULL  COMMENT "시작시간",
-    end_time datetime NOT NULL COMMENT "종료시간",
+    start_time DATETIME NOT NULL  COMMENT "시작시간",
+    end_time DATETIME NOT NULL COMMENT "종료시간",
+    update_time DATETIME COMMENT "게시글 업데이트 시간",
     PRIMARY KEY (notice_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id)
 );

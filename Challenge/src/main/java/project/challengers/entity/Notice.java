@@ -58,4 +58,9 @@ public class Notice {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     private LocalDateTime endTime;
+
+    @Column(nullable = false, name = "update_time")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value="등록시간", example="2021-01-02 00:00:00")
+    private LocalDateTime updateTime;
 }

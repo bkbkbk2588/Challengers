@@ -35,7 +35,7 @@ public class MemberController {
     }
 
     @ApiOperation(value = "회원가입", response = MemberDto.class)
-    @PostMapping(value = "/sign-up")
+    @PostMapping(value = "/signUp")
     public ResponseEntity<Void> memberIdDupCheck(@ApiParam(value = "회원가입정보", required = true) @RequestBody MemberDto member) {
         memberService.signUp(member);
         return new ResponseEntity<>(HttpStatus.CREATED);

@@ -37,6 +37,8 @@ public class QNotice extends EntityPathBase<Notice> {
 
     public final StringPath type = createString("type");
 
+    public final DateTimePath<java.time.LocalDateTime> updateTime = createDateTime("updateTime", java.time.LocalDateTime.class);
+
     public QNotice(String variable) {
         super(Notice.class, forVariable(variable));
     }
