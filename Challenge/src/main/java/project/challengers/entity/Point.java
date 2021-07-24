@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "point")
+@Entity(name = "POINT")
 @Builder
 @ApiModel("포인트")
 public class Point {
@@ -20,7 +20,7 @@ public class Point {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(value="포인트 순번", example="1")
-    private int pointSeq;
+    private long pointSeq;
 
     @Column(nullable = false)
     @ApiModelProperty(value="아이디", example="user001")

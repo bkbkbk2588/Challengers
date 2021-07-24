@@ -21,11 +21,11 @@ public class QParticipant extends EntityPathBase<Participant> {
 
     public final StringPath masterId = createString("masterId");
 
-    public final NumberPath<Integer> noticeSeq = createNumber("noticeSeq", Integer.class);
+    public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
 
     public final StringPath participantId = createString("participantId");
 
-    public final NumberPath<Integer> participantSeq = createNumber("participantSeq", Integer.class);
+    public final NumberPath<Long> participantSeq = createNumber("participantSeq", Long.class);
 
     public final NumberPath<Integer> participantType = createNumber("participantType", Integer.class);
 

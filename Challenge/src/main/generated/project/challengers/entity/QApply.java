@@ -19,13 +19,13 @@ public class QApply extends EntityPathBase<Apply> {
 
     public static final QApply apply = new QApply("apply");
 
-    public final NumberPath<Integer> applySeq = createNumber("applySeq", Integer.class);
+    public final NumberPath<Long> applySeq = createNumber("applySeq", Long.class);
 
     public final NumberPath<Integer> deposit = createNumber("deposit", Integer.class);
 
     public final StringPath id = createString("id");
 
-    public final NumberPath<Integer> noticeSeq = createNumber("noticeSeq", Integer.class);
+    public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
 
     public QApply(String variable) {
         super(Apply.class, forVariable(variable));

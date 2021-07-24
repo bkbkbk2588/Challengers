@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "notice")
+@Entity(name = "NOTICE")
 @Builder
 @ApiModel("챌린저스 모집 게시글")
 public class Notice {
@@ -23,7 +23,7 @@ public class Notice {
     @Column(name = "notice_seq")
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(value="챌린저 게시글 순번", example="1")
-    private int noticeSeq;
+    private long noticeSeq;
 
     @Column(nullable = false)
     @ApiModelProperty(value="제목", example="스터디 모집")
@@ -48,10 +48,6 @@ public class Notice {
     @Column(nullable = false)
     @ApiModelProperty(value="내용", example="영어 스터디 할 사람 신청해주세요")
     private String content;
-
-    @Column(nullable = true, name = "image_path")
-    @ApiModelProperty(value="사진경로", example="C://a.png")
-    private String imagePath;
 
     @Column(nullable = false, name = "start_time")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")

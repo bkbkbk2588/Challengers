@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "apply")
+@Entity(name = "APPLY")
 @Builder
 @ApiModel("참가 신청")
 public class Apply {
@@ -21,7 +21,7 @@ public class Apply {
     @Column(name = "apply_seq")
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(value="참가신청 순번", example="1")
-    private int applySeq;
+    private long applySeq;
 
     @Column(nullable = false)
     @ApiModelProperty(value="참가 신청 아이디", example="user001")
@@ -29,7 +29,7 @@ public class Apply {
 
     @Column(nullable = false, name = "notice_seq")
     @ApiModelProperty(value="챌린저 공지 번호", example="1")
-    private int noticeSeq;
+    private long noticeSeq;
 
     @Column(nullable = false)
     @ApiModelProperty(value="보증금 유형", example="0")

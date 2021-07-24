@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "auth")
+@Entity(name = "AUTH")
 @Builder
 @ApiModel("인증수단")
 public class Auth {
@@ -21,7 +21,7 @@ public class Auth {
     @Column(name = "auth_seq")
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(value="인증 순번", example="1")
-    private int authSeq;
+    private long authSeq;
 
     @Column(nullable = false)
     @ApiModelProperty(value="아이디", example="user001")

@@ -23,7 +23,7 @@ public class QPoint extends EntityPathBase<Point> {
 
     public final NumberPath<Integer> point = createNumber("point", Integer.class);
 
-    public final NumberPath<Integer> pointSeq = createNumber("pointSeq", Integer.class);
+    public final NumberPath<Long> pointSeq = createNumber("pointSeq", Long.class);
 
     public QPoint(String variable) {
         super(Point.class, forVariable(variable));

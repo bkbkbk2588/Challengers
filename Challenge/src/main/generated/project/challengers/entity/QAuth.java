@@ -19,7 +19,7 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public static final QAuth auth = new QAuth("auth");
 
-    public final NumberPath<Integer> authSeq = createNumber("authSeq", Integer.class);
+    public final NumberPath<Long> authSeq = createNumber("authSeq", Long.class);
 
     public final StringPath id = createString("id");
 

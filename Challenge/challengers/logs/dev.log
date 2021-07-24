@@ -1547,3 +1547,8 @@ DEBUG 21-07-24 01:56:22[main] [MainApplication:56] - Running with Spring Boot v2
 INFO  21-07-24 01:56:22[main] [MainApplication:664] - The following profiles are active: dev
 WARN  21-07-24 01:56:26[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 INFO  21-07-24 01:56:27[main] [MainApplication:61] - Started MainApplication in 5.494 seconds (JVM running for 5.957)
+INFO  21-07-24 19:09:55[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1168 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-07-24 19:09:55[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-07-24 19:09:55[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-07-24 19:09:59[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-07-24 19:10:01[main] [MainApplication:61] - Started MainApplication in 6.141 seconds (JVM running for 6.768)
