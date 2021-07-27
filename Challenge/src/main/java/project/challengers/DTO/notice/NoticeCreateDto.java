@@ -15,17 +15,14 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("게시글 정보")
-public class NoticeDTO {
-
-    @ApiModelProperty(value = "게시글 순번", example = "")
-    long noticeSeq;
-
+@ApiModel("게시글 등록")
+public class NoticeCreateDto {
     @ApiModelProperty(value="제목", example="스터디 모집")
     String title;
 
-    @ApiModelProperty(value="방장 아이디", example="user001")
-    String id;
+//    @JsonIgnore
+//    @ApiModelProperty(value="방장 아이디", example="user001")
+//    String id;
 
     @ApiModelProperty(value="게시글 유형", example="0")
     String type;
@@ -46,8 +43,4 @@ public class NoticeDTO {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     LocalDateTime endTime;
-
-    @JsonIgnore
-    @ApiModelProperty(value="업데이트 시간", example="2021-01-02 00:00:00")
-    LocalDateTime updateTime;
 }

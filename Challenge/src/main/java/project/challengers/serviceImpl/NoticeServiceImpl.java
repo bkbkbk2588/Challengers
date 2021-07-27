@@ -3,10 +3,14 @@ package project.challengers.serviceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-import project.challengers.DTO.notice.NoticeDTO;
-import project.challengers.DTO.notice.NoticeListDTO;
-import project.challengers.DTO.notice.SearchPagingDTO;
+import org.springframework.transaction.annotation.Transactional;
+import project.challengers.DTO.notice.NoticeCreateDto;
+import project.challengers.DTO.notice.NoticeDto;
+import project.challengers.DTO.notice.NoticeListDto;
+import project.challengers.DTO.notice.SearchPagingDto;
+import project.challengers.entity.Member;
 import project.challengers.entity.Notice;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
@@ -31,9 +35,9 @@ public class NoticeServiceImpl implements NoticeService {
      * @return
      */
     @Override
-    public NoticeListDTO noticeList() {
+    public NoticeListDto noticeList() {
         List<Notice> noticeList = noticeRepository.findAll();
-        List<NoticeDTO> noticeDto = new ArrayList<>();
+        List<NoticeDto> noticeDto = new ArrayList<>();
 
         Collections.sort(noticeList, (notice1, notice2) -> {
             LocalDateTime time1 = notice1.getUpdateTime(),
@@ -48,18 +52,33 @@ public class NoticeServiceImpl implements NoticeService {
         });
 
         for (Notice notice : noticeList) {
-            NoticeDTO noticeDTO = null;
+            NoticeDto noticeDTO = null;
             BeanUtils.copyProperties(notice, noticeDTO);
             noticeDto.add(noticeDTO);
         }
 
-        return NoticeListDTO.builder()
+        return NoticeListDto.builder()
                 .noticeList(noticeDto)
-                .searchPaging(SearchPagingDTO.builder()
+                .searchPaging(SearchPagingDto.builder()
                         .offset(0L)
                         .size(noticeDto.size())
                         .totalCount(noticeDto.size())
                         .build())
                 .build();
+    }
+
+    /**
+     * 첨부파일 없는 게시글 등록
+     *
+     * @param notice
+     * @param authentication
+     * @return
+     */
+    @Transactional
+    @Override
+    public int createNotice(NoticeCreateDto notice, Authentication authentication) {
+        Member userDetails = (Member) authentication.getPrincipal();
+
+        return noticeRepository.createNotice(notice, userDetails.getId());
     }
 }

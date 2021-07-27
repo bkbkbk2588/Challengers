@@ -2,13 +2,14 @@ package project.challengers.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import project.challengers.DTO.notice.NoticeListDTO;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+import project.challengers.DTO.notice.NoticeCreateDto;
+import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.service.NoticeService;
 
 @Api(tags = {"도전 게시글"})
@@ -33,8 +34,15 @@ public class NoticeController {
 
     @ApiOperation(value = "게시글 전체 목록 조회")
     @GetMapping(value = "/list")
-    public NoticeListDTO noticeList() {
+    public NoticeListDto noticeList() {
         return noticeService.noticeList();
+    }
+
+    @ApiOperation(value = "게시글 등록 (첨부파일 X)")
+    @PostMapping(value = "/create")
+    public int createNotice(@ApiParam("게시글 등록") @RequestBody NoticeCreateDto notice, Authentication authentication) {
+
+        return noticeService.createNotice(notice, authentication);
     }
 
 }

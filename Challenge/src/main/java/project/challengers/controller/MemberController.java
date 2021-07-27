@@ -22,15 +22,15 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @ApiOperation(value = "사용자아이디중복 확인", response = DupCheckDTO.class)
+    @ApiOperation(value = "사용자아이디중복 확인", response = DupCheckDto.class)
     @GetMapping(value = "/dupcheck-id/{id}")
-    public DupCheckDTO memberIdDupCheck(@ApiParam(value = "사용자아이디", required = true) @PathVariable("id") String id) {
+    public DupCheckDto memberIdDupCheck(@ApiParam(value = "사용자아이디", required = true) @PathVariable("id") String id) {
         return memberService.memberIdDupCheck(id);
     }
 
-    @ApiOperation(value = "핸드폰번호 중복 확인", response = DupCheckDTO.class)
+    @ApiOperation(value = "핸드폰번호 중복 확인", response = DupCheckDto.class)
     @GetMapping(value = "/dupcheck-phone/{phone}")
-    public DupCheckDTO memberPhoneDupCheck(@ApiParam(value = "핸드폰번호", required = true) @PathVariable("phone") String phone) {
+    public DupCheckDto memberPhoneDupCheck(@ApiParam(value = "핸드폰번호", required = true) @PathVariable("phone") String phone) {
         return memberService.memberPhoneDupCheck(phone);
     }
 
@@ -41,15 +41,15 @@ public class MemberController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @ApiOperation(value = "로그인", response = LoginResponseDTO.class)
+    @ApiOperation(value = "로그인", response = LoginResponseDto.class)
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginDTO member) {
+    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginDto member) {
         return memberService.login(member);
     }
 
     @ApiOperation(value = "아이디 찾기")
     @GetMapping("/findId/{name}/{phone}")
-    public FindIdDTO findId(@ApiParam(value = "이름", required = true) @PathVariable("name") String name,
+    public FindIdDto findId(@ApiParam(value = "이름", required = true) @PathVariable("name") String name,
                             @ApiParam(value = "핸드폰번호", required = true) @PathVariable("phone") String phone) {
         return memberService.findId(name, phone);
     }
@@ -68,7 +68,7 @@ public class MemberController {
 
     @ApiOperation(value = "내 정보 수정")
     @PutMapping("/updateMember")
-    public int updateMember(@RequestBody UpdateMemberDTO member, Authentication authentication) {
+    public int updateMember(@RequestBody UpdateMemberDto member, Authentication authentication) {
         return memberService.updateMember(member, authentication);
     }
 

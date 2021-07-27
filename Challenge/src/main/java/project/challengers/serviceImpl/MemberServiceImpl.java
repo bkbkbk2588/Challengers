@@ -8,7 +8,6 @@ import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,15 +43,15 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public DupCheckDTO memberIdDupCheck(String id) {
+    public DupCheckDto memberIdDupCheck(String id) {
         String idDup = memberRepository.findByMemberId(id);
 
         if (idDup == null) {
-            return DupCheckDTO.builder()
+            return DupCheckDto.builder()
                     .dupYn("N")
                     .build();
         }
-        return DupCheckDTO.builder()
+        return DupCheckDto.builder()
                 .dupYn("Y")
                 .build();
     }
@@ -65,15 +64,15 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public DupCheckDTO memberPhoneDupCheck(String phone) {
+    public DupCheckDto memberPhoneDupCheck(String phone) {
         String idDup = memberRepository.findByMemberPhone(phone);
 
         if (idDup == null) {
-            return DupCheckDTO.builder()
+            return DupCheckDto.builder()
                     .dupYn("N")
                     .build();
         }
-        return DupCheckDTO.builder()
+        return DupCheckDto.builder()
                 .dupYn("Y")
                 .build();
     }
@@ -102,7 +101,7 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public ResponseEntity<LoginResponseDTO> login(LoginDTO member) {
+    public ResponseEntity<LoginResponseDto> login(LoginDto member) {
         Member memberEntity = memberRepository.findById(member.getId())
                 .orElseThrow(() -> new ChallengersException(HttpStatus.BAD_REQUEST,
                         messageSource.getMessage("error.user.notfound.user.valid.E0001", null, Locale.KOREA)));
@@ -112,9 +111,9 @@ public class MemberServiceImpl implements MemberService {
                     messageSource.getMessage("error.user.login.fail.userpw.E0002", null, Locale.KOREA));
         }
 
-        return ResponseEntity.ok(LoginResponseDTO.builder()
+        return ResponseEntity.ok(LoginResponseDto.builder()
                 .accessToken(jwtComp.createToken(memberEntity.getId(), memberEntity.getRoles()))
-                .member(LoginResponseDTO.Member.builder()
+                .member(LoginResponseDto.Member.builder()
                         .id(memberEntity.getId())
                         .name(memberEntity.getName())
                         .nickname(memberEntity.getNickname())
@@ -132,7 +131,7 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public FindIdDTO findId(String name, String phone) {
+    public FindIdDto findId(String name, String phone) {
         //사용자이름
         if (StringUtils.isBlank(name)) {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
@@ -144,7 +143,7 @@ public class MemberServiceImpl implements MemberService {
                     messageSource.getMessage("error.user.notfound.user.valid.E0003", new String[]{"연락처"}, Locale.KOREA));
         }
 
-        return FindIdDTO.builder()
+        return FindIdDto.builder()
                 .id(memberRepository.findByNameAndPhone(name, phone))
                 .build();
     }
@@ -194,7 +193,7 @@ public class MemberServiceImpl implements MemberService {
      */
     @Transactional
     @Override
-    public int updateMember(UpdateMemberDTO member, Authentication authentication) {
+    public int updateMember(UpdateMemberDto member, Authentication authentication) {
         Member userDetails = (Member) authentication.getPrincipal();
 
         // 사용자 이름
@@ -232,7 +231,7 @@ public class MemberServiceImpl implements MemberService {
                             new String[]{"닉네임"}, Locale.KOREA));
         }
 
-        return memberRepository.saveMember(UpdateMemberDTO.builder()
+        return memberRepository.saveMember(UpdateMemberDto.builder()
                 .name(member.getName())
                 .phone(member.getPhone())
                 .email(member.getEmail())

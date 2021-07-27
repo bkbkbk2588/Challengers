@@ -45,14 +45,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) //토큰 기반 인증이어서 세션 빼기
                 .and()
                 .authorizeRequests()
-                .antMatchers("/**").permitAll()
+                .antMatchers("/v2/**",
+                        "/configuration/**",
+                        "/swagger*/**",
+                        "/webjars/**",
+                        "/swagger-resources/**").permitAll()
                 .antMatchers("/member/dupcheck-id/**").permitAll()
                 .antMatchers("/member/dupcheck-phone/**").permitAll()
                 .antMatchers("/member/signUp").permitAll()
                 .antMatchers("/member/login").permitAll()
                 .antMatchers("/member/findId/**").permitAll()
                 .antMatchers("/member/findPw").permitAll()
-                //.anyRequest().authenticated()
+                .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenComp),
                         UsernamePasswordAuthenticationFilter.class);

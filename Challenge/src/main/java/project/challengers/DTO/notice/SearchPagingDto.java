@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SearchPagingDTO{
+public class SearchPagingDto {
     @ApiModelProperty(value="offset 값: 0부터시작", example = "0")
     long offset;
 

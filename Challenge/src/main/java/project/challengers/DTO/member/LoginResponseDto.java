@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @ApiModel("로그인 응답")
-public class LoginResponseDTO {
+public class LoginResponseDto {
     @ApiModelProperty(value = "access_token", example = "b8f4ec80-b11b-3d27-9377-e41d5167077a")
     private String accessToken;
 

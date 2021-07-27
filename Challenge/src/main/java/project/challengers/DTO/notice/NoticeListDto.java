@@ -14,10 +14,10 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @ApiModel("게시글 목록")
-public class NoticeListDTO {
+public class NoticeListDto {
     @ApiModelProperty(value = "검색페이징", example = "")
-    SearchPagingDTO searchPaging;
+    SearchPagingDto searchPaging;
 
     @ApiModelProperty(value = "게시글 목록", example = "")
-    List<NoticeDTO> noticeList;
+    List<NoticeDto> noticeList;
 }

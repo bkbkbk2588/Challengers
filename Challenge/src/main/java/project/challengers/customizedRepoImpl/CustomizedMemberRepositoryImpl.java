@@ -1,7 +1,7 @@
 package project.challengers.customizedRepoImpl;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import project.challengers.DTO.member.UpdateMemberDTO;
+import project.challengers.DTO.member.UpdateMemberDto;
 import project.challengers.customizedRepo.CustomizedMemberRepository;
 
 import static project.challengers.entity.QMember.member;
@@ -47,7 +47,7 @@ public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepositor
     }
 
     @Override
-    public int saveMember(UpdateMemberDTO updateMember, String id) {
+    public int saveMember(UpdateMemberDto updateMember, String id) {
         return (int) jpaQueryFactory.update(member)
                 .set(member.name, updateMember.getName())
                 .set(member.email, updateMember.getEmail())

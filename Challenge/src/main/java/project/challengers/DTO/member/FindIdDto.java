@@ -8,10 +8,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor@AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@ApiModel("아이디 중복확인")
-public class DupCheckDTO {
-    @ApiModelProperty(value="중복체크", example="Y")
-    private String dupYn;
+@ApiModel("아이디 찾기")
+public class FindIdDto {
+    @ApiModelProperty(value = "아이디", example = "user001")
+    private String id;
 }

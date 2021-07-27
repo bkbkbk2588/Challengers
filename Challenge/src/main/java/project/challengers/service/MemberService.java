@@ -5,13 +5,13 @@ import org.springframework.security.core.Authentication;
 import project.challengers.DTO.member.*;
 
 public interface MemberService {
-    DupCheckDTO memberIdDupCheck(String id);
-    DupCheckDTO memberPhoneDupCheck(String phone);
+    DupCheckDto memberIdDupCheck(String id);
+    DupCheckDto memberPhoneDupCheck(String phone);
     void signUp(MemberDto member);
-    ResponseEntity<LoginResponseDTO> login(LoginDTO member);
-    FindIdDTO findId(String name, String phone);
+    ResponseEntity<LoginResponseDto> login(LoginDto member);
+    FindIdDto findId(String name, String phone);
     MemberDto findMember(Authentication authentication);
     int resetPassword(Authentication authentication);
-    int updateMember(UpdateMemberDTO member, Authentication authentication);
+    int updateMember(UpdateMemberDto member, Authentication authentication);
     int deleteMember(Authentication authentication);
 }

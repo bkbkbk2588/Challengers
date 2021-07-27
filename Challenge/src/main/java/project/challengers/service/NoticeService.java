@@ -1,7 +1,10 @@
 package project.challengers.service;
 
-import project.challengers.DTO.notice.NoticeListDTO;
+import org.springframework.security.core.Authentication;
+import project.challengers.DTO.notice.NoticeCreateDto;
+import project.challengers.DTO.notice.NoticeListDto;
 
 public interface NoticeService {
-    NoticeListDTO noticeList();
+    NoticeListDto noticeList();
+    int createNotice(NoticeCreateDto notice, Authentication authentication);
 }

@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ApiModel("사용자 로그인")
-public class LoginDTO {
+public class LoginDto {
     @NotNull
     @ApiModelProperty(value="아이디", example="user001")
     private String id;
