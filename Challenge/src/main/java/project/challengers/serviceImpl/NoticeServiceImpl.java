@@ -1,17 +1,17 @@
 package project.challengers.serviceImpl;
 
+import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import project.challengers.DTO.notice.NoticeCreateDto;
-import project.challengers.DTO.notice.NoticeDto;
-import project.challengers.DTO.notice.NoticeListDto;
-import project.challengers.DTO.notice.SearchPagingDto;
+import project.challengers.DTO.notice.*;
 import project.challengers.entity.Member;
 import project.challengers.entity.Notice;
+import project.challengers.exception.ChallengersException;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
 
@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class NoticeServiceImpl implements NoticeService {
@@ -61,7 +62,7 @@ public class NoticeServiceImpl implements NoticeService {
                 .noticeList(noticeDto)
                 .searchPaging(SearchPagingDto.builder()
                         .offset(0L)
-                        .size(noticeDto.size())
+                        .size((long) noticeDto.size())
                         .totalCount(noticeDto.size())
                         .build())
                 .build();
@@ -77,8 +78,155 @@ public class NoticeServiceImpl implements NoticeService {
     @Transactional
     @Override
     public int createNotice(NoticeCreateDto notice, Authentication authentication) {
-        Member userDetails = (Member) authentication.getPrincipal();
+        // 제목
+        if (StringUtils.isBlank(notice.getTitle())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"제목"}, Locale.KOREA));
+        }
 
-        return noticeRepository.createNotice(notice, userDetails.getId());
+        // 게시글 타입
+        if (StringUtils.isBlank(notice.getType())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"게시글 타입"}, Locale.KOREA));
+        }
+
+        // 최대 참여 인원
+        if (notice.getMaxPeople() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"최대 참여 인원"}, Locale.KOREA));
+        }
+
+        // 보증금
+        if (notice.getType() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"보증금"}, Locale.KOREA));
+        }
+
+        // 게시글 내용
+        if (StringUtils.isBlank(notice.getType())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"게시글 내용"}, Locale.KOREA));
+        }
+
+        // 도전 시작 날짜
+        if (notice.getStartTime() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"도전 시작날짜"}, Locale.KOREA));
+        }
+
+        // 도전 끝나는 날짜
+        if (notice.getEndTime() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
+        }
+
+        Member member = (Member) authentication.getPrincipal();
+        Notice result = noticeRepository.save(Notice.builder()
+                .title(notice.getTitle())
+                .id(member.getId())
+                .type(notice.getType())
+                .maxPeople(notice.getMaxPeople())
+                .price(notice.getPrice())
+                .content(notice.getContent())
+                .startTime(notice.getStartTime())
+                .endTime(notice.getEndTime())
+                .build());
+
+        return result != null ? 1 : 0;
     }
+
+    /**
+     * 첨부파일 있는 게시글 등록
+     *
+     * @param notice
+     * @param authentication
+     * @return
+     */
+    @Override
+    public int createFileNotice(FileNoticeCreateDto notice, Authentication authentication) {
+        // 제목
+        if (StringUtils.isBlank(notice.getTitle())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"제목"}, Locale.KOREA));
+        }
+
+        // 게시글 타입
+        if (StringUtils.isBlank(notice.getType())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"게시글 타입"}, Locale.KOREA));
+        }
+
+        // 최대 참여 인원
+        if (notice.getMaxPeople() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"최대 참여 인원"}, Locale.KOREA));
+        }
+
+        // 보증금
+        if (notice.getType() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"보증금"}, Locale.KOREA));
+        }
+
+        // 게시글 내용
+        if (StringUtils.isBlank(notice.getType())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"게시글 내용"}, Locale.KOREA));
+        }
+
+        // 이미지 경로
+        if (StringUtils.isBlank(notice.getImagePath())) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"이미지 경로"}, Locale.KOREA));
+        }
+
+        // 도전 시작 날짜
+        if (notice.getStartTime() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"도전 시작날짜"}, Locale.KOREA));
+        }
+
+        // 도전 끝나는 날짜
+        if (notice.getEndTime() == null) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
+                            new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
+        }
+
+        Member member = (Member) authentication.getPrincipal();
+        Notice result = noticeRepository.save(Notice.builder()
+                .title(notice.getTitle())
+                .id(member.getId())
+                .type(notice.getType())
+                .maxPeople(notice.getMaxPeople())
+                .price(notice.getPrice())
+                .content(notice.getContent())
+                .imagePath(notice.getImagePath())
+                .startTime(notice.getStartTime())
+                .endTime(notice.getEndTime())
+                .build());
+
+        return result != null ? 1 : 0;
+    }
+
+    @Override
+    public NoticeListDto noticePagingList(SearchPagingDto paging) {
+
+        return null;
+    }
+
 }

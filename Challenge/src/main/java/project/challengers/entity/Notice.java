@@ -49,6 +49,9 @@ public class Notice {
     @ApiModelProperty(value="내용", example="영어 스터디 할 사람 신청해주세요")
     private String content;
 
+    @Column(name = "image_path")
+    private String imagePath;
+
     @Column(nullable = false, name = "start_time")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="시작시간", example="2021-01-01 00:00:00")
@@ -59,7 +62,7 @@ public class Notice {
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     private LocalDateTime endTime;
 
-    @Column(nullable = false, name = "update_time")
+    @Column(name = "update_time")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="업데이트 시간", example="2021-01-02 00:00:00")
     private LocalDateTime updateTime;

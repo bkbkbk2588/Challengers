@@ -8,8 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import project.challengers.DTO.notice.FileNoticeCreateDto;
 import project.challengers.DTO.notice.NoticeCreateDto;
 import project.challengers.DTO.notice.NoticeListDto;
+import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.service.NoticeService;
 
 @Api(tags = {"도전 게시글"})
@@ -17,14 +19,12 @@ import project.challengers.service.NoticeService;
 @RequestMapping("/notice")
 public class NoticeController {
     /* TODO
-        1. 도전 게시글 등록 (첨부파일 X)
-        2. 도전 게시글 등록 (첨부파일 O)
-        3. 게시글 개수 필터 조회
-        4. 게시글 제목으로 검색
-        5. 게시글 내용으로 검색
-        6. 도전 게시글 상세 조회
-        7. 도전 게시글 삭제
-        8. 도전 게시글 수정 (작성자만 권한 있음) (첨부파일이 있는거랑 없는거 둘다)
+        1. 게시글 개수 필터 조회
+        2. 게시글 제목으로 검색
+        3. 게시글 내용으로 검색
+        4. 도전 게시글 상세 조회
+        5. 도전 게시글 삭제
+        6. 도전 게시글 수정 (작성자만 권한 있음) (첨부파일이 있는거랑 없는거 둘다)
      */
 
     Logger logger = LoggerFactory.getLogger(NoticeController.class);
@@ -41,8 +41,18 @@ public class NoticeController {
     @ApiOperation(value = "게시글 등록 (첨부파일 X)")
     @PostMapping(value = "/create")
     public int createNotice(@ApiParam("게시글 등록") @RequestBody NoticeCreateDto notice, Authentication authentication) {
-
         return noticeService.createNotice(notice, authentication);
     }
 
+    @ApiOperation(value = "게시글 등록 (첨부파일 O)")
+    @PostMapping(value = "/create")
+    public int createFileNotice(@ApiParam("게시글 등록") @RequestBody FileNoticeCreateDto notice, Authentication authentication) {
+        return noticeService.createFileNotice(notice, authentication);
+    }
+
+    @ApiOperation(value = "게시글 페이지 조회")
+    @GetMapping(value = "/list/page")
+    public NoticeListDto noticePagingList(@ApiParam(value="검색페이징") SearchPagingDto paging) {
+        return null;
+    }
 }

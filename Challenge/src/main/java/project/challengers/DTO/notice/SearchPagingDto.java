@@ -11,10 +11,10 @@ import lombok.*;
 @Builder
 public class SearchPagingDto {
     @ApiModelProperty(value="offset 값: 0부터시작", example = "0")
-    long offset;
+    Long offset;
 
     @ApiModelProperty(value="조회목록 크기", example = "10")
-    long size;
+    Long size;
 
     @ApiModelProperty(value="전체 수 ", example = "4")
     long totalCount;
