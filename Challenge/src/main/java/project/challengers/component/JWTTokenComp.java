@@ -1,25 +1,23 @@
 package project.challengers.component;
 
+import com.google.common.collect.Lists;
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
+import project.challengers.entity.Member;
 
 import javax.annotation.PostConstruct;
-import javax.servlet.http.HttpServletRequest;
 import java.util.Base64;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
 
-@RequiredArgsConstructor
 @Component
 @PropertySource("classpath:config/challengers-dev.properties")
 public class JWTTokenComp {
@@ -27,9 +25,7 @@ public class JWTTokenComp {
     private String secretKey;
 
     // 토큰 유효시간 60분
-    private long tokenValidTime = 60 * 60 * 1000L;
-
-    private final UserDetailsService userDetailsService;
+    private long tokenValidTime = 1 * 60 * 1000L;
 
     // 객체 초기화, secretKey를 Base64로 인코딩
     @PostConstruct
@@ -37,42 +33,58 @@ public class JWTTokenComp {
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
     }
 
+    // 토큰에서 회원 정보 추출
+    public String getMemberIdFromToken(String token) {
+        return getClaimFromToken(token, Claims::getSubject);
+    }
+
+    // 토큰에서 claim 추출
+    public <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
+        final Claims claims = getAllClaimsFromToken(token);
+        return claimsResolver.apply(claims);
+    }
+
+    // 토큰 유효기간 판단
+    private Boolean isTokenExpired(String token) {
+        final Date expiration = getExpirationDateFromToken(token);
+        return expiration.before(new Date());
+    }
+
+    // 토큰에서 유효기간 추출
+    public Date getExpirationDateFromToken(String token) {
+        return getClaimFromToken(token, Claims::getExpiration);
+    }
+
+    // 토큰에서 claim 전부 추출
+    public Claims getAllClaimsFromToken(String token) {
+        return Jwts.parser()
+                .setSigningKey(secretKey)
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
     // JWT 토큰 생성
-    public String createToken(String userPk, List<String> roles) {
-        Claims claims = Jwts.claims().setSubject(userPk); // JWT payload 에 저장되는 정보단위
-        //claims.put("roles", roles); // 정보는 key / value 쌍으로 저장
-        Date now = new Date();
+    public String generateToken(Member userDetails) {
+        Map<String, Object> claims = new HashMap<>();
+
+        claims.put("role", Lists.newArrayList("ROLE_" + userDetails.getRoles()));
+        return doGenerateToken(claims, userDetails.getId());
+    }
+
+    // JWT 토큰값 설정
+    private String doGenerateToken(Map<String, Object> claims, String subject) {
+        long nowMillis = System.currentTimeMillis();
         return Jwts.builder()
-                .setClaims(claims) // 정보 저장
-                .setIssuedAt(now) // 토큰 발행 시간 정보
-                .setExpiration(new Date(now.getTime() + tokenValidTime)) // set Expire Time
-                .signWith(SignatureAlgorithm.HS256, secretKey)  // 사용할 암호화 알고리즘과 signature 에 들어갈 secret값 세팅
+                .setClaims(claims)
+                .setSubject(subject)
+                .setIssuedAt(new Date(nowMillis))
+                .setExpiration(new Date(nowMillis))
+                .signWith(SignatureAlgorithm.HS512, secretKey)
                 .compact();
     }
 
-    // JWT 토큰에서 인증 정보 조회
-    public Authentication getAuthentication(String token) {
-        UserDetails userDetails = userDetailsService.loadUserByUsername(this.getUserPk(token));
-        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
-    }
-
-    // 토큰에서 회원 정보 추출
-    public String getUserPk(String token) {
-        return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().getSubject();
-    }
-
-    // Request의 Header에서 token 값을 가져옴 "Authorization" : "TOKEN값'
-    public String resolveToken(HttpServletRequest request) {
-        return request.getHeader("Authorization");
-    }
-
-    // 토큰의 유효성 + 만료일자 확인
-    public boolean validateToken(String jwtToken) {
-        try {
-            Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(jwtToken);
-            return !claims.getBody().getExpiration().before(new Date());
-        } catch (Exception e) {
-            return false;
-        }
+    public Boolean validateToken(String token, Member userDetails) {
+        final String userId = getMemberIdFromToken(token);
+        return (userId.equals(userDetails.getId()) && !isTokenExpired(token));
     }
 }

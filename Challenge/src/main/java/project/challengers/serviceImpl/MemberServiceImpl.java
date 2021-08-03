@@ -112,7 +112,7 @@ public class MemberServiceImpl implements MemberService {
         }
 
         return ResponseEntity.ok(LoginResponseDto.builder()
-                .accessToken(jwtComp.createToken(memberEntity.getId(), memberEntity.getRoles()))
+                .accessToken(jwtComp.generateToken(memberEntity))
                 .member(LoginResponseDto.Member.builder()
                         .id(memberEntity.getId())
                         .name(memberEntity.getName())

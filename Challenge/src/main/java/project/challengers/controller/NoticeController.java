@@ -45,7 +45,7 @@ public class NoticeController {
     }
 
     @ApiOperation(value = "게시글 등록 (첨부파일 O)")
-    @PostMapping(value = "/create")
+    @PostMapping(value = "/create/file")
     public int createFileNotice(@ApiParam("게시글 등록") @RequestBody FileNoticeCreateDto notice, Authentication authentication) {
         return noticeService.createFileNotice(notice, authentication);
     }
