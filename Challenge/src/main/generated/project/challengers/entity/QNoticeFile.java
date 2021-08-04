@@ -19,9 +19,11 @@ public class QNoticeFile extends EntityPathBase<NoticeFile> {
 
     public static final QNoticeFile noticeFile = new QNoticeFile("noticeFile");
 
-    public final NumberPath<Long> fileSeq = createNumber("fileSeq", Long.class);
+    public final StringPath fileName = createString("fileName");
 
-    public final StringPath imagePath = createString("imagePath");
+    public final StringPath filePath = createString("filePath");
+
+    public final NumberPath<Long> fileSeq = createNumber("fileSeq", Long.class);
 
     public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
 

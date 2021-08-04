@@ -1,5 +1,4 @@
 
-
 CREATE TABLE MEMBER(
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
     pw VARCHAR(255) NOT NULL COMMENT "비밀번호",
@@ -14,8 +13,10 @@ CREATE TABLE MEMBER(
 CREATE TABLE AUTH (
     auth_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "인증 순번" ,
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
-    photo VARCHAR(255) COMMENT "사진경로" ,
-    video VARCHAR(255) COMMENT "동영상경로" ,
+    photo_name VARCHAR(255) COMMENT "사진이름" ,
+    photo_path VARCHAR(255) COMMENT "사진경로" ,
+    video_name VARCHAR(255) COMMENT "동영상이름" ,
+    video_path VARCHAR(255) COMMENT "동영상경로" ,
     PRIMARY KEY (auth_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id)
 );
@@ -46,14 +47,15 @@ CREATE TABLE NOTICE (
 CREATE TABLE NOTICE_FILE (
     file_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "파일 순번",
     notice_seq BIGINT NOT NULL COMMENT "공지 번호",
-    image_path VARCHAR(255)  COMMENT "사진경로",
+    file_name VARCHAR(255) COMMENT "파일 이름",
+    file_path VARCHAR(255)  COMMENT "사진 경로",
     PRIMARY KEY (file_seq),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
 );
 
 CREATE TABLE PARTICIPANT (
     patricipant_seq  BIGINT NOT NULL AUTO_INCREMENT COMMENT "참여자 순번",
-    notice_seq INT not null COMMENT "공지번호",
+    notice_seq BIGINT not null COMMENT "공지번호",
     master_id VARCHAR(20) NOT NULL COMMENT "방장아이디",
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
     participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장)",
@@ -61,15 +63,13 @@ CREATE TABLE PARTICIPANT (
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
 );
 
-
-
 CREATE TABLE APPLY (
-apply_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "번호",
-id VARCHAR(20) NOT NULL COMMENT "아이디",
-notice_seq BIGINT NOT NULL COMMENT "챌린저 공지 번호",
-deposit INT NOT NULL COMMENT "유형(0:보증금 냄, 1:보증금 안냄)",
-primary key (apply_seq),
-FOREIGN KEY (id) REFERENCES PARTICIPANT (participant_id),
-FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
+    apply_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "번호",
+    id VARCHAR(20) NOT NULL COMMENT "아이디",
+    notice_seq BIGINT NOT NULL COMMENT "챌린저 공지 번호",
+    deposit INT NOT NULL COMMENT "유형(0:보증금 냄, 1:보증금 안냄)",
+    primary key (apply_seq),
+    FOREIGN KEY (id) REFERENCES PARTICIPANT (participant_id),
+    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
 );
 

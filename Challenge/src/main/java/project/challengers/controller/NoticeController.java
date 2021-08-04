@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import project.challengers.DTO.notice.FileNoticeCreateDto;
@@ -13,6 +14,7 @@ import project.challengers.DTO.notice.NoticeCreateDto;
 import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.service.NoticeService;
+import reactor.core.publisher.Flux;
 
 @Api(tags = {"도전 게시글"})
 @RestController
@@ -44,10 +46,12 @@ public class NoticeController {
         return noticeService.createNotice(notice, authentication);
     }
 
+    // TODO 파일 올리는거 수정
     @ApiOperation(value = "게시글 등록 (첨부파일 O)")
     @PostMapping(value = "/create/file")
-    public int createFileNotice(@ApiParam("게시글 등록") @RequestBody FileNoticeCreateDto notice, Authentication authentication) {
-        return noticeService.createFileNotice(notice, authentication);
+    public int createFileNotice(@ApiParam("게시글 등록") @RequestBody FileNoticeCreateDto notice,
+                                @RequestPart("files") Flux<FilePart> filePartFlux, Authentication authentication) {
+        return noticeService.createFileNotice(notice, filePartFlux, authentication);
     }
 
     @ApiOperation(value = "게시글 페이지 조회")

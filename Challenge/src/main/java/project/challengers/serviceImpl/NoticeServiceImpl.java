@@ -5,6 +5,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,8 +13,10 @@ import project.challengers.DTO.notice.*;
 import project.challengers.entity.Member;
 import project.challengers.entity.Notice;
 import project.challengers.exception.ChallengersException;
+import project.challengers.repository.MemberRepository;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
+import reactor.core.publisher.Flux;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -25,6 +28,9 @@ import java.util.Locale;
 public class NoticeServiceImpl implements NoticeService {
     @Autowired
     NoticeRepository noticeRepository;
+
+    @Autowired
+    MemberRepository memberRepository;
 
     @Autowired
     MessageSource messageSource;
@@ -127,7 +133,7 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-        Member member = (Member) authentication.getPrincipal();
+        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
         Notice result = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
                 .id(member.getId())
@@ -142,6 +148,7 @@ public class NoticeServiceImpl implements NoticeService {
         return result != null ? 1 : 0;
     }
 
+    // TODO 첨부파일 기능 구현 필요
     /**
      * 첨부파일 있는 게시글 등록
      *
@@ -150,7 +157,7 @@ public class NoticeServiceImpl implements NoticeService {
      * @return
      */
     @Override
-    public int createFileNotice(FileNoticeCreateDto notice, Authentication authentication) {
+    public int createFileNotice(FileNoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication) {
         // 제목
         if (StringUtils.isBlank(notice.getTitle())) {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
@@ -207,7 +214,7 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-        Member member = (Member) authentication.getPrincipal();
+        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
         Notice result = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
                 .id(member.getId())
@@ -215,7 +222,6 @@ public class NoticeServiceImpl implements NoticeService {
                 .maxPeople(notice.getMaxPeople())
                 .price(notice.getPrice())
                 .content(notice.getContent())
-                .imagePath(notice.getImagePath())
                 .startTime(notice.getStartTime())
                 .endTime(notice.getEndTime())
                 .build());

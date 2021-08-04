@@ -23,9 +23,13 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public final StringPath id = createString("id");
 
-    public final StringPath photo = createString("photo");
+    public final StringPath photoName = createString("photoName");
 
-    public final StringPath video = createString("video");
+    public final StringPath photoPath = createString("photoPath");
+
+    public final StringPath videoName = createString("videoName");
+
+    public final StringPath videoPath = createString("videoPath");
 
     public QAuth(String variable) {
         super(Auth.class, forVariable(variable));

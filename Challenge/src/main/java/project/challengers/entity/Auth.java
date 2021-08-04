@@ -20,18 +20,20 @@ public class Auth {
     @Id
     @Column(name = "auth_seq")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(value="인증 순번", example="1")
     private long authSeq;
 
     @Column(nullable = false)
-    @ApiModelProperty(value="아이디", example="user001")
     private String id;
 
-    @Column(nullable = true)
-    @ApiModelProperty(value="인증 사진 경로", example="C://a.png")
-    private String photo;
+    @Column(name = "photo_name", nullable = true)
+    private String photoName;
 
-    @Column(nullable = true)
-    @ApiModelProperty(value="인증 동영상 경로", example="C://a.mp4")
-    private String video;
+    @Column(name = "photo_path", nullable = true)
+    private String photoPath;
+
+    @Column(name = "video_name", nullable = true)
+    private String videoName;
+
+    @Column(name = "video_path", nullable = true)
+    private String videoPath;
 }

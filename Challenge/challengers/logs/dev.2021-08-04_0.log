@@ -1,0 +1,1591 @@
+INFO  21-08-04 21:27:50[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1222 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:27:50[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:27:50[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-08-04 21:27:53[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor': There is already [Root bean: class [org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+ERROR 21-08-04 21:27:53[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+INFO  21-08-04 21:28:19[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1234 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:28:19[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:28:19[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-08-04 21:28:21[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor': There is already [Root bean: class [org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+ERROR 21-08-04 21:28:21[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+INFO  21-08-04 21:29:23[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1245 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:29:23[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:29:23[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-08-04 21:29:24[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor': There is already [Root bean: class [org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+ERROR 21-08-04 21:29:24[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+INFO  21-08-04 21:29:59[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1254 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:29:59[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:29:59[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-08-04 21:30:00[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor': There is already [Root bean: class [org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+ERROR 21-08-04 21:30:00[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+INFO  21-08-04 21:40:04[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1325 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:40:04[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:40:04[main] [MainApplication:664] - The following profiles are active: dev
+WARN  21-08-04 21:40:06[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor': There is already [Root bean: class [org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+ERROR 21-08-04 21:40:06[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+INFO  21-08-04 21:49:41[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1429 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 21:49:41[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 21:49:41[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 21:49:45[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 21:49:47[main] [MainApplication:61] - Started MainApplication in 6.068 seconds (JVM running for 6.651)
+DEBUG 21-08-04 22:07:22[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:07:22[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:07:45[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MjQ0MywiaWF0IjoxNjI4MDgyNDQzfQ.mvd_Brxc-rlVwPjTYNTzhoar9tHWSNivT71DO8gY9QzkDiCHcI-TVh3W_fS3091koLiBeM68lSIDrNU8E8_SHQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:07:45[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MjQ0MywiaWF0IjoxNjI4MDgyNDQzfQ.mvd_Brxc-rlVwPjTYNTzhoar9tHWSNivT71DO8gY9QzkDiCHcI-TVh3W_fS3091koLiBeM68lSIDrNU8E8_SHQ
+WARN  21-08-04 22:07:45[reactor-http-nio-7] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:07:23Z. Current time: 2021-08-04T22:07:45Z, a difference of 22417 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:62)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:43)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:38)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:41)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 22:07:57[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MjQ0MywiaWF0IjoxNjI4MDgyNDQzfQ.mvd_Brxc-rlVwPjTYNTzhoar9tHWSNivT71DO8gY9QzkDiCHcI-TVh3W_fS3091koLiBeM68lSIDrNU8E8_SHQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:07:57[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MjQ0MywiaWF0IjoxNjI4MDgyNDQzfQ.mvd_Brxc-rlVwPjTYNTzhoar9tHWSNivT71DO8gY9QzkDiCHcI-TVh3W_fS3091koLiBeM68lSIDrNU8E8_SHQ
+WARN  21-08-04 22:07:57[reactor-http-nio-7] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:07:23Z. Current time: 2021-08-04T22:07:57Z, a difference of 34107 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:62)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:43)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:38)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:41)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 22:09:50[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1505 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:09:50[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:09:50[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:09:54[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:09:55[main] [MainApplication:61] - Started MainApplication in 6.092 seconds (JVM running for 6.803)
+INFO  21-08-04 22:21:39[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1576 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:21:39[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:21:39[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:21:43[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:21:44[main] [MainApplication:61] - Started MainApplication in 5.828 seconds (JVM running for 6.309)
+DEBUG 21-08-04 22:21:55[reactor-http-nio-6] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"text/css,*/*;q=0.1", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"text/css,*/*;q=0.1", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:55[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:55[reactor-http-nio-6] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:55[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:55[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:55[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/index.html/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Referer:"http://localhost:8080/swagger-ui/index.html/", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:55[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:21:57[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:22:06[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:22:06[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:22:26[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MzMyNiwiaWF0IjoxNjI4MDgzMzI2fQ.lWIPQY79fJXIpgqzY2HenJd_8ORNos4WysVYwWXlBuCWhKDF5IxuUPREkQD_saqGHdEn46cNaUGeSDdNZoAbtQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:22:26[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4MzMyNiwiaWF0IjoxNjI4MDgzMzI2fQ.lWIPQY79fJXIpgqzY2HenJd_8ORNos4WysVYwWXlBuCWhKDF5IxuUPREkQD_saqGHdEn46cNaUGeSDdNZoAbtQ
+WARN  21-08-04 22:22:26[reactor-http-nio-5] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:22:06Z. Current time: 2021-08-04T22:22:26Z, a difference of 20839 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:41)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 22:38:13[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1640 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:38:13[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:38:13[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:38:16[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:38:18[main] [MainApplication:61] - Started MainApplication in 5.837 seconds (JVM running for 6.341)
+DEBUG 21-08-04 22:38:22[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-04 22:38:22[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:38:23[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:39:10[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:39:10[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 22:39:52[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:39:52[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw
+WARN  21-08-04 22:39:52[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:39:10Z. Current time: 2021-08-04T22:39:52Z, a difference of 42869 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 22:47:16[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1675 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:47:16[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:47:16[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:47:19[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:47:20[main] [MainApplication:61] - Started MainApplication in 5.767 seconds (JVM running for 6.251)
+DEBUG 21-08-04 22:53:12[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:53:12[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw
+WARN  21-08-04 22:53:12[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:39:10Z. Current time: 2021-08-04T22:53:12Z, a difference of 842944 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 22:53:50[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:53:50[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NDM1MCwiaWF0IjoxNjI4MDg0MzUwfQ.0c2owwiLHC4au7FCO58PnM4vncUjo-DjDM62IZPc7gCQElWWKVkxcs_vzisw-seRsNltLCR5opuKPtWkdp4vNw
+WARN  21-08-04 22:53:50[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:39:10Z. Current time: 2021-08-04T22:53:50Z, a difference of 880852 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:311)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:432)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 22:54:12[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTIzMSwiaWF0IjoxNjI4MDg1MjMxfQ.l2Qowzd_2U1tgCYkAZe18dJ_C8R3xBd2nCS9hMUcxYjuaatskqFyno2pBZTtLuKLMAxnI9x06IgY_H7UTM8Rrw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:54:12[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTIzMSwiaWF0IjoxNjI4MDg1MjMxfQ.l2Qowzd_2U1tgCYkAZe18dJ_C8R3xBd2nCS9hMUcxYjuaatskqFyno2pBZTtLuKLMAxnI9x06IgY_H7UTM8Rrw
+WARN  21-08-04 22:54:12[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:53:51Z. Current time: 2021-08-04T22:54:12Z, a difference of 21685 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 22:56:32[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1707 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:56:32[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:56:32[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:56:36[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:56:37[main] [MainApplication:61] - Started MainApplication in 5.674 seconds (JVM running for 6.161)
+DEBUG 21-08-04 22:56:45[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTIzMSwiaWF0IjoxNjI4MDg1MjMxfQ.l2Qowzd_2U1tgCYkAZe18dJ_C8R3xBd2nCS9hMUcxYjuaatskqFyno2pBZTtLuKLMAxnI9x06IgY_H7UTM8Rrw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:56:45[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTIzMSwiaWF0IjoxNjI4MDg1MjMxfQ.l2Qowzd_2U1tgCYkAZe18dJ_C8R3xBd2nCS9hMUcxYjuaatskqFyno2pBZTtLuKLMAxnI9x06IgY_H7UTM8Rrw
+WARN  21-08-04 22:56:45[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:53:51Z. Current time: 2021-08-04T22:56:45Z, a difference of 174238 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:311)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:432)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 22:56:58[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTQwNSwiaWF0IjoxNjI4MDg1NDA1fQ.uWnbR-UeasmTYQDv0K6DgH3nBzN-j87ubhREYobf_Cpf5t68DIKaq2X2tff-U_WHPA1rs3n3nkBBL-p-QeMPsQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:56:58[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTQwNSwiaWF0IjoxNjI4MDg1NDA1fQ.uWnbR-UeasmTYQDv0K6DgH3nBzN-j87ubhREYobf_Cpf5t68DIKaq2X2tff-U_WHPA1rs3n3nkBBL-p-QeMPsQ
+WARN  21-08-04 22:56:58[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:56:45Z. Current time: 2021-08-04T22:56:58Z, a difference of 13622 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 22:57:54[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1717 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 22:57:54[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 22:57:54[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 22:57:59[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 22:58:00[main] [MainApplication:61] - Started MainApplication in 6.142 seconds (JVM running for 6.649)
+DEBUG 21-08-04 22:59:10[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTQwNSwiaWF0IjoxNjI4MDg1NDA1fQ.uWnbR-UeasmTYQDv0K6DgH3nBzN-j87ubhREYobf_Cpf5t68DIKaq2X2tff-U_WHPA1rs3n3nkBBL-p-QeMPsQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:59:10[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTQwNSwiaWF0IjoxNjI4MDg1NDA1fQ.uWnbR-UeasmTYQDv0K6DgH3nBzN-j87ubhREYobf_Cpf5t68DIKaq2X2tff-U_WHPA1rs3n3nkBBL-p-QeMPsQ
+WARN  21-08-04 22:59:10[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:56:45Z. Current time: 2021-08-04T22:59:10Z, a difference of 145234 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:311)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:432)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 22:59:25[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTU1MCwiaWF0IjoxNjI4MDg1NTUwfQ.PZ4RtH6GcDt16IYOgn4miHDTCm7tTeE8dabjN0qDwG00rDms3X9Kqx7kiwm7t5BEB2mTW0NyQcSk9PGGu5S2ig", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 22:59:25[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTU1MCwiaWF0IjoxNjI4MDg1NTUwfQ.PZ4RtH6GcDt16IYOgn4miHDTCm7tTeE8dabjN0qDwG00rDms3X9Kqx7kiwm7t5BEB2mTW0NyQcSk9PGGu5S2ig
+WARN  21-08-04 22:59:25[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:59:10Z. Current time: 2021-08-04T22:59:25Z, a difference of 15202 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 23:01:02[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1734 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 23:01:02[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 23:01:02[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 23:01:06[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 23:01:07[main] [MainApplication:61] - Started MainApplication in 5.746 seconds (JVM running for 6.229)
+DEBUG 21-08-04 23:01:15[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTU1MCwiaWF0IjoxNjI4MDg1NTUwfQ.PZ4RtH6GcDt16IYOgn4miHDTCm7tTeE8dabjN0qDwG00rDms3X9Kqx7kiwm7t5BEB2mTW0NyQcSk9PGGu5S2ig", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:01:15[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4NTU1MCwiaWF0IjoxNjI4MDg1NTUwfQ.PZ4RtH6GcDt16IYOgn4miHDTCm7tTeE8dabjN0qDwG00rDms3X9Kqx7kiwm7t5BEB2mTW0NyQcSk9PGGu5S2ig
+WARN  21-08-04 23:01:15[reactor-http-nio-2] [AuthenticationManager:38] - AuthToke Error
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-08-04T22:59:10Z. Current time: 2021-08-04T23:01:15Z, a difference of 125605 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at project.challengers.component.JWTTokenComp.getAllClaimsFromToken(JWTTokenComp.java:60)
+	at project.challengers.component.JWTTokenComp.getClaimFromToken(JWTTokenComp.java:41)
+	at project.challengers.component.JWTTokenComp.getMemberIdFromToken(JWTTokenComp.java:36)
+	at project.challengers.config.AuthenticationManager.authenticate(AuthenticationManager.java:36)
+	at project.challengers.config.SecurityContextRepository.load(SecurityContextRepository.java:42)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.withSecurityContext(ReactorContextWebFilter.java:53)
+	at org.springframework.security.web.server.context.ReactorContextWebFilter.lambda$filter$0(ReactorContextWebFilter.java:48)
+	at reactor.core.publisher.MonoContextWrite.subscribeOrReturn(MonoContextWrite.java:38)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:128)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:360)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:79)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:860)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:638)
+	at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:475)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:525)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:209)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:311)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:432)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-04 23:01:30[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTI3NSwiaWF0IjoxNjI4MDg1Njc1fQ.pnbKy9MdhONAyM-4F96ql75M05YWYGZoFkdZ49WnPJbrnPla91BmdD8ScwQhJdprCVnO5-2f3d-WJNVnG_TzXA", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:01:30[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTI3NSwiaWF0IjoxNjI4MDg1Njc1fQ.pnbKy9MdhONAyM-4F96ql75M05YWYGZoFkdZ49WnPJbrnPla91BmdD8ScwQhJdprCVnO5-2f3d-WJNVnG_TzXA
+ERROR 21-08-04 23:01:30[boundedElastic-1] [AbstractErrorWebExceptionHandler:122] - [cf7825e6-2]  500 Server Error for HTTP GET "/member/findMember"
+java.lang.ClassCastException: class java.lang.String cannot be cast to class project.challengers.entity.Member (java.lang.String is in module java.base of loader 'bootstrap'; project.challengers.entity.Member is in unnamed module of loader 'app')
+	at project.challengers.serviceImpl.MemberServiceImpl.findMember(MemberServiceImpl.java:159)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/member/findMember" [ExceptionHandlingWebHandler]
+Stack trace:
+		at project.challengers.serviceImpl.MemberServiceImpl.findMember(MemberServiceImpl.java:159)
+		at project.challengers.serviceImpl.MemberServiceImpl$$FastClassBySpringCGLIB$$16c13103.invoke(<generated>)
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+		at project.challengers.serviceImpl.MemberServiceImpl$$EnhancerBySpringCGLIB$$ec2647d8.findMember(<generated>)
+		at project.challengers.controller.MemberController.findMember(MemberController.java:60)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 23:04:41[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1762 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 23:04:41[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 23:04:41[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 23:04:45[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 23:04:46[main] [MainApplication:61] - Started MainApplication in 6.036 seconds (JVM running for 6.602)
+DEBUG 21-08-04 23:04:56[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTI3NSwiaWF0IjoxNjI4MDg1Njc1fQ.pnbKy9MdhONAyM-4F96ql75M05YWYGZoFkdZ49WnPJbrnPla91BmdD8ScwQhJdprCVnO5-2f3d-WJNVnG_TzXA", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:04:56[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTI3NSwiaWF0IjoxNjI4MDg1Njc1fQ.pnbKy9MdhONAyM-4F96ql75M05YWYGZoFkdZ49WnPJbrnPla91BmdD8ScwQhJdprCVnO5-2f3d-WJNVnG_TzXA
+DEBUG 21-08-04 23:05:09[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTQ5NiwiaWF0IjoxNjI4MDg1ODk2fQ.6LZt8aba-VUYRwU1P-hmVIOT_vnaKzQySJ3_HhinBiVs5xYwpD5SamgEICeQgb2yyyIE_bLqInJkOyQuIzs34A", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:05:09[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA4OTQ5NiwiaWF0IjoxNjI4MDg1ODk2fQ.6LZt8aba-VUYRwU1P-hmVIOT_vnaKzQySJ3_HhinBiVs5xYwpD5SamgEICeQgb2yyyIE_bLqInJkOyQuIzs34A
+INFO  21-08-04 23:13:40[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1827 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 23:13:40[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 23:13:40[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 23:13:44[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 23:13:45[main] [MainApplication:61] - Started MainApplication in 5.757 seconds (JVM running for 6.283)
+DEBUG 21-08-04 23:14:00[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-04 23:14:00[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:01[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:27[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:27[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:14:49[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/member/findMember
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MDA2NywiaWF0IjoxNjI4MDg2NDY3fQ.t5gwCTBj6LcsqJC3zAMihYfl4nydO7qeZaiDcLXUOETbczJVgfQAKNgdHWYeympq3Pyzt5wp6Dt0uX5xpgIklA", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:14:49[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MDA2NywiaWF0IjoxNjI4MDg2NDY3fQ.t5gwCTBj6LcsqJC3zAMihYfl4nydO7qeZaiDcLXUOETbczJVgfQAKNgdHWYeympq3Pyzt5wp6Dt0uX5xpgIklA
+INFO  21-08-04 23:42:45[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 2028 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 23:42:45[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 23:42:45[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 23:42:48[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 23:42:50[main] [MainApplication:61] - Started MainApplication in 6.159 seconds (JVM running for 6.681)
+DEBUG 21-08-04 23:42:57[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-04 23:42:57[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:42:59[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:43:08[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:43:08[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-04 23:43:27[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/notice/create/file
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"254", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MTc4OCwiaWF0IjoxNjI4MDg4MTg4fQ.4cmcinKK5yV3YJoVRft6bWbixEaAIegWOgZ9f4IXewS70IsHmq8axKgzLZ8XdneTpZOVFoH4Wt7Bf21nalRXQA", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:43:27[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MTc4OCwiaWF0IjoxNjI4MDg4MTg4fQ.4cmcinKK5yV3YJoVRft6bWbixEaAIegWOgZ9f4IXewS70IsHmq8axKgzLZ8XdneTpZOVFoH4Wt7Bf21nalRXQA
+ERROR 21-08-04 23:43:27[reactor-http-nio-2] [AbstractErrorWebExceptionHandler:122] - [b37a837d-7]  500 Server Error for HTTP POST "/notice/create/file"
+java.lang.ClassCastException: class java.lang.String cannot be cast to class project.challengers.entity.Member (java.lang.String is in module java.base of loader 'bootstrap'; project.challengers.entity.Member is in unnamed module of loader 'app')
+	at project.challengers.serviceImpl.NoticeServiceImpl.createFileNotice(NoticeServiceImpl.java:210)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP POST "/notice/create/file" [ExceptionHandlingWebHandler]
+Stack trace:
+		at project.challengers.serviceImpl.NoticeServiceImpl.createFileNotice(NoticeServiceImpl.java:210)
+		at project.challengers.serviceImpl.NoticeServiceImpl$$FastClassBySpringCGLIB$$9822b205.invoke(<generated>)
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+		at project.challengers.serviceImpl.NoticeServiceImpl$$EnhancerBySpringCGLIB$$c72416cf.createFileNotice(<generated>)
+		at project.challengers.controller.NoticeController.createFileNotice(NoticeController.java:50)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:151)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:159)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:259)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:389)
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:396)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:555)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:253)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-04 23:45:16[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 2042 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-04 23:45:16[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-04 23:45:16[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-04 23:45:20[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-04 23:45:22[main] [MainApplication:61] - Started MainApplication in 6.808 seconds (JVM running for 7.346)
+DEBUG 21-08-04 23:45:26[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/notice/create/file
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"254", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MTc4OCwiaWF0IjoxNjI4MDg4MTg4fQ.4cmcinKK5yV3YJoVRft6bWbixEaAIegWOgZ9f4IXewS70IsHmq8axKgzLZ8XdneTpZOVFoH4Wt7Bf21nalRXQA", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Referer:"http://localhost:8080/swagger-ui/index.html", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", Cookie:"JSESSIONID=BE8BC4E66F1EE807D5467A6E55F50ADC"]
+DEBUG 21-08-04 23:45:26[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAyIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyODA5MTc4OCwiaWF0IjoxNjI4MDg4MTg4fQ.4cmcinKK5yV3YJoVRft6bWbixEaAIegWOgZ9f4IXewS70IsHmq8axKgzLZ8XdneTpZOVFoH4Wt7Bf21nalRXQA

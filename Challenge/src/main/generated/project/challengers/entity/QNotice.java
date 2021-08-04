@@ -25,8 +25,6 @@ public class QNotice extends EntityPathBase<Notice> {
 
     public final StringPath id = createString("id");
 
-    public final StringPath imagePath = createString("imagePath");
-
     public final NumberPath<Integer> maxPeople = createNumber("maxPeople", Integer.class);
 
     public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
