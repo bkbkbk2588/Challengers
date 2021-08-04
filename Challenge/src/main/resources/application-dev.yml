@@ -1,4 +1,5 @@
 server.port: 8080
+server.forward-headers-strategy: native
 
 logging:
   config: classpath:config/logback-dev.xml
@@ -14,8 +15,6 @@ management:
       enabled: true
 
 spring:
-  main:
-    allow-bean-definition-overriding: true
   application:
     name: challengers
   datasource:

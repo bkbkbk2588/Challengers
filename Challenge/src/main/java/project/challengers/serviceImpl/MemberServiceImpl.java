@@ -17,6 +17,7 @@ import project.challengers.entity.Member;
 import project.challengers.exception.ChallengersException;
 import project.challengers.repository.MemberRepository;
 import project.challengers.service.MemberService;
+import reactor.core.publisher.Mono;
 
 import java.util.Locale;
 
@@ -101,7 +102,7 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public ResponseEntity<LoginResponseDto> login(LoginDto member) {
+    public Mono<ResponseEntity<LoginResponseDto>> login(LoginDto member) {
         Member memberEntity = memberRepository.findById(member.getId())
                 .orElseThrow(() -> new ChallengersException(HttpStatus.BAD_REQUEST,
                         messageSource.getMessage("error.user.notfound.user.valid.E0001", null, Locale.KOREA)));
@@ -111,7 +112,7 @@ public class MemberServiceImpl implements MemberService {
                     messageSource.getMessage("error.user.login.fail.userpw.E0002", null, Locale.KOREA));
         }
 
-        return ResponseEntity.ok(LoginResponseDto.builder()
+        return Mono.just(ResponseEntity.ok(LoginResponseDto.builder()
                 .accessToken(jwtComp.generateToken(memberEntity))
                 .member(LoginResponseDto.Member.builder()
                         .id(memberEntity.getId())
@@ -120,7 +121,7 @@ public class MemberServiceImpl implements MemberService {
                         .email(memberEntity.getEmail())
                         .phone(memberEntity.getPhone())
                         .build())
-                .build());
+                .build()));
     }
 
     /**
@@ -156,7 +157,7 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public MemberDto findMember(Authentication authentication) {
-        Member userDetails = (Member) authentication.getPrincipal();
+        Member userDetails = memberRepository.findById((String) authentication.getPrincipal()).get();
 
         return MemberDto.builder()
                 .id(userDetails.getId())
@@ -177,7 +178,7 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int resetPassword(Authentication authentication) {
-        Member member = (Member) authentication.getPrincipal();
+        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
 
         return memberRepository.saveResetPw(member.getId(),
                 passwordEncoder.encode(member.getId().substring(0, 3)
@@ -194,7 +195,7 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int updateMember(UpdateMemberDto member, Authentication authentication) {
-        Member userDetails = (Member) authentication.getPrincipal();
+        Member userDetails = memberRepository.findById((String) authentication.getPrincipal()).get();
 
         // 사용자 이름
         if (StringUtils.isBlank(member.getName())) {
@@ -248,7 +249,7 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int deleteMember(Authentication authentication) {
-        Member member = (Member) authentication.getPrincipal();
+        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
 
         return memberRepository.deleteMember(member.getId());
     }

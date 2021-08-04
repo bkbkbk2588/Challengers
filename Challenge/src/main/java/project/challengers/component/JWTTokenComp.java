@@ -4,10 +4,8 @@ import com.google.common.collect.Lists;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 import project.challengers.entity.Member;
 
@@ -25,7 +23,7 @@ public class JWTTokenComp {
     private String secretKey;
 
     // 토큰 유효시간 60분
-    private long tokenValidTime = 1 * 60 * 1000L;
+    private long tokenValidTime = 1 * 60 * 60 * 1000L;
 
     // 객체 초기화, secretKey를 Base64로 인코딩
     @PostConstruct
@@ -78,7 +76,7 @@ public class JWTTokenComp {
                 .setClaims(claims)
                 .setSubject(subject)
                 .setIssuedAt(new Date(nowMillis))
-                .setExpiration(new Date(nowMillis))
+                .setExpiration(new Date(nowMillis + tokenValidTime))
                 .signWith(SignatureAlgorithm.HS512, secretKey)
                 .compact();
     }

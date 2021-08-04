@@ -64,16 +64,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-
-        //TODO 수정 필요
         return http
-                .securityMatcher(new NegatedServerWebExchangeMatcher(
-                        ServerWebExchangeMatchers.pathMatchers(
-                                "/v2/**",
-                                "/configuration/**",
-                                "/swagger*/**",
-                                "/webjars/**",
-                                "/swagger-resources/**")))
                 .exceptionHandling()
                 .authenticationEntryPoint((swe, e) -> Mono.fromRunnable(() -> {
                     swe.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
@@ -85,25 +76,21 @@ public class WebSecurityConfig {
                 .authenticationManager(authenticationManager)
                 .securityContextRepository(securityContextRepository)
                 .authorizeExchange()
-//                .pathMatchers("/swagger*/**").access(this::whiteListIp)
-//                .pathMatchers("/swagger-resources/**").access(this::whiteListIp)
-//                .pathMatchers("/configuration/**").access(this::whiteListIp)
-//                .pathMatchers("/webjars/**").access(this::whiteListIp)
-//                .pathMatchers("/v2/**").access(this::whiteListIp)
+                .pathMatchers("/swagger*/**").access(this::whiteListIp)
+                .pathMatchers("/swagger-resources/**").access(this::whiteListIp)
+                .pathMatchers("/v2/**").access(this::whiteListIp)
                 .pathMatchers("/member/dupcheck-id/**").permitAll()
                 .pathMatchers("/member/dupcheck-phone/**").permitAll()
                 .pathMatchers("/member/signUp").permitAll()
                 .pathMatchers("/member/login").permitAll()
                 .pathMatchers("/member/findId/**").permitAll()
                 .pathMatchers("/member/findPw").permitAll()
-
                 .anyExchange().authenticated()
                 .and().build();
     }
 
     private Mono<AuthorizationDecision> whiteListIp(Mono<Authentication> authentication, AuthorizationContext context) {
         String ip = context.getExchange().getRequest().getRemoteAddress().getAddress().toString().replace("/", "");
-        System.out.println("ip : " + ip);
         return authentication.map((a) -> new AuthorizationDecision(a.isAuthenticated()))
                 .defaultIfEmpty(new AuthorizationDecision(
                         (whiteListIp.contains(ip)) ? true : false

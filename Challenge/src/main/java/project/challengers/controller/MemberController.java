@@ -12,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import project.challengers.DTO.member.*;
 import project.challengers.service.MemberService;
+import reactor.core.publisher.Mono;
 
 @Api(tags = {"사용자"})
 @RestController
@@ -43,7 +44,7 @@ public class MemberController {
 
     @ApiOperation(value = "로그인", response = LoginResponseDto.class)
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginDto member) {
+    public Mono<ResponseEntity<LoginResponseDto>> login(@RequestBody LoginDto member) {
         return memberService.login(member);
     }
 
