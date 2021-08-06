@@ -10,10 +10,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.notice.*;
+import project.challengers.component.FileComponent;
 import project.challengers.entity.Member;
 import project.challengers.entity.Notice;
+import project.challengers.entity.NoticeFile;
 import project.challengers.exception.ChallengersException;
 import project.challengers.repository.MemberRepository;
+import project.challengers.repository.NoticeFileRepository;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
@@ -34,6 +37,12 @@ public class NoticeServiceImpl implements NoticeService {
 
     @Autowired
     MessageSource messageSource;
+
+    @Autowired
+    FileComponent fileComp;
+
+    @Autowired
+    NoticeFileRepository noticeFileRepository;
 
     /**
      * 게시글 전체 목록 조회
@@ -133,10 +142,10 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
+//        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
         Notice result = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
-                .id(member.getId())
+                .id((String) authentication.getPrincipal())
                 .type(notice.getType())
                 .maxPeople(notice.getMaxPeople())
                 .price(notice.getPrice())
@@ -149,6 +158,7 @@ public class NoticeServiceImpl implements NoticeService {
     }
 
     // TODO 첨부파일 기능 구현 필요
+
     /**
      * 첨부파일 있는 게시글 등록
      *
@@ -156,6 +166,7 @@ public class NoticeServiceImpl implements NoticeService {
      * @param authentication
      * @return
      */
+    @Transactional
     @Override
     public int createFileNotice(FileNoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication) {
         // 제목
@@ -193,13 +204,6 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"게시글 내용"}, Locale.KOREA));
         }
 
-        // 이미지 경로
-        if (StringUtils.isBlank(notice.getImagePath())) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"이미지 경로"}, Locale.KOREA));
-        }
-
         // 도전 시작 날짜
         if (notice.getStartTime() == null) {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
@@ -214,10 +218,12 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
-        Notice result = noticeRepository.save(Notice.builder()
+//        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
+
+        // 게시글 입력
+        Notice noticeResult = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
-                .id(member.getId())
+                .id((String) authentication.getPrincipal())
                 .type(notice.getType())
                 .maxPeople(notice.getMaxPeople())
                 .price(notice.getPrice())
@@ -226,7 +232,22 @@ public class NoticeServiceImpl implements NoticeService {
                 .endTime(notice.getEndTime())
                 .build());
 
-        return result != null ? 1 : 0;
+        // 첨부파일 경로, 이름 설정
+        final String[] fileName = new String[1], filePath = new String[1];
+        fileComp.save(filePartFlux)
+                .subscribe(file -> {
+                    fileName[0] = file.getLeft();
+                    filePath[0] = file.getRight();
+                });
+
+        // 첨부파일 입력
+        NoticeFile noticeFileResult = noticeFileRepository.save(NoticeFile.builder()
+                .noticeSeq(noticeResult.getNoticeSeq())
+                .fileName(fileName[0])
+                .filePath(filePath[0])
+                .build());
+
+        return noticeResult != null && noticeFileResult != null ? 1 : 0;
     }
 
     @Override

@@ -19,6 +19,7 @@ CREATE TABLE AUTH (
     video_path VARCHAR(255) COMMENT "동영상경로" ,
     PRIMARY KEY (auth_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id)
+    engine=InnoDB
 );
 
 

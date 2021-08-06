@@ -46,7 +46,6 @@ public class NoticeController {
         return noticeService.createNotice(notice, authentication);
     }
 
-    // TODO 파일 올리는거 수정
     @ApiOperation(value = "게시글 등록 (첨부파일 O)")
     @PostMapping(value = "/create/file")
     public int createFileNotice(@ApiParam("게시글 등록") @RequestBody FileNoticeCreateDto notice,

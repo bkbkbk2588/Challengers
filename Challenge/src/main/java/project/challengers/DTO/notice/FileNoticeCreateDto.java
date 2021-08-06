@@ -31,9 +31,6 @@ public class FileNoticeCreateDto {
     @ApiModelProperty(value="내용", example="영어 스터디 할 사람 신청해주세요")
     String content;
 
-    @ApiModelProperty(value = "이미지 경로", example = "/Users/image.png")
-    String imagePath;
-
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="시작시간", example="2021-01-01 00:00:00")
     LocalDateTime startTime;

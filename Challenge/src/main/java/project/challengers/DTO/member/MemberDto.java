@@ -17,7 +17,6 @@ public class MemberDto {
     @ApiModelProperty(value="아이디", example="user001")
     private String id;
 
-    @JsonIgnore
     @ApiModelProperty(value="비밀번호", example="1234")
     private String pw;
 
