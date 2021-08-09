@@ -30,7 +30,6 @@ spring:
       format_sql: true
       use_sql_comments: true
 
-
 challengers:
   path:
     prefix: ./challengers # TODO 나중에 올릴때 수정 필요

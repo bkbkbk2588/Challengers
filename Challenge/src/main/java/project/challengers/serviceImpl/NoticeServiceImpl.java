@@ -142,7 +142,6 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-//        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
         Notice result = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
                 .id((String) authentication.getPrincipal())
@@ -218,8 +217,6 @@ public class NoticeServiceImpl implements NoticeService {
                             new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
         }
 
-//        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
-
         // 게시글 입력
         Notice noticeResult = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
@@ -233,19 +230,18 @@ public class NoticeServiceImpl implements NoticeService {
                 .build());
 
         // 첨부파일 경로, 이름 설정
-        final String[] fileName = new String[1], filePath = new String[1];
+        List<NoticeFile> noticeFiles = new ArrayList<>();
         fileComp.save(filePartFlux)
                 .subscribe(file -> {
-                    fileName[0] = file.getLeft();
-                    filePath[0] = file.getRight();
+                    noticeFiles.add(NoticeFile.builder()
+                            .noticeSeq(noticeResult.getNoticeSeq())
+                            .fileName(file.getLeft())
+                            .filePath(file.getRight())
+                            .build());
                 });
 
         // 첨부파일 입력
-        NoticeFile noticeFileResult = noticeFileRepository.save(NoticeFile.builder()
-                .noticeSeq(noticeResult.getNoticeSeq())
-                .fileName(fileName[0])
-                .filePath(filePath[0])
-                .build());
+        List<NoticeFile> noticeFileResult = noticeFileRepository.saveAll(noticeFiles);
 
         return noticeResult != null && noticeFileResult != null ? 1 : 0;
     }
