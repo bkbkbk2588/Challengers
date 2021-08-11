@@ -11,7 +11,9 @@ import org.springframework.web.server.ServerWebInputException;
 import project.challengers.exception.ChallengersException;
 import reactor.core.publisher.Flux;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -32,6 +34,7 @@ public class FileComponent {
                         + new String(filePart.filename().getBytes("ISO-8859-1"), "UTF-8"));
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
+                logger.error(e.getMessage());
             }
             try {
                 Files.createParentDirs(newFile);
@@ -40,51 +43,7 @@ public class FileComponent {
                 e.printStackTrace();
                 logger.error("file save fail");
                 throw new ChallengersException("file save fail");
-
             }
-
-//            final BufferedReader[] reader = new BufferedReader[1];
-//
-            filePart.content().subscribe(s -> {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(s.asInputStream()));
-
-                while (true) {
-                    try {
-                        if (reader.readLine() == null)
-                            break;
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-//
-//            String str = "";
-//            while (true) {
-//                try {
-//                    if (!((str = reader[0].readLine()) != null)) break;
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                System.out.println(str);
-//            }
-
-            // ??????
-            filePart.transferTo(newFile);
-
-            System.out.println("size : " + newFile.length());
-
-//            try {
-//                FileReader a = new FileReader(newFile);
-//                int ch;
-//                while ((ch = a.read()) != -1) {
-//                    System.out.println("!!!!!");
-//                    System.out.print((char) ch);
-//                }
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
 
             String fileName = "";
             try {
@@ -93,6 +52,9 @@ public class FileComponent {
                 e.printStackTrace();
                 logger.error(e.getMessage());
             }
+            // 파일 내용 저장
+            filePart.transferTo(newFile).then().subscribe();
+
             return Pair.of(fileName, newFile.getAbsolutePath());
         }).onErrorReturn(ServerWebInputException.class, Pair.of(null, null))
                 .filter(p -> p.getLeft() != null && p.getRight() != null);

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.notice.*;
 import project.challengers.component.FileComponent;
-import project.challengers.entity.Member;
 import project.challengers.entity.Notice;
 import project.challengers.entity.NoticeFile;
 import project.challengers.exception.ChallengersException;
@@ -84,15 +83,16 @@ public class NoticeServiceImpl implements NoticeService {
     }
 
     /**
-     * 첨부파일 없는 게시글 등록
+     * 게시글 등록
      *
      * @param notice
+     * @param filePartFlux
      * @param authentication
      * @return
      */
     @Transactional
     @Override
-    public int createNotice(NoticeCreateDto notice, Authentication authentication) {
+    public int createNotice(NoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication) {
         // 제목
         if (StringUtils.isBlank(notice.getTitle())) {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
@@ -153,97 +153,23 @@ public class NoticeServiceImpl implements NoticeService {
                 .endTime(notice.getEndTime())
                 .build());
 
+        if (filePartFlux != null) {
+            // 첨부파일 경로, 이름 설정
+            List<NoticeFile> noticeFiles = new ArrayList<>();
+            fileComp.save(filePartFlux)
+                    .subscribe(file -> {
+                        noticeFiles.add(NoticeFile.builder()
+                                .noticeSeq(result.getNoticeSeq())
+                                .fileName(file.getLeft())
+                                .filePath(file.getRight())
+                                .build());
+                    });
+            // 첨부파일 입력
+            List<NoticeFile> noticeFileResult = noticeFileRepository.saveAll(noticeFiles);
+            return result != null && noticeFileResult != null ? 1 : 0;
+        }
+
         return result != null ? 1 : 0;
-    }
-
-    // TODO 첨부파일 기능 구현 필요
-
-    /**
-     * 첨부파일 있는 게시글 등록
-     *
-     * @param notice
-     * @param authentication
-     * @return
-     */
-    @Transactional
-    @Override
-    public int createFileNotice(FileNoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication) {
-        // 제목
-        if (StringUtils.isBlank(notice.getTitle())) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"제목"}, Locale.KOREA));
-        }
-
-        // 게시글 타입
-        if (StringUtils.isBlank(notice.getType())) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"게시글 타입"}, Locale.KOREA));
-        }
-
-        // 최대 참여 인원
-        if (notice.getMaxPeople() == null) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"최대 참여 인원"}, Locale.KOREA));
-        }
-
-        // 보증금
-        if (notice.getType() == null) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"보증금"}, Locale.KOREA));
-        }
-
-        // 게시글 내용
-        if (StringUtils.isBlank(notice.getType())) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"게시글 내용"}, Locale.KOREA));
-        }
-
-        // 도전 시작 날짜
-        if (notice.getStartTime() == null) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"도전 시작날짜"}, Locale.KOREA));
-        }
-
-        // 도전 끝나는 날짜
-        if (notice.getEndTime() == null) {
-            throw new ChallengersException(HttpStatus.BAD_REQUEST,
-                    messageSource.getMessage("error.user.notfound.user.valid.E0003",
-                            new String[]{"도전 끝나는 날짜"}, Locale.KOREA));
-        }
-
-        // 게시글 입력
-        Notice noticeResult = noticeRepository.save(Notice.builder()
-                .title(notice.getTitle())
-                .id((String) authentication.getPrincipal())
-                .type(notice.getType())
-                .maxPeople(notice.getMaxPeople())
-                .price(notice.getPrice())
-                .content(notice.getContent())
-                .startTime(notice.getStartTime())
-                .endTime(notice.getEndTime())
-                .build());
-
-        // 첨부파일 경로, 이름 설정
-        List<NoticeFile> noticeFiles = new ArrayList<>();
-        fileComp.save(filePartFlux)
-                .subscribe(file -> {
-                    noticeFiles.add(NoticeFile.builder()
-                            .noticeSeq(noticeResult.getNoticeSeq())
-                            .fileName(file.getLeft())
-                            .filePath(file.getRight())
-                            .build());
-                });
-
-        // 첨부파일 입력
-        List<NoticeFile> noticeFileResult = noticeFileRepository.saveAll(noticeFiles);
-
-        return noticeResult != null && noticeFileResult != null ? 1 : 0;
     }
 
     @Override

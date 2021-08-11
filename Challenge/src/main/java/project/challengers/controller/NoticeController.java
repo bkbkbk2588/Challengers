@@ -49,7 +49,7 @@ public class NoticeController {
     @ApiOperation(value = "게시글 등록 (첨부파일 X)")
     @PostMapping(value = "/create")
     public int createNotice(@ApiParam("게시글 등록") @RequestBody NoticeCreateDto notice, Authentication authentication) {
-        return noticeService.createNotice(notice, authentication);
+        return noticeService.createNotice(notice, null, authentication);
     }
 
     @ApiOperation(value = "게시글 등록 (첨부파일 O)")
@@ -57,9 +57,9 @@ public class NoticeController {
     public int createFileNotice(@RequestPart("notice") String notice,
                                 @RequestPart("files") Flux<FilePart> filePartFlux, Authentication authentication)
             throws JsonProcessingException {
-        FileNoticeCreateDto noticeCreateDto = objectMapper.readValue(notice, FileNoticeCreateDto.class);
+        NoticeCreateDto noticeCreateDto = objectMapper.readValue(notice, NoticeCreateDto.class);
 
-        return noticeService.createFileNotice(noticeCreateDto, filePartFlux, authentication);
+        return noticeService.createNotice(noticeCreateDto, filePartFlux, authentication);
     }
 
     @ApiOperation(value = "게시글 페이지 조회")
