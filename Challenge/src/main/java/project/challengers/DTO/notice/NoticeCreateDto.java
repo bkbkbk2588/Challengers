@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("게시글 등록 (첨부파일 X)")
+@ApiModel("게시글 등록")
 public class NoticeCreateDto {
     @ApiModelProperty(value="제목", example="스터디 모집")
     String title;

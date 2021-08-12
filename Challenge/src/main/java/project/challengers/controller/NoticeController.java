@@ -10,14 +10,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.multipart.FilePart;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-import project.challengers.DTO.notice.FileNoticeCreateDto;
 import project.challengers.DTO.notice.NoticeCreateDto;
+import project.challengers.DTO.notice.NoticeInfoDto;
 import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
+
+import java.io.IOException;
+import java.util.List;
 
 @Api(tags = {"도전 게시글"})
 @RestController
@@ -27,7 +31,6 @@ public class NoticeController {
         1. 게시글 개수 필터 조회
         2. 게시글 제목으로 검색
         3. 게시글 내용으로 검색
-        4. 도전 게시글 상세 조회
         5. 도전 게시글 삭제
         6. 도전 게시글 수정 (작성자만 권한 있음) (첨부파일이 있는거랑 없는거 둘다)
      */
@@ -66,5 +69,12 @@ public class NoticeController {
     @GetMapping(value = "/list/page")
     public NoticeListDto noticePagingList(@ApiParam(value = "검색페이징") SearchPagingDto paging) {
         return null;
+    }
+
+    @ApiOperation(value = "게시글 조회")
+    @GetMapping(value = "/{seq}", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public List<byte[]> getNotice(@ApiParam(value = "게시글 번호") @PathVariable long seq,
+                                  ServerHttpResponse res ) throws IOException {
+        return noticeService.getNotice(seq, res);
     }
 }

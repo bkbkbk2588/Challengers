@@ -5,6 +5,11 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.io.buffer.DataBufferUtils;
+import org.springframework.core.io.buffer.DefaultDataBufferFactory;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebInputException;
@@ -59,4 +64,13 @@ public class FileComponent {
         }).onErrorReturn(ServerWebInputException.class, Pair.of(null, null))
                 .filter(p -> p.getLeft() != null && p.getRight() != null);
     }
+
+//    public Flux<DataBuffer> download(String filePath) throws IOException {
+//        Resource resource = new FileSystemResource(filePath);
+//        logger.debug("download file exist :{}, {}", filePath, resource.getFile().exists());
+//        if(resource.getFile().exists()) {
+//            return DataBufferUtils.read(resource, new DefaultDataBufferFactory(), 512);
+//        }
+//        return Flux.empty();
+//    }
 }

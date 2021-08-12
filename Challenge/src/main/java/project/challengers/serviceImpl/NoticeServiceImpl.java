@@ -1,11 +1,16 @@
 package project.challengers.serviceImpl;
 
+import com.querydsl.core.Tuple;
+import org.apache.commons.io.IOUtils;
 import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.codec.multipart.FilePart;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +24,11 @@ import project.challengers.repository.NoticeFileRepository;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -176,6 +185,41 @@ public class NoticeServiceImpl implements NoticeService {
     public NoticeListDto noticePagingList(SearchPagingDto paging) {
 
         return null;
+    }
+
+
+    /**
+     * 게시글 상세 조회
+     *
+     * @param noticeSeq
+     * @return
+     */
+    @Override
+    public List<byte[]> getNotice(long noticeSeq, ServerHttpResponse res) throws IOException {
+        List<Tuple> noticeTuple = noticeRepository.getNotice(noticeSeq);
+        Notice notice = noticeTuple.get(0).get(0, Notice.class);
+
+        List<NoticeFile> noticeFile = new ArrayList<>();
+        noticeTuple.stream().forEach(tuple -> {
+            noticeFile.add(tuple.get(1, NoticeFile.class));
+        });
+        List<byte[]> list = new ArrayList<>();
+        for (NoticeFile file : noticeFile) {
+//            HttpHeaders headers = res.getHeaders();
+//            headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getFileName());
+//            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+//            headers.setContentDispositionFormData(file.getFileName(), file.getFileName());
+//            Mono<Void> result = res.writeWith(fileComp.download(file.getFilePath()));
+            System.out.println(file.getFilePath());
+            InputStream in = new FileInputStream(file.getFilePath());
+//                    getClass().getResourceAsStream(file.getFilePath());
+            if (in == null)
+                System.out.println("!!!!!!!!!!!!");
+            list.add(IOUtils.toByteArray(in));
+//            System.out.println(fileComp.download(file.getFilePath()));
+        }
+
+        return list;
     }
 
 }

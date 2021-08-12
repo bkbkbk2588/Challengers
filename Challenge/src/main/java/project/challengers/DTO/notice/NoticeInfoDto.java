@@ -7,15 +7,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("게시글 등록 (첨부파일 O)")
-public class FileNoticeCreateDto {
+@ApiModel("게시글 정보")
+public class NoticeInfoDto {
     @ApiModelProperty(value="제목", example="스터디 모집")
     String title;
 
@@ -38,4 +40,7 @@ public class FileNoticeCreateDto {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     LocalDateTime endTime;
+
+    @ApiModelProperty(value = "게시글 사진")
+    List<MultipartFile> multipartFileList;
 }
