@@ -1,16 +1,21 @@
 package project.challengers.serviceImpl;
 
 import com.querydsl.core.Tuple;
-import org.apache.commons.io.IOUtils;
 import io.micrometer.core.instrument.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
-import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,16 +24,16 @@ import project.challengers.component.FileComponent;
 import project.challengers.entity.Notice;
 import project.challengers.entity.NoticeFile;
 import project.challengers.exception.ChallengersException;
-import project.challengers.repository.MemberRepository;
 import project.challengers.repository.NoticeFileRepository;
 import project.challengers.repository.NoticeRepository;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
-import java.io.FileInputStream;
+import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,11 +42,13 @@ import java.util.Locale;
 
 @Service
 public class NoticeServiceImpl implements NoticeService {
+    Logger logger = LoggerFactory.getLogger(NoticeServiceImpl.class);
+
     @Autowired
     NoticeRepository noticeRepository;
 
-    @Autowired
-    MemberRepository memberRepository;
+    @Value("${challengers.path.prefix}${challengers.path.files}")
+    private String UPLOAD_FILE_PATH;
 
     @Autowired
     MessageSource messageSource;
@@ -51,6 +58,7 @@ public class NoticeServiceImpl implements NoticeService {
 
     @Autowired
     NoticeFileRepository noticeFileRepository;
+
 
     /**
      * 게시글 전체 목록 조회
@@ -66,6 +74,7 @@ public class NoticeServiceImpl implements NoticeService {
         Collections.sort(noticeList, (notice1, notice2) -> {
             LocalDateTime time1 = notice1.getUpdateTime(),
                     time2 = notice2.getUpdateTime();
+
             if (time1 != null && time2 != null) {
                 if (time1.isBefore(time2))
                     return -1;
@@ -76,7 +85,7 @@ public class NoticeServiceImpl implements NoticeService {
         });
 
         for (Notice notice : noticeList) {
-            NoticeDto noticeDTO = null;
+            NoticeDto noticeDTO = new NoticeDto();
             BeanUtils.copyProperties(notice, noticeDTO);
             noticeDto.add(noticeDTO);
         }
@@ -195,7 +204,7 @@ public class NoticeServiceImpl implements NoticeService {
      * @return
      */
     @Override
-    public List<byte[]> getNotice(long noticeSeq, ServerHttpResponse res) throws IOException {
+    public NoticeInfoDto getNotice(long noticeSeq, ServerHttpRequest req) {
         List<Tuple> noticeTuple = noticeRepository.getNotice(noticeSeq);
         Notice notice = noticeTuple.get(0).get(0, Notice.class);
 
@@ -203,23 +212,50 @@ public class NoticeServiceImpl implements NoticeService {
         noticeTuple.stream().forEach(tuple -> {
             noticeFile.add(tuple.get(1, NoticeFile.class));
         });
-        List<byte[]> list = new ArrayList<>();
-        for (NoticeFile file : noticeFile) {
-//            HttpHeaders headers = res.getHeaders();
-//            headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getFileName());
-//            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-//            headers.setContentDispositionFormData(file.getFileName(), file.getFileName());
-//            Mono<Void> result = res.writeWith(fileComp.download(file.getFilePath()));
-            System.out.println(file.getFilePath());
-            InputStream in = new FileInputStream(file.getFilePath());
-//                    getClass().getResourceAsStream(file.getFilePath());
-            if (in == null)
-                System.out.println("!!!!!!!!!!!!");
-            list.add(IOUtils.toByteArray(in));
-//            System.out.println(fileComp.download(file.getFilePath()));
-        }
 
-        return list;
+        List<String> fileDownloadUri = new ArrayList<>();
+
+        noticeFile.forEach(file -> {
+            fileDownloadUri.add(req.getURI().toString()
+                    .substring(0, req.getURI().toString().length() - Long.toString(noticeSeq).length())
+                    + "downloadFile"
+//                    + File.separator
+                    + file.getFilePath());
+//                    + file.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
+        });
+
+        return NoticeInfoDto.builder()
+                .title(notice.getTitle())
+                .type(notice.getType())
+                .maxPeople(notice.getMaxPeople())
+                .price(notice.getPrice())
+                .content(notice.getContent())
+                .id(notice.getId())
+                .startTime(notice.getStartTime())
+                .endTime(notice.getEndTime())
+                .fileUrl(fileDownloadUri)
+                .build();
     }
 
+    // TODO url 조회로 바꾸기
+    @Override
+    public ResponseEntity<Resource> downloadFile(String fileName) throws IOException {
+//        File file = new File(UPLOAD_FILE_PATH + File.separator + fileName);
+        File file = new File(fileName);
+
+        HttpHeaders header = new HttpHeaders();
+        header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=img.jpg");
+        header.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        header.add("Pragma", "no-cache");
+        header.add("Expires", "0");
+
+        Path path = Paths.get(file.getAbsolutePath());
+        ByteArrayResource resource = new ByteArrayResource(Files.readAllBytes(path));
+
+        return ResponseEntity.ok()
+                .headers(header)
+                .contentLength(file.length())
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .body(resource);
+    }
 }

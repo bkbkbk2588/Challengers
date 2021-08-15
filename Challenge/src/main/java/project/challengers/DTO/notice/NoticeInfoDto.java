@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -33,6 +32,9 @@ public class NoticeInfoDto {
     @ApiModelProperty(value="내용", example="영어 스터디 할 사람 신청해주세요")
     String content;
 
+    @ApiModelProperty(value="방장 id", example="user001")
+    String id;
+
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="시작시간", example="2021-01-01 00:00:00")
     LocalDateTime startTime;
@@ -41,6 +43,6 @@ public class NoticeInfoDto {
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     LocalDateTime endTime;
 
-    @ApiModelProperty(value = "게시글 사진")
-    List<MultipartFile> multipartFileList;
+    @ApiModelProperty(value = "[localhost:8080/downloadFile/1.jpg]")
+    List<String> fileUrl;
 }

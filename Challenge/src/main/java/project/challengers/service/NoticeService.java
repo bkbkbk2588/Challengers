@@ -1,7 +1,9 @@
 package project.challengers.service;
 
+import org.springframework.core.io.Resource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
-import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
 import project.challengers.DTO.notice.NoticeCreateDto;
 import project.challengers.DTO.notice.NoticeInfoDto;
@@ -10,11 +12,11 @@ import project.challengers.DTO.notice.SearchPagingDto;
 import reactor.core.publisher.Flux;
 
 import java.io.IOException;
-import java.util.List;
 
 public interface NoticeService {
     NoticeListDto noticeList();
     int createNotice(NoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication);
     NoticeListDto noticePagingList(SearchPagingDto paging);
-    List<byte[]> getNotice(long noticeSeq, ServerHttpResponse res ) throws IOException;
+    NoticeInfoDto getNotice(long noticeSeq, ServerHttpRequest req);
+    ResponseEntity<Resource> downloadFile(String fileName) throws IOException;
 }

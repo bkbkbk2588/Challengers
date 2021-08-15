@@ -8,9 +8,11 @@ import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
-import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import project.challengers.DTO.notice.NoticeCreateDto;
@@ -21,7 +23,6 @@ import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
 
 import java.io.IOException;
-import java.util.List;
 
 @Api(tags = {"도전 게시글"})
 @RestController
@@ -43,7 +44,7 @@ public class NoticeController {
     @Autowired
     ObjectMapper objectMapper;
 
-    @ApiOperation(value = "게시글 전체 목록 조회")
+    @ApiOperation(value = "게시글 전체 목록 조회", response = NoticeListDto.class)
     @GetMapping(value = "/list")
     public NoticeListDto noticeList() {
         return noticeService.noticeList();
@@ -71,10 +72,16 @@ public class NoticeController {
         return null;
     }
 
-    @ApiOperation(value = "게시글 조회")
-    @GetMapping(value = "/{seq}", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public List<byte[]> getNotice(@ApiParam(value = "게시글 번호") @PathVariable long seq,
-                                  ServerHttpResponse res ) throws IOException {
-        return noticeService.getNotice(seq, res);
+    @ApiOperation(value = "게시글 조회", response = NoticeInfoDto.class)
+    @GetMapping(value = "/{seq}")
+    public NoticeInfoDto getNotice(@ApiParam(value = "게시글 번호") @PathVariable long seq,
+                                   ServerHttpRequest request) {
+        return noticeService.getNotice(seq, request);
+    }
+
+    @ApiOperation(value = "게시글 사진 조회 (게시글 조회에서 나온 url로 확인 가능)")
+    @GetMapping("/downloadFile/{fileName:.+}")
+    public ResponseEntity<Resource> downloadFile(@ApiParam(value = "사진 제목") @PathVariable String fileName) throws IOException {
+        return noticeService.downloadFile(fileName);
     }
 }
