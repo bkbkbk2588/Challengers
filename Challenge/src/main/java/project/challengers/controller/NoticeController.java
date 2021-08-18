@@ -8,9 +8,7 @@ import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
@@ -29,7 +27,7 @@ import java.io.IOException;
 @RequestMapping("/notice")
 public class NoticeController {
     /* TODO
-        1. 게시글 개수 필터 조회
+        1. 게시글 페이지 조회
         2. 게시글 제목으로 검색
         3. 게시글 내용으로 검색
         5. 도전 게시글 삭제
@@ -69,7 +67,7 @@ public class NoticeController {
     @ApiOperation(value = "게시글 페이지 조회")
     @GetMapping(value = "/list/page")
     public NoticeListDto noticePagingList(@ApiParam(value = "검색페이징") SearchPagingDto paging) {
-        return null;
+        return noticeService.noticePagingList(paging);
     }
 
     @ApiOperation(value = "게시글 조회", response = NoticeInfoDto.class)
@@ -80,8 +78,10 @@ public class NoticeController {
     }
 
     @ApiOperation(value = "게시글 사진 조회 (게시글 조회에서 나온 url로 확인 가능)")
-    @GetMapping("/downloadFile/{fileName:.+}")
-    public ResponseEntity<Resource> downloadFile(@ApiParam(value = "사진 제목") @PathVariable String fileName) throws IOException {
+    @GetMapping(value = "/downloadFile/{fileName}",
+            produces = {MediaType.IMAGE_GIF_VALUE, MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE})
+    public byte[] downloadFile(@ApiParam(value = "사진 제목") @PathVariable String fileName) throws IOException {
         return noticeService.downloadFile(fileName);
     }
+
 }

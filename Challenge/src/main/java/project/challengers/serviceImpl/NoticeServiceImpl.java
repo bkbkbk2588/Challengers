@@ -2,18 +2,14 @@ package project.challengers.serviceImpl;
 
 import com.querydsl.core.Tuple;
 import io.micrometer.core.instrument.util.StringUtils;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
@@ -30,10 +26,9 @@ import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,6 +54,27 @@ public class NoticeServiceImpl implements NoticeService {
     @Autowired
     NoticeFileRepository noticeFileRepository;
 
+//    /**
+//     *
+//     * @param noticeList
+//     * @return
+//     */
+//    private List<Notice> sortList(List<Notice> noticeList) {
+//        Collections.sort(noticeList, (notice1, notice2) -> {
+//            LocalDateTime time1 = notice1.getUpdateTime(),
+//                    time2 = notice2.getUpdateTime();
+//
+//            if (time1 != null && time2 != null) {
+//                if (time1.isBefore(time2))
+//                    return -1;
+//                else if (time1.isAfter(time2))
+//                    return 0;
+//            }
+//            return (int) (notice2.getNoticeSeq() - notice1.getNoticeSeq());
+//        });
+//
+//        return noticeList;
+//    }
 
     /**
      * 게시글 전체 목록 조회
@@ -68,21 +84,10 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public NoticeListDto noticeList() {
+        //TODO order by 설정
+
         List<Notice> noticeList = noticeRepository.findAll();
         List<NoticeDto> noticeDto = new ArrayList<>();
-
-        Collections.sort(noticeList, (notice1, notice2) -> {
-            LocalDateTime time1 = notice1.getUpdateTime(),
-                    time2 = notice2.getUpdateTime();
-
-            if (time1 != null && time2 != null) {
-                if (time1.isBefore(time2))
-                    return -1;
-                else if (time1.isAfter(time2))
-                    return 0;
-            }
-            return (int) (notice2.getNoticeSeq() - notice1.getNoticeSeq());
-        });
 
         for (Notice notice : noticeList) {
             NoticeDto noticeDTO = new NoticeDto();
@@ -190,6 +195,12 @@ public class NoticeServiceImpl implements NoticeService {
         return result != null ? 1 : 0;
     }
 
+    /**
+     * 게시글 페이지 조회
+     *
+     * @param paging
+     * @return
+     */
     @Override
     public NoticeListDto noticePagingList(SearchPagingDto paging) {
 
@@ -219,9 +230,8 @@ public class NoticeServiceImpl implements NoticeService {
             fileDownloadUri.add(req.getURI().toString()
                     .substring(0, req.getURI().toString().length() - Long.toString(noticeSeq).length())
                     + "downloadFile"
-//                    + File.separator
-                    + file.getFilePath());
-//                    + file.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
+                    + File.separator
+                    + file.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
         });
 
         return NoticeInfoDto.builder()
@@ -237,25 +247,22 @@ public class NoticeServiceImpl implements NoticeService {
                 .build();
     }
 
-    // TODO url 조회로 바꾸기
+    /**
+     * 이미지 파일 조회
+     *
+     * @param fileName
+     * @return
+     * @throws IOException
+     */
     @Override
-    public ResponseEntity<Resource> downloadFile(String fileName) throws IOException {
-//        File file = new File(UPLOAD_FILE_PATH + File.separator + fileName);
-        File file = new File(fileName);
+    public byte[] downloadFile(String fileName) throws IOException {
+        if (StringUtils.isBlank(fileName) || StringUtils.isEmpty(fileName)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.notice.notfound.file.E0005",
+                            null, Locale.KOREA));
+        }
 
-        HttpHeaders header = new HttpHeaders();
-        header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=img.jpg");
-        header.add("Cache-Control", "no-cache, no-store, must-revalidate");
-        header.add("Pragma", "no-cache");
-        header.add("Expires", "0");
-
-        Path path = Paths.get(file.getAbsolutePath());
-        ByteArrayResource resource = new ByteArrayResource(Files.readAllBytes(path));
-
-        return ResponseEntity.ok()
-                .headers(header)
-                .contentLength(file.length())
-                .contentType(MediaType.parseMediaType("application/octet-stream"))
-                .body(resource);
+        InputStream in = new FileInputStream(UPLOAD_FILE_PATH + File.separator + fileName);
+        return IOUtils.toByteArray(in);
     }
 }

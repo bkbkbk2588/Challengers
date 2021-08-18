@@ -1,7 +1,5 @@
 package project.challengers.service;
 
-import org.springframework.core.io.Resource;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
@@ -18,5 +16,5 @@ public interface NoticeService {
     int createNotice(NoticeCreateDto notice, Flux<FilePart> filePartFlux, Authentication authentication);
     NoticeListDto noticePagingList(SearchPagingDto paging);
     NoticeInfoDto getNotice(long noticeSeq, ServerHttpRequest req);
-    ResponseEntity<Resource> downloadFile(String fileName) throws IOException;
+    byte[] downloadFile(String fileName) throws IOException;
 }

@@ -6,6 +6,7 @@ import project.challengers.DTO.notice.NoticeInfoDto;
 import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.customizedRepo.CustomizedNoticeRepository;
+import project.challengers.entity.Notice;
 
 import java.util.List;
 
@@ -22,7 +23,10 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
 
     @Override
     public NoticeListDto noticePagingList(SearchPagingDto paging) {
-        //TODO 페이징 처리
+        List<Notice> noticeList = jpaQueryFactory.selectFrom(notice)
+                .limit(paging.getSize())
+                .offset(paging.getOffset())
+                .fetch();
         return null;
     }
 
