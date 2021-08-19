@@ -6,6 +6,7 @@ import lombok.*;
 
 @ApiModel(value="검색페이징")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

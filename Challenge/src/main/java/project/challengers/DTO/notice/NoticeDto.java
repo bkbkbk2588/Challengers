@@ -45,7 +45,7 @@ public class NoticeDto {
     @ApiModelProperty(value="종료시간", example="2021-01-02 00:00:00")
     LocalDateTime endTime;
 
-    @JsonIgnore
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="업데이트 시간", example="2021-01-02 00:00:00")
     LocalDateTime updateTime;
 }

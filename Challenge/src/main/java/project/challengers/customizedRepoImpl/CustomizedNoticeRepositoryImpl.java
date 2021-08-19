@@ -22,12 +22,21 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
     }
 
     @Override
-    public NoticeListDto noticePagingList(SearchPagingDto paging) {
-        List<Notice> noticeList = jpaQueryFactory.selectFrom(notice)
+    public List<Notice> findNoticeAll() {
+        return jpaQueryFactory.selectFrom(notice)
+                .orderBy(notice.updateTime.desc())
+                .orderBy(notice.noticeSeq.desc())
+                .fetch();
+    }
+
+    @Override
+    public List<Notice> noticePagingList(SearchPagingDto paging) {
+        return jpaQueryFactory.selectFrom(notice)
+                .orderBy(notice.updateTime.desc())
+                .orderBy(notice.noticeSeq.desc())
                 .limit(paging.getSize())
                 .offset(paging.getOffset())
                 .fetch();
-        return null;
     }
 
     @Override
@@ -36,5 +45,39 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
                 .from(notice).rightJoin(noticeFile)
                 .on(notice.noticeSeq.eq(noticeFile.noticeSeq))
                 .where(notice.noticeSeq.eq(noticeSeq)).fetch();
+    }
+
+    @Override
+    public List<Notice> noticeSearchTitle(String title, SearchPagingDto paging) {
+        return jpaQueryFactory.selectFrom(notice)
+                .where(notice.title.contains(title))
+                .orderBy(notice.updateTime.desc())
+                .orderBy(notice.noticeSeq.desc())
+                .offset(paging.getOffset())
+                .limit(paging.getSize())
+                .fetch();
+    }
+
+    @Override
+    public List<Notice> noticeSearchContent(String content, SearchPagingDto paging) {
+        return jpaQueryFactory.selectFrom(notice)
+                .where(notice.content.contains(content))
+                .orderBy(notice.updateTime.desc())
+                .orderBy(notice.noticeSeq.desc())
+                .offset(paging.getOffset())
+                .limit(paging.getSize())
+                .fetch();
+    }
+
+    @Override
+    public int deleteNotice(long noticeSeq) {
+        return (int) jpaQueryFactory.delete(notice)
+                .where(notice.noticeSeq.eq(noticeSeq))
+                .execute();
+    }
+
+    @Override
+    public int deleteNoticeFile(long noticeSeq) {
+        return 1;
     }
 }

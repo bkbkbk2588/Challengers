@@ -27,9 +27,6 @@ import java.io.IOException;
 @RequestMapping("/notice")
 public class NoticeController {
     /* TODO
-        1. 게시글 페이지 조회
-        2. 게시글 제목으로 검색
-        3. 게시글 내용으로 검색
         5. 도전 게시글 삭제
         6. 도전 게시글 수정 (작성자만 권한 있음) (첨부파일이 있는거랑 없는거 둘다)
      */
@@ -84,4 +81,23 @@ public class NoticeController {
         return noticeService.downloadFile(fileName);
     }
 
+    @ApiOperation(value = "게시글 제목 검색(Like 검색)")
+    @GetMapping(value = "/searchTitle/{title}")
+    public NoticeListDto noticeSearchTitle(@ApiParam(value = "게시글 제목") @PathVariable(value = "title") String title,
+                                           @ApiParam(value = "검색페이징") SearchPagingDto paging) {
+        return noticeService.noticeSearchTitle(title, paging);
+    }
+
+    @ApiOperation(value = "게시글 내용 검색(Like 검색)")
+    @GetMapping(value = "/searchContent/{content}")
+    public NoticeListDto noticeSearchContent(@ApiParam(value = "게시글 내용") @PathVariable String content,
+                                             @ApiParam(value = "검색페이징") SearchPagingDto paging) {
+        return noticeService.noticeSearchContent(content, paging);
+    }
+
+    @ApiOperation(value = "게시글 삭제")
+    @DeleteMapping(value = "/delete/{noticeSeq}")
+    public int deleteNotice(@ApiParam(value = "게시글 번호") @PathVariable(value = "noticeSeq") long noticeSeq, Authentication authentication) {
+        return noticeService.deleteNotice(noticeSeq, authentication);
+    }
 }

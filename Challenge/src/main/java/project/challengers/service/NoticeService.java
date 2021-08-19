@@ -17,4 +17,7 @@ public interface NoticeService {
     NoticeListDto noticePagingList(SearchPagingDto paging);
     NoticeInfoDto getNotice(long noticeSeq, ServerHttpRequest req);
     byte[] downloadFile(String fileName) throws IOException;
+    NoticeListDto noticeSearchTitle(String title, SearchPagingDto paging);
+    NoticeListDto noticeSearchContent(String content, SearchPagingDto paging);
+    int deleteNotice(long noticeSeq, Authentication authentication);
 }

@@ -7,5 +7,4 @@ import project.challengers.entity.Notice;
 import java.util.List;
 
 public interface NoticeRepository extends JpaRepository<Notice, Long>, CustomizedNoticeRepository {
-
 }

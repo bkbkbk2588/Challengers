@@ -29,9 +29,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -54,28 +52,6 @@ public class NoticeServiceImpl implements NoticeService {
     @Autowired
     NoticeFileRepository noticeFileRepository;
 
-//    /**
-//     *
-//     * @param noticeList
-//     * @return
-//     */
-//    private List<Notice> sortList(List<Notice> noticeList) {
-//        Collections.sort(noticeList, (notice1, notice2) -> {
-//            LocalDateTime time1 = notice1.getUpdateTime(),
-//                    time2 = notice2.getUpdateTime();
-//
-//            if (time1 != null && time2 != null) {
-//                if (time1.isBefore(time2))
-//                    return -1;
-//                else if (time1.isAfter(time2))
-//                    return 0;
-//            }
-//            return (int) (notice2.getNoticeSeq() - notice1.getNoticeSeq());
-//        });
-//
-//        return noticeList;
-//    }
-
     /**
      * 게시글 전체 목록 조회
      * 최신글 또는 최신 업데이트된 게시글이 위로 나오게 설정
@@ -84,10 +60,14 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public NoticeListDto noticeList() {
-        //TODO order by 설정
-
-        List<Notice> noticeList = noticeRepository.findAll();
+        List<Notice> noticeList = noticeRepository.findNoticeAll();
         List<NoticeDto> noticeDto = new ArrayList<>();
+
+        // 게시글이 없을 경우
+        if (noticeList.size() == 0) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.notice.notfound.noticeList.E0006", null, Locale.KOREA));
+        }
 
         for (Notice notice : noticeList) {
             NoticeDto noticeDTO = new NoticeDto();
@@ -145,7 +125,7 @@ public class NoticeServiceImpl implements NoticeService {
         }
 
         // 게시글 내용
-        if (StringUtils.isBlank(notice.getType())) {
+        if (StringUtils.isBlank(notice.getContent())) {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
                     messageSource.getMessage("error.user.notfound.user.valid.E0003",
                             new String[]{"게시글 내용"}, Locale.KOREA));
@@ -197,14 +177,55 @@ public class NoticeServiceImpl implements NoticeService {
 
     /**
      * 게시글 페이지 조회
+     * size, offset 없을 경우 default 값으로 size : 10, offset : 0
      *
      * @param paging
      * @return
      */
     @Override
     public NoticeListDto noticePagingList(SearchPagingDto paging) {
+        // 사이즈 입력 없을 경우
+        if (paging.getSize() == null) {
+            paging.setSize(10L);
+        }
 
-        return null;
+        // offset 입력 없을 경우
+        if (paging.getOffset() == null) {
+            paging.setOffset(0L);
+        }
+
+        List<Notice> noticeList = noticeRepository.noticePagingList(paging);
+        List<NoticeDto> noticeDto = new ArrayList<>();
+
+        // 게시글이 없을 경우
+        if (noticeList.size() == 0) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.notice.notfound.noticeList.E0006", null, Locale.KOREA));
+        }
+
+        noticeList.forEach(notice -> {
+            noticeDto.add(NoticeDto.builder()
+                    .noticeSeq(notice.getNoticeSeq())
+                    .title(notice.getTitle())
+                    .id(notice.getId())
+                    .type(notice.getType())
+                    .maxPeople(notice.getMaxPeople())
+                    .price(notice.getPrice())
+                    .content(notice.getContent())
+                    .startTime(notice.getStartTime())
+                    .endTime(notice.getEndTime())
+                    .updateTime(notice.getUpdateTime())
+                    .build());
+        });
+
+        return NoticeListDto.builder()
+                .searchPaging(SearchPagingDto.builder()
+                        .offset(paging.getOffset())
+                        .size(paging.getSize())
+                        .totalCount(noticeDto.size())
+                        .build())
+                .noticeList(noticeDto)
+                .build();
     }
 
 
@@ -264,5 +285,163 @@ public class NoticeServiceImpl implements NoticeService {
 
         InputStream in = new FileInputStream(UPLOAD_FILE_PATH + File.separator + fileName);
         return IOUtils.toByteArray(in);
+    }
+
+    /**
+     * 게시글 제목 Like 검색
+     * size, offset 없을 경우 default 값으로 size : 10, offset : 0
+     *
+     * @param title
+     * @return
+     */
+    @Override
+    public NoticeListDto noticeSearchTitle(String title, SearchPagingDto paging) {
+
+        // 제목이 없을 경우
+        if (StringUtils.isBlank(title) || StringUtils.isEmpty(title)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.notice.notfound.noticeTitle.E0007", null, Locale.KOREA));
+        }
+
+        // 사이즈 입력 없을 경우
+        if (paging.getSize() == null) {
+            paging.setSize(10L);
+        }
+
+        // offset 입력 없을 경우
+        if (paging.getOffset() == null) {
+            paging.setOffset(0L);
+        }
+
+        List<Notice> noticeList = noticeRepository.noticeSearchTitle(title, paging);
+        List<NoticeDto> noticeDto = new ArrayList<>();
+
+        // 게시글이 없을 경우
+        if (noticeList.size() == 0) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.notice.notfound.noticeList.E0006", null, Locale.KOREA));
+
+        }
+
+        noticeList.forEach(notice -> {
+            noticeDto.add(NoticeDto.builder()
+                    .noticeSeq(notice.getNoticeSeq())
+                    .title(notice.getTitle())
+                    .id(notice.getId())
+                    .type(notice.getType())
+                    .maxPeople(notice.getMaxPeople())
+                    .price(notice.getPrice())
+                    .content(notice.getContent())
+                    .startTime(notice.getStartTime())
+                    .endTime(notice.getEndTime())
+                    .updateTime(notice.getUpdateTime())
+                    .build());
+        });
+
+        return NoticeListDto.builder()
+                .searchPaging(SearchPagingDto.builder()
+                        .offset(paging.getOffset())
+                        .size(paging.getSize())
+                        .totalCount(noticeList.size())
+                        .build())
+                .noticeList(noticeDto)
+                .build();
+    }
+
+    /**
+     * 게시글 내용 Like 검색
+     * size, offset 없을 경우 default 값으로 size : 10, offset : 0
+     *
+     * @param content
+     * @return
+     */
+    @Override
+    public NoticeListDto noticeSearchContent(String content, SearchPagingDto paging) {
+        // 내용이 없을 경우
+        if (StringUtils.isBlank(content) || StringUtils.isEmpty(content)) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.notice.notfound.noticeContent.E0008", null, Locale.KOREA));
+        }
+
+        // 사이즈 입력 없을 경우
+        if (paging.getSize() == null) {
+            paging.setSize(10L);
+        }
+
+        // offset 입력 없을 경우
+        if (paging.getOffset() == null) {
+            paging.setOffset(0L);
+        }
+
+        List<Notice> noticeList = noticeRepository.noticeSearchContent(content, paging);
+        List<NoticeDto> noticeDto = new ArrayList<>();
+
+        // 게시글이 없을 경우
+        if (noticeList.size() == 0) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.notice.notfound.noticeList.E0006", null, Locale.KOREA));
+
+        }
+
+        noticeList.forEach(notice -> {
+            noticeDto.add(NoticeDto.builder()
+                    .noticeSeq(notice.getNoticeSeq())
+                    .title(notice.getTitle())
+                    .id(notice.getId())
+                    .type(notice.getType())
+                    .maxPeople(notice.getMaxPeople())
+                    .price(notice.getPrice())
+                    .content(notice.getContent())
+                    .startTime(notice.getStartTime())
+                    .endTime(notice.getEndTime())
+                    .updateTime(notice.getUpdateTime())
+                    .build());
+        });
+
+        return NoticeListDto.builder()
+                .searchPaging(SearchPagingDto.builder()
+                        .offset(paging.getOffset())
+                        .size(paging.getSize())
+                        .totalCount(noticeList.size())
+                        .build())
+                .noticeList(noticeDto)
+                .build();
+    }
+
+    /**
+     * 게시글 삭제
+     *
+     * @param noticeSeq
+     * @param authentication
+     * @return
+     */
+    @Override
+    public int deleteNotice(long noticeSeq, Authentication authentication) {
+        Notice notice = noticeRepository.findById(noticeSeq).orElseThrow(() -> {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.notice.notfound.E0010"
+                            , new String[]{Long.toString(noticeSeq)}, Locale.KOREA));
+        });
+
+        // 본인의 게시글인지 확인
+        if (!notice.getId().equals(authentication.getPrincipal())) {
+            throw new ChallengersException(HttpStatus.FORBIDDEN,
+                    messageSource.getMessage("error.notice.identification.fail.E0009", null,
+                            Locale.KOREA));
+        }
+
+        List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
+
+        // 게시글 이미지 파일이 없을 경우
+        if (noticeFileList.size() == 0) {
+            return noticeRepository.deleteNotice(noticeSeq);
+        }
+
+        List<String> filePath = new ArrayList<>();
+        noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
+        fileComp.delete(Flux.fromIterable(filePath)).subscribe();
+
+        // TODO notice, noticeFile delete
+        return 0;
     }
 }
