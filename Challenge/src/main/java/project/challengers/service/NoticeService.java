@@ -3,10 +3,7 @@ package project.challengers.service;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
-import project.challengers.DTO.notice.NoticeCreateDto;
-import project.challengers.DTO.notice.NoticeInfoDto;
-import project.challengers.DTO.notice.NoticeListDto;
-import project.challengers.DTO.notice.SearchPagingDto;
+import project.challengers.DTO.notice.*;
 import reactor.core.publisher.Flux;
 
 import java.io.IOException;
@@ -20,5 +17,5 @@ public interface NoticeService {
     NoticeListDto noticeSearchTitle(String title, SearchPagingDto paging);
     NoticeListDto noticeSearchContent(String content, SearchPagingDto paging);
     int deleteNotice(long noticeSeq, Authentication authentication);
-    int updateNotice(long noticeSeq, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication);
+    int updateNotice(NoticeUpdateDto notice, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication);
 }

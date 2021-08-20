@@ -437,7 +437,7 @@ public class NoticeServiceImpl implements NoticeService {
     /**
      * 게시글 수정
      *
-     * @param noticeSeq      게시글 번호
+     * @param notice         게시글 수정 항목
      * @param fileSeq        삭제할 사진 번호
      * @param filePartFlux   새로 추가할 사진
      * @param authentication
@@ -445,8 +445,14 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Transactional
     @Override
-    public int updateNotice(long noticeSeq, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication) {
-        checkNotice(noticeSeq, authentication);
+    public int updateNotice(NoticeUpdateDto notice, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication) {
+        // 게시글 번호가 없을 경우
+        if (notice.getNoticeSeq() == 0) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.notice.notfound.seq.E0011"
+                            , null, Locale.KOREA));
+        }
+        Notice noticeEntity = checkNotice(notice.getNoticeSeq(), authentication);
 
         // 삭제할 파일이 있을 경우 파일 삭제
         if (fileSeq != null) {
@@ -467,7 +473,7 @@ public class NoticeServiceImpl implements NoticeService {
             fileComp.save(filePartFlux)
                     .subscribe(file -> {
                         noticeFiles.add(NoticeFile.builder()
-                                .noticeSeq(noticeSeq)
+                                .noticeSeq(notice.getNoticeSeq())
                                 .fileName(file.getLeft())
                                 .filePath(file.getRight())
                                 .build());
@@ -487,7 +493,7 @@ public class NoticeServiceImpl implements NoticeService {
      * @param noticeSeq
      * @param authentication
      */
-    private void checkNotice(long noticeSeq, Authentication authentication) {
+    private Notice checkNotice(long noticeSeq, Authentication authentication) {
         Notice notice = noticeRepository.findById(noticeSeq).orElseThrow(() -> {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
                     messageSource.getMessage("error.notice.notfound.E0010"
@@ -500,5 +506,6 @@ public class NoticeServiceImpl implements NoticeService {
                     messageSource.getMessage("error.notice.identification.fail.E0009", null,
                             Locale.KOREA));
         }
+        return notice;
     }
 }

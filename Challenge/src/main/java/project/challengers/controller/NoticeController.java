@@ -13,15 +13,11 @@ import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-import project.challengers.DTO.notice.NoticeCreateDto;
-import project.challengers.DTO.notice.NoticeInfoDto;
-import project.challengers.DTO.notice.NoticeListDto;
-import project.challengers.DTO.notice.SearchPagingDto;
+import project.challengers.DTO.notice.*;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
 
 import java.io.IOException;
-import java.util.List;
 
 @Api(tags = {"도전 게시글"})
 @RestController
@@ -98,15 +94,16 @@ public class NoticeController {
     }
 
     @ApiOperation(value = "게시글 수정 (첨부파일 수정 X)")
-    @PutMapping(value = "/update/{noticeSeq}")
-    public int updateNotice(@ApiParam(value = "게시글 번호") @PathVariable(value = "noticeSeq") long noticeSeq, Authentication authentication) {
-        return 1;
+    @PutMapping(value = "/update")
+    public int updateNotice(@ApiParam(value = "게시글 번호") @RequestBody NoticeUpdateDto notice, Authentication authentication) {
+        return noticeService.updateNotice(notice, null, null, authentication);
     }
 
     @ApiOperation(value = "게시글 수정 (첨부파일 수정 O)")
-    @PutMapping(value = "/update/file/{noticeSeq}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public int updateNoticeFile(@PathVariable("noticeSeq") long noticeSeq, @RequestPart("deleteFiles") Flux<String> fileSeq,
-                                @RequestPart("Files") Flux<FilePart> filePartFlux, Authentication authentication) {
-        return noticeService.updateNotice(noticeSeq, fileSeq, filePartFlux, authentication);
+    @PutMapping(value = "/update/file", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public int updateNoticeFile(@RequestPart("notice") String notice, @RequestPart("deleteFiles") Flux<String> fileSeq,
+                                @RequestPart("Files") Flux<FilePart> filePartFlux, Authentication authentication) throws JsonProcessingException {
+        NoticeUpdateDto noticeUpdateDto = objectMapper.readValue(notice, NoticeUpdateDto.class);
+        return noticeService.updateNotice(noticeUpdateDto, fileSeq, filePartFlux, authentication);
     }
 }
