@@ -21,16 +21,12 @@ import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
 
 import java.io.IOException;
+import java.util.List;
 
 @Api(tags = {"도전 게시글"})
 @RestController
 @RequestMapping("/notice")
 public class NoticeController {
-    /* TODO
-        5. 도전 게시글 삭제
-        6. 도전 게시글 수정 (작성자만 권한 있음) (첨부파일이 있는거랑 없는거 둘다)
-     */
-
     Logger logger = LoggerFactory.getLogger(NoticeController.class);
 
     @Autowired
@@ -99,5 +95,18 @@ public class NoticeController {
     @DeleteMapping(value = "/delete/{noticeSeq}")
     public int deleteNotice(@ApiParam(value = "게시글 번호") @PathVariable(value = "noticeSeq") long noticeSeq, Authentication authentication) {
         return noticeService.deleteNotice(noticeSeq, authentication);
+    }
+
+    @ApiOperation(value = "게시글 수정 (첨부파일 수정 X)")
+    @PutMapping(value = "/update/{noticeSeq}")
+    public int updateNotice(@ApiParam(value = "게시글 번호") @PathVariable(value = "noticeSeq") long noticeSeq, Authentication authentication) {
+        return 1;
+    }
+
+    @ApiOperation(value = "게시글 수정 (첨부파일 수정 O)")
+    @PutMapping(value = "/update/file/{noticeSeq}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public int updateNoticeFile(@PathVariable("noticeSeq") long noticeSeq, @RequestPart("deleteFiles") Flux<String> fileSeq,
+                                @RequestPart("Files") Flux<FilePart> filePartFlux, Authentication authentication) {
+        return noticeService.updateNotice(noticeSeq, fileSeq, filePartFlux, authentication);
     }
 }

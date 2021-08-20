@@ -20,4 +20,5 @@ public interface NoticeService {
     NoticeListDto noticeSearchTitle(String title, SearchPagingDto paging);
     NoticeListDto noticeSearchContent(String content, SearchPagingDto paging);
     int deleteNotice(long noticeSeq, Authentication authentication);
+    int updateNotice(long noticeSeq, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication);
 }

@@ -1,12 +1,13 @@
 package project.challengers.customizedRepoImpl;
 
 import com.querydsl.core.Tuple;
+import com.querydsl.core.types.EntityPath;
+import com.querydsl.jpa.JPAExpressions;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import project.challengers.DTO.notice.NoticeInfoDto;
-import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.customizedRepo.CustomizedNoticeRepository;
 import project.challengers.entity.Notice;
+import project.challengers.entity.NoticeFile;
 
 import java.util.List;
 
@@ -78,6 +79,23 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
 
     @Override
     public int deleteNoticeFile(long noticeSeq) {
-        return 1;
+        return (int) jpaQueryFactory.delete(noticeFile)
+                .where(noticeFile.noticeSeq.eq(noticeSeq))
+                .execute();
+    }
+
+    @Override
+    public int deleteFile(List<Long> fileSeq) {
+        return (int) jpaQueryFactory.delete(noticeFile)
+                .where(noticeFile.fileSeq.in(fileSeq))
+                .execute();
+    }
+
+    @Override
+    public List<String> findByFilePath(List<Long> fileSeq) {
+        return jpaQueryFactory.select(noticeFile.filePath)
+                .from(noticeFile)
+                .where(noticeFile.fileSeq.in(fileSeq)).fetchAll().fetchAll()
+                .fetch();
     }
 }

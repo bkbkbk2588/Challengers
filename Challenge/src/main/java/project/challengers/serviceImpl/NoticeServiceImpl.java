@@ -30,6 +30,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -415,8 +416,80 @@ public class NoticeServiceImpl implements NoticeService {
      * @param authentication
      * @return
      */
+    @Transactional
     @Override
     public int deleteNotice(long noticeSeq, Authentication authentication) {
+        checkNotice(noticeSeq, authentication);
+        List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
+
+        // 파일이 있을 경우
+        if (noticeFileList.size() != 0) {
+            noticeRepository.deleteNoticeFile(noticeSeq);
+        }
+
+        List<String> filePath = new ArrayList<>();
+        noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
+        fileComp.delete(Flux.fromIterable(filePath)).subscribe();
+
+        return noticeRepository.deleteNotice(noticeSeq);
+    }
+
+    /**
+     * 게시글 수정
+     *
+     * @param noticeSeq      게시글 번호
+     * @param fileSeq        삭제할 사진 번호
+     * @param filePartFlux   새로 추가할 사진
+     * @param authentication
+     * @return
+     */
+    @Transactional
+    @Override
+    public int updateNotice(long noticeSeq, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication) {
+        checkNotice(noticeSeq, authentication);
+
+        // TODO 1. 삭제할 파일이 있으면 먼저 삭제, 2. 추가할 파일이 있으면 파일 추가, 3. 게시글 수정
+
+        // 삭제할 파일이 있을 경우 파일 삭제
+        if (fileSeq != null) {
+            List<Long> fileSeqList = new ArrayList<>();
+            fileSeq.subscribe(seq -> {
+                fileSeqList.add(Long.parseLong(seq));
+            });
+            List<String> filePathList = noticeRepository.findByFilePath(fileSeqList);
+
+            fileComp.delete(Flux.fromIterable(filePathList)).subscribe(); // 파일 삭제
+            noticeRepository.deleteFile(fileSeqList); // DB delete
+        }
+
+        // 추가할 파일이 있을 경우 파일 추가
+        if (filePartFlux != null) {
+            // 첨부파일 경로, 이름 설정
+            List<NoticeFile> noticeFiles = new ArrayList<>();
+            fileComp.save(filePartFlux)
+                    .subscribe(file -> {
+                        noticeFiles.add(NoticeFile.builder()
+                                .noticeSeq(noticeSeq)
+                                .fileName(file.getLeft())
+                                .filePath(file.getRight())
+                                .build());
+                    });
+            // 첨부파일 입력
+            noticeFileRepository.saveAll(noticeFiles);
+        }
+
+        // 게시글 수정
+
+        return 0;
+    }
+
+    /**
+     * 게시글 존재여부와 본인이 작성한 게시글인지 확인
+     *
+     * @param noticeSeq
+     * @param authentication
+     */
+    private void checkNotice(long noticeSeq, Authentication authentication) {
         Notice notice = noticeRepository.findById(noticeSeq).orElseThrow(() -> {
             throw new ChallengersException(HttpStatus.BAD_REQUEST,
                     messageSource.getMessage("error.notice.notfound.E0010"
@@ -429,19 +502,5 @@ public class NoticeServiceImpl implements NoticeService {
                     messageSource.getMessage("error.notice.identification.fail.E0009", null,
                             Locale.KOREA));
         }
-
-        List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
-
-        // 게시글 이미지 파일이 없을 경우
-        if (noticeFileList.size() == 0) {
-            return noticeRepository.deleteNotice(noticeSeq);
-        }
-
-        List<String> filePath = new ArrayList<>();
-        noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
-        fileComp.delete(Flux.fromIterable(filePath)).subscribe();
-
-        // TODO notice, noticeFile delete
-        return 0;
     }
 }
