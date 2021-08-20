@@ -448,8 +448,6 @@ public class NoticeServiceImpl implements NoticeService {
     public int updateNotice(long noticeSeq, Flux<String> fileSeq, Flux<FilePart> filePartFlux, Authentication authentication) {
         checkNotice(noticeSeq, authentication);
 
-        // TODO 1. 삭제할 파일이 있으면 먼저 삭제, 2. 추가할 파일이 있으면 파일 추가, 3. 게시글 수정
-
         // 삭제할 파일이 있을 경우 파일 삭제
         if (fileSeq != null) {
             List<Long> fileSeqList = new ArrayList<>();
