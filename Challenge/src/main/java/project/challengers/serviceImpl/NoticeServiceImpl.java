@@ -30,7 +30,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -481,10 +480,7 @@ public class NoticeServiceImpl implements NoticeService {
             // 첨부파일 입력
             noticeFileRepository.saveAll(noticeFiles);
         }
-
-        // 게시글 수정
-
-        return 0;
+        return noticeRepository.updateNotice(notice);
     }
 
     /**

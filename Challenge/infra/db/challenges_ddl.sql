@@ -55,11 +55,11 @@ CREATE TABLE NOTICE_FILE (
 
 CREATE TABLE PARTICIPANT (
     patricipant_seq  BIGINT NOT NULL AUTO_INCREMENT COMMENT "참여자 순번",
-    notice_seq BIGINT not null COMMENT "공지번호",
+    notice_seq BIGINT NOT NULL COMMENT "공지번호",
     master_id VARCHAR(20) NOT NULL COMMENT "방장아이디",
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
     participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장)",
-    primary key (patricipant_seq),
+    PRIMARY KEY (patricipant_seq),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE APPLY (
     id VARCHAR(20) NOT NULL COMMENT "아이디",
     notice_seq BIGINT NOT NULL COMMENT "챌린저 공지 번호",
     deposit INT NOT NULL COMMENT "유형(0:보증금 냄, 1:보증금 안냄)",
-    primary key (apply_seq),
+    PRIMARY KEY (apply_seq),
     FOREIGN KEY (id) REFERENCES PARTICIPANT (participant_id),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
 );

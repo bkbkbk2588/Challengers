@@ -6,6 +6,7 @@ logging:
   level:
     root: WARN
     org.springframework.web.reactive.function.client: trace
+    org.hibernate.type.descriptor.sql: TRACE
 
 management:
   endpoints:
@@ -23,11 +24,14 @@ spring:
     password: 비밀번호
   jpa:
     database: mysql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
     hibernate:
       use-new-id-generator-mappings: false
       ddl-auto: update
       show-sql: true
-      format_sql: true
       use_sql_comments: true
   codec:
     max-in-memory-size: 30MB # 게시글 사진 용량

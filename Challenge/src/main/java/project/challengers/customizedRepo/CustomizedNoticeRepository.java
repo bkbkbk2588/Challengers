@@ -1,13 +1,9 @@
 package project.challengers.customizedRepo;
 
 import com.querydsl.core.Tuple;
-import org.aspectj.weaver.ast.Not;
-import project.challengers.DTO.notice.NoticeInfoDto;
-import project.challengers.DTO.notice.NoticeListDto;
 import project.challengers.DTO.notice.NoticeUpdateDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.entity.Notice;
-import project.challengers.entity.NoticeFile;
 
 import java.util.List;
 

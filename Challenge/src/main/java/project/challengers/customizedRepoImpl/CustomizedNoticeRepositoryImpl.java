@@ -1,13 +1,13 @@
 package project.challengers.customizedRepoImpl;
 
 import com.querydsl.core.Tuple;
-import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import project.challengers.DTO.notice.NoticeUpdateDto;
 import project.challengers.DTO.notice.SearchPagingDto;
 import project.challengers.customizedRepo.CustomizedNoticeRepository;
 import project.challengers.entity.Notice;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static project.challengers.entity.QNotice.notice;
@@ -100,7 +100,16 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
 
     @Override
     public int updateNotice(NoticeUpdateDto noticeUpdateDto) {
-
-        return 1;
+        return (int) jpaQueryFactory.update(notice)
+                .set(notice.content, noticeUpdateDto.getContent())
+                .set(notice.title, noticeUpdateDto.getTitle())
+                .set(notice.type, noticeUpdateDto.getType())
+                .set(notice.maxPeople, noticeUpdateDto.getMaxPeople())
+                .set(notice.price, noticeUpdateDto.getPrice())
+                .set(notice.startTime, noticeUpdateDto.getStartTime())
+                .set(notice.endTime, noticeUpdateDto.getEndTime())
+                .set(notice.updateTime, LocalDateTime.now())
+                .where(notice.noticeSeq.eq(noticeUpdateDto.getNoticeSeq()))
+                .execute();
     }
 }
