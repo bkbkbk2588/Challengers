@@ -31,8 +31,8 @@ spring:
     hibernate:
       use-new-id-generator-mappings: false
       ddl-auto: update
-      show-sql: true
       format_sql: true
+      show-sql: true
       use_sql_comments: true
   codec:
     max-in-memory-size: 30MB # 게시글 사진 용량

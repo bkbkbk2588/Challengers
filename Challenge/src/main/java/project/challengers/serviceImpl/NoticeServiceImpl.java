@@ -421,11 +421,6 @@ public class NoticeServiceImpl implements NoticeService {
         checkNotice(noticeSeq, authentication);
         List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
 
-        // 파일이 있을 경우
-        if (noticeFileList.size() != 0) {
-            noticeRepository.deleteNoticeFile(noticeSeq);
-        }
-
         List<String> filePath = new ArrayList<>();
         noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
         fileComp.delete(Flux.fromIterable(filePath)).subscribe();

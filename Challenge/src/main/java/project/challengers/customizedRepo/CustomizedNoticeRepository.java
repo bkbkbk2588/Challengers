@@ -14,7 +14,6 @@ public interface CustomizedNoticeRepository {
     List<Notice> noticeSearchTitle(String title, SearchPagingDto paging);
     List<Notice> noticeSearchContent(String content, SearchPagingDto paging);
     int deleteNotice(long noticeSeq);
-    int deleteNoticeFile(long noticeSeq);
     int deleteFile(List<Long> fileSeq);
     List<String> findByFilePath(List<Long> fileSeq);
     int updateNotice(NoticeUpdateDto noticeUpdateDto);

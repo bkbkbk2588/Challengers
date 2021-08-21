@@ -77,13 +77,6 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
     }
 
     @Override
-    public int deleteNoticeFile(long noticeSeq) {
-        return (int) jpaQueryFactory.delete(noticeFile)
-                .where(noticeFile.noticeSeq.eq(noticeSeq))
-                .execute();
-    }
-
-    @Override
     public int deleteFile(List<Long> fileSeq) {
         return (int) jpaQueryFactory.delete(noticeFile)
                 .where(noticeFile.fileSeq.in(fileSeq))

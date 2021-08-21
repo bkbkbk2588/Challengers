@@ -18,7 +18,7 @@ CREATE TABLE AUTH (
     video_name VARCHAR(255) COMMENT "동영상이름" ,
     video_path VARCHAR(255) COMMENT "동영상경로" ,
     PRIMARY KEY (auth_seq),
-    FOREIGN KEY (id) REFERENCES MEMBER (id)
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
 );
 
 
@@ -26,7 +26,17 @@ CREATE TABLE POINT (
     point_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "포인트 번호" ,
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
     point INT default 0 COMMENT "포인트(없을시 0)" ,
-    PRIMARY KEY (point_seq)
+    PRIMARY KEY (point_seq),
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
+);
+
+CREATE TABLE POINT_HISTORY (
+    point_history_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "포인트 이력 번호" ,
+    id VARCHAR(20) NOT NULL COMMENT "아이디" ,
+    status INT NOT NULL COMMENT "0:입급, 1:출금",
+    point INT NOT NULL COMMENT "포인트" ,
+    PRIMARY KEY (point_history_seq),
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
 );
 
 CREATE TABLE NOTICE (
@@ -41,7 +51,7 @@ CREATE TABLE NOTICE (
     end_time DATETIME NOT NULL COMMENT "종료시간",
     update_time DATETIME COMMENT "게시글 업데이트 시간",
     PRIMARY KEY (notice_seq),
-    FOREIGN KEY (id) REFERENCES MEMBER (id)
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
 );
 
 CREATE TABLE NOTICE_FILE (
@@ -50,7 +60,7 @@ CREATE TABLE NOTICE_FILE (
     file_name VARCHAR(255) COMMENT "파일 이름",
     file_path VARCHAR(255)  COMMENT "사진 경로",
     PRIMARY KEY (file_seq),
-    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
+    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 
 CREATE TABLE PARTICIPANT (
@@ -60,7 +70,7 @@ CREATE TABLE PARTICIPANT (
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
     participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장)",
     PRIMARY KEY (patricipant_seq),
-    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
+    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 
 CREATE TABLE APPLY (
@@ -69,7 +79,7 @@ CREATE TABLE APPLY (
     notice_seq BIGINT NOT NULL COMMENT "챌린저 공지 번호",
     deposit INT NOT NULL COMMENT "유형(0:보증금 냄, 1:보증금 안냄)",
     PRIMARY KEY (apply_seq),
-    FOREIGN KEY (id) REFERENCES PARTICIPANT (participant_id),
-    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq)
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE,
+    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 
