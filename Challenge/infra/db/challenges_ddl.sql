@@ -27,6 +27,7 @@ CREATE TABLE POINT (
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
     point INT default 0 COMMENT "포인트(없을시 0)" ,
     PRIMARY KEY (point_seq),
+    UNIQUE KEY(id),
     FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
 );
 
@@ -35,6 +36,7 @@ CREATE TABLE POINT_HISTORY (
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
     status INT NOT NULL COMMENT "0:입급, 1:출금",
     point INT NOT NULL COMMENT "포인트" ,
+    insert_time DATETIME NOT NULL  COMMENT "입출금 시간",
     PRIMARY KEY (point_history_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
 );

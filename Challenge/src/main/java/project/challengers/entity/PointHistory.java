@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,5 +29,8 @@ public class PointHistory {
 
     @Column(nullable = false)
     private int point;
+
+    @Column(name = "insert_time", nullable = false)
+    LocalDateTime insertTime;
 
 }
