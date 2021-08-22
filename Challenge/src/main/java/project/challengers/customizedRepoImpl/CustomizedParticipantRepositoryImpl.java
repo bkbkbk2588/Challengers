@@ -15,11 +15,11 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
     }
 
     @Override
-    public int updateType(List<String> idList, long noticeSeq) {
+    public int updateType(List<String> idList, long noticeSeq, int type) {
         return (int) jpaQueryFactory.update(participant)
-                .set(participant.participantType,4)
+                .set(participant.participantType, type)
                 .where(participant.participantId.in(idList)
-                .and(participant.noticeSeq.eq(noticeSeq)))
+                        .and(participant.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
 }

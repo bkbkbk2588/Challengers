@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.apply.ApplyDto;
 import project.challengers.DTO.apply.ApplyListDto;
+import project.challengers.base.ParticipantType;
+import project.challengers.base.PointHistoryStatus;
 import project.challengers.entity.*;
 import project.challengers.exception.ChallengersException;
 import project.challengers.repository.*;
@@ -71,11 +73,17 @@ public class ApplyServcieImpl implements ApplyService {
                     messageSource.getMessage("error.apply.already.master.E0016", null, Locale.KOREA));
         }
 
-        List<Participant> participant = participantRepository.findByNoticeSeqAndParticipantType(apply.getNoticeSeq(), 0);
+        List<Participant> participant = participantRepository.findByNoticeSeqAndParticipantType(apply.getNoticeSeq(), ParticipantType.normal.ordinal());
+
+        // 참여인원을 초과할 경우
+        if (notice.getMaxPeople() - 1 <= participant.size()) {
+            throw new ChallengersException(HttpStatus.FORBIDDEN,
+                    messageSource.getMessage("error.notice.max.people.E0020",null,Locale.KOREA));
+        }
 
         // 방이 끝났을 경우
         if (!notice.getEndTime().isBefore(LocalDateTime.now())
-                || participant.size() > 0 ? participant.get(0).getParticipantType() == 4 : false) {
+                || participant.size() > 0 ? participant.get(0).getParticipantType() == ParticipantType.out.ordinal() : false) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.notice.finish.E0019", null, Locale.KOREA));
         }
@@ -102,7 +110,7 @@ public class ApplyServcieImpl implements ApplyService {
         pointHistoryRepository.save(PointHistory.builder()
                 .id(id)
                 .point(apply.getDeposit())
-                .status(1)
+                .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
                 .build());
 
@@ -142,7 +150,7 @@ public class ApplyServcieImpl implements ApplyService {
             participantList.add(Participant.builder()
                     .masterId(id)
                     .noticeSeq(noticeSeq)
-                    .participantType(0)
+                    .participantType(ParticipantType.normal.ordinal())
                     .participantId(userId)
                     .build());
         });

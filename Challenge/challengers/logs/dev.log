@@ -1,0 +1,1618 @@
+INFO  21-08-23 00:06:31[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1301 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:06:31[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:06:31[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:06:35[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:06:36[main] [MainApplication:61] - Started MainApplication in 6.297 seconds (JVM running for 6.854)
+DEBUG 21-08-23 00:06:41[reactor-http-nio-6] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-23 00:06:41[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:41[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:41[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:41[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:41[reactor-http-nio-6] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:41[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:41[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:41[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:41[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"text/css,*/*;q=0.1", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:42[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:06:51[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:06:51[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:06:51[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+DEBUG 21-08-23 00:07:16[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:07:16[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:07:16[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([patricip1_7_] : [BIGINT]) - [3]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([master_i2_7_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([notice_s3_7_] : [BIGINT]) - [1]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([particip4_7_] : [VARCHAR]) - [user002]
+TRACE 21-08-23 00:07:16[boundedElastic-3] [BasicExtractor:60] - extracted value ([particip5_7_] : [INTEGER]) - [4]
+DEBUG 21-08-23 00:07:28[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:07:28[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:07:28[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:07:28[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [4]
+ERROR 21-08-23 00:07:28[boundedElastic-3] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/4" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:82)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-23 00:08:11[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:08:11[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:08:11[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([patricip1_7_] : [BIGINT]) - [3]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([master_i2_7_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([notice_s3_7_] : [BIGINT]) - [1]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([particip4_7_] : [VARCHAR]) - [user002]
+TRACE 21-08-23 00:08:11[boundedElastic-3] [BasicExtractor:60] - extracted value ([particip5_7_] : [INTEGER]) - [4]
+DEBUG 21-08-23 00:08:17[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/3
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:08:17[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:08:17[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:08:18[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [3]
+ERROR 21-08-23 00:08:18[boundedElastic-3] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/3" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:82)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-23 00:08:23[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:08:23[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:08:23[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:08:23[boundedElastic-3] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [4]
+ERROR 21-08-23 00:08:23[boundedElastic-3] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/4" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:82)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-23 00:08:34[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1331 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:08:34[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:08:34[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:08:38[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:08:39[main] [MainApplication:61] - Started MainApplication in 6.129 seconds (JVM running for 6.658)
+DEBUG 21-08-23 00:08:43[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:08:43[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:08:43[reactor-http-nio-2] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:08:43[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [4]
+ERROR 21-08-23 00:08:43[boundedElastic-1] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/4" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:82)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-23 00:19:27[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1368 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:19:27[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:19:27[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:19:31[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:19:32[main] [MainApplication:61] - Started MainApplication in 5.875 seconds (JVM running for 6.359)
+DEBUG 21-08-23 00:19:37[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:19:37[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:19:37[reactor-http-nio-2] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:19:37[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [4]
+ERROR 21-08-23 00:19:37[boundedElastic-1] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/4" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:83)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+DEBUG 21-08-23 00:19:52[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:19:52[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:19:52[reactor-http-nio-2] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([patricip1_7_] : [BIGINT]) - [3]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([master_i2_7_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([notice_s3_7_] : [BIGINT]) - [1]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([particip4_7_] : [VARCHAR]) - [user002]
+TRACE 21-08-23 00:19:52[boundedElastic-1] [BasicExtractor:60] - extracted value ([particip5_7_] : [INTEGER]) - [4]
+INFO  21-08-23 00:20:17[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1378 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:20:17[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:20:17[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:20:21[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:20:22[main] [MainApplication:61] - Started MainApplication in 5.892 seconds (JVM running for 6.421)
+DEBUG 21-08-23 00:20:26[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:20:26[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:20:27[reactor-http-nio-2] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([patricip1_7_] : [BIGINT]) - [3]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([master_i2_7_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([notice_s3_7_] : [BIGINT]) - [1]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([particip4_7_] : [VARCHAR]) - [user002]
+TRACE 21-08-23 00:20:27[boundedElastic-1] [BasicExtractor:60] - extracted value ([particip5_7_] : [INTEGER]) - [4]
+DEBUG 21-08-23 00:20:31[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:20:31[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0ODQxMSwiaWF0IjoxNjI5NjQ0ODExfQ.jItxegZi2iAayEcp_MKpNCUCbgHKLQ3eJ3LImiYdn12t0lUBt4eCIbEdhs4sCrDt2lzfjRs3d4_kioX0NgCXLw
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:20:31[reactor-http-nio-2] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:20:31[boundedElastic-1] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [4]
+ERROR 21-08-23 00:20:31[boundedElastic-1] [GlobalErrorHandler:63] - ChallengersException Other Exception
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ springfox.boot.starter.autoconfigure.SwaggerUiWebFluxConfiguration$CustomWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/participant/4" [ExceptionHandlingWebHandler]
+Stack trace:
+		at java.base/java.util.Optional.get(Optional.java:148)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.checkAuth(ParticipantServiceImpl.java:84)
+		at project.challengers.serviceImpl.ParticipantServiceImpl.getAllParticipant(ParticipantServiceImpl.java:61)
+		at project.challengers.controller.ParticipantController.getAllParticipant(ParticipantController.java:42)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:146)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:251)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:336)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:128)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:154)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.innerNext(FluxConcatMap.java:281)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:860)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:238)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoCurrentContext.subscribe(MonoCurrentContext.java:36)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2359)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:169)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:448)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onSubscribe(FluxConcatMap.java:218)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:173)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:84)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2361)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2167)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2041)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4046)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:81)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:845)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:607)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:587)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:464)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:292)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:370)
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789)
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:108)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142)
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onComplete(FluxFilter.java:166)
+		at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onComplete(FluxMap.java:269)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1790)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:328)
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:345)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:199)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:73)
+		at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:251)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+		at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+INFO  21-08-23 00:28:07[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1416 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:28:07[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:28:07[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:28:11[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:28:13[main] [MainApplication:61] - Started MainApplication in 5.91 seconds (JVM running for 6.383)
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-6] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-6] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"text/css,*/*;q=0.1", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:22[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:28:30[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : POST http://localhost:8080/member/login
+ [Host:"localhost:8080", Connection:"keep-alive", Content-Length:"35", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Origin:"http://localhost:8080", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:28:30[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:28:30[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+DEBUG 21-08-23 00:30:09[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1/1
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0OTcxMCwiaWF0IjoxNjI5NjQ2MTEwfQ.7PJwMRZQbSZEsgeDZPm7WRwH3X4H1hXA2O0Y4j6smufOQVTJwgQ_0JU0I3rPlM9L9U1e4FInOIG1HYhLB_d6BQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:30:09[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0OTcxMCwiaWF0IjoxNjI5NjQ2MTEwfQ.7PJwMRZQbSZEsgeDZPm7WRwH3X4H1hXA2O0Y4j6smufOQVTJwgQ_0JU0I3rPlM9L9U1e4FInOIG1HYhLB_d6BQ
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:30:09[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:30:09[boundedElastic-2] [BasicBinder:64] - binding parameter [2] as [INTEGER] - [1]
+DEBUG 21-08-23 00:30:14[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/participant/1/4
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", accept:"*/*", Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0OTcxMCwiaWF0IjoxNjI5NjQ2MTEwfQ.7PJwMRZQbSZEsgeDZPm7WRwH3X4H1hXA2O0Y4j6smufOQVTJwgQ_0JU0I3rPlM9L9U1e4FInOIG1HYhLB_d6BQ", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:30:14[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDAxIiwicm9sZSI6WyJST0xFX1tdIl0sImV4cCI6MTYyOTY0OTcxMCwiaWF0IjoxNjI5NjQ2MTEwfQ.7PJwMRZQbSZEsgeDZPm7WRwH3X4H1hXA2O0Y4j6smufOQVTJwgQ_0JU0I3rPlM9L9U1e4FInOIG1HYhLB_d6BQ
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicBinder:64] - binding parameter [1] as [VARCHAR] - [user001]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([email2_3_0_] : [VARCHAR]) - [abc@abc.abc]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([name3_3_0_] : [VARCHAR]) - [홍길동]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([nickname4_3_0_] : [VARCHAR]) - [abc]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([phone5_3_0_] : [VARCHAR]) - [01011111111]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:60] - extracted value ([pw6_3_0_] : [VARCHAR]) - [$2a$10$DaXSNdpFIfcM2rcVCfHzTONx9q8UXgjgbcK8KmJR7jwohVakxwVRC]
+TRACE 21-08-23 00:30:14[reactor-http-nio-4] [BasicExtractor:50] - extracted value ([member_i1_4_1_] : [VARCHAR]) - [null]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([content2_5_0_] : [VARCHAR]) - [영어 스터디 할 사람 신청해주세요]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([end_time3_5_0_] : [TIMESTAMP]) - [2021-01-02T00:00]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([id4_5_0_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([max_peop5_5_0_] : [INTEGER]) - [10]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([price6_5_0_] : [INTEGER]) - [1000]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([start_ti7_5_0_] : [TIMESTAMP]) - [2021-01-01T00:00]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([title8_5_0_] : [VARCHAR]) - [스터디 모집]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([type9_5_0_] : [VARCHAR]) - [0]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:50] - extracted value ([update_10_5_0_] : [TIMESTAMP]) - [null]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicBinder:64] - binding parameter [1] as [BIGINT] - [1]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicBinder:64] - binding parameter [2] as [INTEGER] - [4]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([patricip1_7_] : [BIGINT]) - [3]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([master_i2_7_] : [VARCHAR]) - [user001]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([notice_s3_7_] : [BIGINT]) - [1]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([particip4_7_] : [VARCHAR]) - [user002]
+TRACE 21-08-23 00:30:14[boundedElastic-2] [BasicExtractor:60] - extracted value ([particip5_7_] : [INTEGER]) - [4]
+INFO  21-08-23 00:30:30[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1447 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:30:30[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:30:30[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:30:34[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+ERROR 21-08-23 00:30:36[main] [DocumentationPluginsBootstrapper:98] - Unable to scan documentation context default
+org.springframework.core.annotation.AnnotationConfigurationException: Different @AliasFor mirror values for annotation [org.springframework.web.bind.annotation.PathVariable] declared on public java.util.List project.challengers.controller.ParticipantController.getParticipantStatus(long,int,org.springframework.security.core.Authentication); attribute 'name' and its alias 'value' are declared with values of [도전방 번호] and [noticeSeq].
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets$MirrorSet.resolve(AnnotationTypeMapping.java:711)
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets.resolve(AnnotationTypeMapping.java:666)
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:134)
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:118)
+	at org.springframework.core.annotation.TypeMappedAnnotation.from(TypeMappedAnnotation.java:589)
+	at org.springframework.core.annotation.MergedAnnotation.from(MergedAnnotation.java:548)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1194)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1280)
+	at org.springframework.core.annotation.SynthesizingMethodParameter.adaptAnnotationArray(SynthesizingMethodParameter.java:104)
+	at org.springframework.core.MethodParameter.getParameterAnnotations(MethodParameter.java:645)
+	at org.springframework.web.method.HandlerMethod$HandlerMethodParameter.getParameterAnnotations(HandlerMethod.java:502)
+	at springfox.documentation.service.ResolvedMethodParameter.<init>(ResolvedMethodParameter.java:43)
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.lambda$toParameters$1(HandlerMethodResolver.java:168)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.methodParameters(HandlerMethodResolver.java:82)
+	at springfox.documentation.spring.web.WebFluxRequestHandler.getParameters(WebFluxRequestHandler.java:139)
+	at springfox.documentation.spi.service.contexts.RequestMappingContext.getParameters(RequestMappingContext.java:195)
+	at springfox.documentation.spi.service.contexts.Orderings.methodParametersSignature(Orderings.java:82)
+	at springfox.documentation.spi.service.contexts.Orderings.qualifiedMethodName(Orderings.java:77)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1515)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:353)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.sortedByMethods(ApiListingScanner.java:229)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:152)
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:67)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.scanDocumentation(AbstractDocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:63)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at project.challengers.MainApplication.main(MainApplication.java:9)
+INFO  21-08-23 00:30:36[main] [MainApplication:61] - Started MainApplication in 7.422 seconds (JVM running for 7.979)
+INFO  21-08-23 00:31:41[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1457 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:31:41[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:31:41[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:31:45[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+ERROR 21-08-23 00:31:46[main] [DocumentationPluginsBootstrapper:98] - Unable to scan documentation context default
+org.springframework.core.annotation.AnnotationConfigurationException: Different @AliasFor mirror values for annotation [org.springframework.web.bind.annotation.PathVariable] declared on public java.util.List project.challengers.controller.ParticipantController.getParticipantStatus(long,int,org.springframework.security.core.Authentication); attribute 'name' and its alias 'value' are declared with values of [noticeSeq] and [도전방 번호].
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets$MirrorSet.resolve(AnnotationTypeMapping.java:711)
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets.resolve(AnnotationTypeMapping.java:666)
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:134)
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:118)
+	at org.springframework.core.annotation.TypeMappedAnnotation.from(TypeMappedAnnotation.java:589)
+	at org.springframework.core.annotation.MergedAnnotation.from(MergedAnnotation.java:548)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1194)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1280)
+	at org.springframework.core.annotation.SynthesizingMethodParameter.adaptAnnotationArray(SynthesizingMethodParameter.java:104)
+	at org.springframework.core.MethodParameter.getParameterAnnotations(MethodParameter.java:645)
+	at org.springframework.web.method.HandlerMethod$HandlerMethodParameter.getParameterAnnotations(HandlerMethod.java:502)
+	at springfox.documentation.service.ResolvedMethodParameter.<init>(ResolvedMethodParameter.java:43)
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.lambda$toParameters$1(HandlerMethodResolver.java:168)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at springfox.documentation.spring.web.readers.operation.HandlerMethodResolver.methodParameters(HandlerMethodResolver.java:82)
+	at springfox.documentation.spring.web.WebFluxRequestHandler.getParameters(WebFluxRequestHandler.java:139)
+	at springfox.documentation.spi.service.contexts.RequestMappingContext.getParameters(RequestMappingContext.java:195)
+	at springfox.documentation.spi.service.contexts.Orderings.methodParametersSignature(Orderings.java:82)
+	at springfox.documentation.spi.service.contexts.Orderings.qualifiedMethodName(Orderings.java:77)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1515)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:353)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.sortedByMethods(ApiListingScanner.java:229)
+	at springfox.documentation.spring.web.scanners.ApiListingScanner.scan(ApiListingScanner.java:152)
+	at springfox.documentation.spring.web.scanners.ApiDocumentationScanner.scan(ApiDocumentationScanner.java:67)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.scanDocumentation(AbstractDocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:63)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at project.challengers.MainApplication.main(MainApplication.java:9)
+INFO  21-08-23 00:31:46[main] [MainApplication:61] - Started MainApplication in 6.461 seconds (JVM running for 6.953)
+INFO  21-08-23 00:34:31[main] [MainApplication:55] - Starting MainApplication using Java 11.0.10 on jeonbyeong-gug-ui-MacBookPro.local with PID 1479 (/Users/jeonbyeong-gug/Challengers/Challenge/out/production/classes started by jeonbyeong-gug in /Users/jeonbyeong-gug/Challengers/Challenge)
+DEBUG 21-08-23 00:34:31[main] [MainApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-08-23 00:34:31[main] [MainApplication:664] - The following profiles are active: dev
+DEBUG 21-08-23 00:34:36[main] [WebSecurityConfig:62] - Server White List Ip : [127.0.0.1, 0:0:0:0:0:0:0:1, 127.0.0.1]
+INFO  21-08-23 00:34:37[main] [MainApplication:61] - Started MainApplication in 6.609 seconds (JVM running for 7.111)
+DEBUG 21-08-23 00:34:48[reactor-http-nio-6] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-3] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", If-Modified-Since:"Thu, 08 Jul 2021 12:51:31 GMT"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-4] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"application/signed-exchange;v=b3;q=0.9,*/*;q=0.8", Purpose:"prefetch", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-3] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-6] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-4] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-5] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/springfox.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-5] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-bundle.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-2] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui.css?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"text/css,*/*;q=0.1", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"style", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-2] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-6] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-ui/swagger-ui-standalone-preset.js?v=3.0.0
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Accept:"*/*", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"no-cors", Sec-Fetch-Dest:"script", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-6] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/ui
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources/configuration/security
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/swagger-resources
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Content-Type:"application/json", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:34] - HEADS : GET http://localhost:8080/v2/api-docs
+ [Host:"localhost:8080", Connection:"keep-alive", sec-ch-ua:""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"", Accept:"application/json,*/*", sec-ch-ua-mobile:"?0", User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36", Sec-Fetch-Site:"same-origin", Sec-Fetch-Mode:"cors", Sec-Fetch-Dest:"empty", Accept-Encoding:"gzip, deflate, br", Accept-Language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"]
+DEBUG 21-08-23 00:34:48[reactor-http-nio-7] [SecurityContextRepository:36] - AUTH HEAD : null

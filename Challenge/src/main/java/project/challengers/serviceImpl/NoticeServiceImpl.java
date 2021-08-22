@@ -16,6 +16,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.notice.*;
+import project.challengers.base.ParticipantType;
+import project.challengers.base.PointHistoryStatus;
 import project.challengers.component.FileComponent;
 import project.challengers.entity.*;
 import project.challengers.exception.ChallengersException;
@@ -183,7 +185,7 @@ public class NoticeServiceImpl implements NoticeService {
         pointHistoryRepository.save(PointHistory.builder()
                 .id((String) authentication.getPrincipal())
                 .point(notice.getPrice())
-                .status(1)
+                .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
                 .build());
 
@@ -473,7 +475,7 @@ public class NoticeServiceImpl implements NoticeService {
         participantList.forEach(participant -> {
             idList.add(participant.getParticipantId());
         });
-        participantRepository.updateType(idList, noticeSeq);
+        participantRepository.updateType(idList, noticeSeq, ParticipantType.out.ordinal());
 
         return noticeRepository.deleteNotice(noticeSeq);
     }
@@ -496,7 +498,7 @@ public class NoticeServiceImpl implements NoticeService {
                     messageSource.getMessage("error.notice.notfound.seq.E0011"
                             , null, Locale.KOREA));
         }
-        Notice noticeEntity = checkNotice(notice.getNoticeSeq(), authentication);
+        checkNotice(notice.getNoticeSeq(), authentication);
 
         // 삭제할 파일이 있을 경우 파일 삭제
         if (fileSeq != null) {

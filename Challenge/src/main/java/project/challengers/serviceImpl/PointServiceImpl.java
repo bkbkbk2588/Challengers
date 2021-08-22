@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.point.*;
+import project.challengers.base.PointHistoryStatus;
 import project.challengers.entity.Point;
 import project.challengers.entity.PointHistory;
 import project.challengers.exception.ChallengersException;
@@ -103,7 +104,7 @@ public class PointServiceImpl implements PointService {
         PointHistory pointHistory = pointHistoryRepository.save(PointHistory.builder()
                 .id(id)
                 .point(point.getPoint())
-                .status(1)
+                .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
                 .build());
 

@@ -2,6 +2,7 @@ package project.challengers.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +31,14 @@ public class ApplyController {
 
     @ApiOperation(value = "도전 신청 수락(방장만 가능)")
     @DeleteMapping(value = "/accept/{noticeSeq}")
-    public int acceptApply(@PathVariable long noticeSeq,
-                           @RequestBody List<String> idList, Authentication authentication) {
+    public int acceptApply(@ApiParam(name = "도전방 번호") @PathVariable long noticeSeq,
+                           @ApiParam(name = "id 리스트") @RequestBody List<String> idList, Authentication authentication) {
         return applyService.acceptApply(noticeSeq, idList, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "도전방 신청자 목록")
     @GetMapping(value = "/{noticeSeq}")
-    public List<ApplyListDto> getApplyList(@PathVariable long noticeSeq, Authentication authentication) {
+    public List<ApplyListDto> getApplyList(@ApiParam(name = "도전방 번호") @PathVariable long noticeSeq, Authentication authentication) {
         return applyService.getApplyList(noticeSeq, (String) authentication.getPrincipal());
     }
 }
