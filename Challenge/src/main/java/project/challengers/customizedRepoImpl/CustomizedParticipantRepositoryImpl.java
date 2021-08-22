@@ -1,11 +1,25 @@
 package project.challengers.customizedRepoImpl;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import project.challengers.customizedRepo.CustomizedParticipantRepository;
 
-public class CustomizedParticipantRepositoryImpl {
+import java.util.List;
+
+import static project.challengers.entity.QParticipant.participant;
+
+public class CustomizedParticipantRepositoryImpl implements CustomizedParticipantRepository {
     final private JPAQueryFactory jpaQueryFactory;
 
     public CustomizedParticipantRepositoryImpl(final JPAQueryFactory jpaQueryFactory) {
         this.jpaQueryFactory = jpaQueryFactory;
+    }
+
+    @Override
+    public int updateType(List<String> idList, long noticeSeq) {
+        return (int) jpaQueryFactory.update(participant)
+                .set(participant.participantType,4)
+                .where(participant.participantId.in(idList)
+                .and(participant.noticeSeq.eq(noticeSeq)))
+                .execute();
     }
 }

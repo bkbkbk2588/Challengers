@@ -73,6 +73,13 @@ public class ApplyServcieImpl implements ApplyService {
 
         List<Participant> participant = participantRepository.findByNoticeSeqAndParticipantType(apply.getNoticeSeq(), 0);
 
+        // 방이 끝났을 경우
+        if (!notice.getEndTime().isBefore(LocalDateTime.now())
+                || participant.size() > 0 ? participant.get(0).getParticipantType() == 4 : false) {
+            throw new ChallengersException(HttpStatus.CONFLICT,
+                    messageSource.getMessage("error.notice.finish.E0019", null, Locale.KOREA));
+        }
+
         // 이미 참여중인 사용자 일 경우
         participant.forEach(p -> {
             if (p.getParticipantId().equals(id)) {
@@ -139,12 +146,13 @@ public class ApplyServcieImpl implements ApplyService {
                     .participantId(userId)
                     .build());
         });
+        Challenge challenge = challengeRepository.findById(noticeSeq).get();
 
         // 참가자로 전환
         participantRepository.saveAll(participantList);
 
         // challenge 에 update
-        challengeRepository.updateMoney(noticeSeq, depositSum);
+        challengeRepository.updateMoney(noticeSeq, depositSum + challenge.getMoney());
 
         return applyRepository.acceptApply(idList, noticeSeq);
     }

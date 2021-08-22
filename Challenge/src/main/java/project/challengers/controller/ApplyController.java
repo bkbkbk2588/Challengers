@@ -19,11 +19,6 @@ import java.util.List;
 public class ApplyController {
     Logger logger = LoggerFactory.getLogger(ApplyController.class);
 
-    /*
-        TODO
-        3. 도전 신청자 목록 조회 GET(방장만 가능)
-     */
-
     @Autowired
     ApplyService applyService;
 

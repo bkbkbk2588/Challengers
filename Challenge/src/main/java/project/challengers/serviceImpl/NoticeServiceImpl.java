@@ -456,6 +456,7 @@ public class NoticeServiceImpl implements NoticeService {
     public int deleteNotice(long noticeSeq, Authentication authentication) {
         Challenge challenge = challengeRepository.findById(noticeSeq).get();
 
+        // 도전방의 포인트가 남아있을 경우
         if (challenge.getMoney() > 0) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.notice.delete.money.conflict.E0018", null, Locale.KOREA));
@@ -466,6 +467,13 @@ public class NoticeServiceImpl implements NoticeService {
         List<String> filePath = new ArrayList<>();
         noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
         fileComp.delete(Flux.fromIterable(filePath)).subscribe();
+
+        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+        List<String> idList = new ArrayList<>();
+        participantList.forEach(participant -> {
+            idList.add(participant.getParticipantId());
+        });
+        participantRepository.updateType(idList, noticeSeq);
 
         return noticeRepository.deleteNotice(noticeSeq);
     }
