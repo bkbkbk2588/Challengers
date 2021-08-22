@@ -70,18 +70,25 @@ CREATE TABLE PARTICIPANT (
     notice_seq BIGINT NOT NULL COMMENT "공지번호",
     master_id VARCHAR(20) NOT NULL COMMENT "방장아이디",
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
-    participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장)",
+    participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장, 4: 방 종료)",
     PRIMARY KEY (patricipant_seq),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 
 CREATE TABLE APPLY (
     apply_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "번호",
-    id VARCHAR(20) NOT NULL COMMENT "아이디",
+    id VARCHAR(20) NOT NULL COMMENT "신청 아이디",
     notice_seq BIGINT NOT NULL COMMENT "챌린저 공지 번호",
-    deposit INT NOT NULL COMMENT "유형(0:보증금 냄, 1:보증금 안냄)",
+    deposit INT NOT NULL COMMENT "제출한 보증금",
     PRIMARY KEY (apply_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE,
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
+);
+
+CREATE TABLE CHALLENGE (
+    challenge_seq BIGINT NOT NULL COMMENT "도전 번호",
+    money INT COMMENT "보증금 포함 모은 벌금",
+    PRIMARY KEY (challenge_seq),
+    FOREIGN KEY (challenge_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 

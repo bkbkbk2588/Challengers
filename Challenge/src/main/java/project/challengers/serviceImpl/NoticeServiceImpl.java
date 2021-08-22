@@ -17,11 +17,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.notice.*;
 import project.challengers.component.FileComponent;
-import project.challengers.entity.Notice;
-import project.challengers.entity.NoticeFile;
+import project.challengers.entity.*;
 import project.challengers.exception.ChallengersException;
-import project.challengers.repository.NoticeFileRepository;
-import project.challengers.repository.NoticeRepository;
+import project.challengers.repository.*;
 import project.challengers.service.NoticeService;
 import reactor.core.publisher.Flux;
 
@@ -29,6 +27,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -51,6 +50,18 @@ public class NoticeServiceImpl implements NoticeService {
 
     @Autowired
     NoticeFileRepository noticeFileRepository;
+
+    @Autowired
+    ChallengeRepository challengeRepository;
+
+    @Autowired
+    PointRepository pointRepository;
+
+    @Autowired
+    PointHistoryRepository pointHistoryRepository;
+
+    @Autowired
+    ParticipantRepository participantRepository;
 
     /**
      * 게시글 전체 목록 조회
@@ -86,7 +97,7 @@ public class NoticeServiceImpl implements NoticeService {
     }
 
     /**
-     * 게시글 등록
+     * 게시글 등록 (방장은 등록과 동시에 보증금 입금)
      *
      * @param notice
      * @param filePartFlux
@@ -154,6 +165,31 @@ public class NoticeServiceImpl implements NoticeService {
                 .content(notice.getContent())
                 .startTime(notice.getStartTime())
                 .endTime(notice.getEndTime())
+                .build());
+
+        // 방장은 등록과 동시에 보증금 입금
+        Point pointEntity = pointRepository.findById((String) authentication.getPrincipal());
+
+        // 출금 금액이 더 많을 경우
+        if (pointEntity == null || notice.getPrice() > pointEntity.getPoint()) {
+            throw new ChallengersException(HttpStatus.CONFLICT,
+                    messageSource.getMessage("error.point.withdraw.big.E0013", null, Locale.KOREA));
+        }
+
+        pointRepository.updatePoint(pointEntity.getPoint() - notice.getPrice(),
+                (String) authentication.getPrincipal());
+
+        // 이력 추가
+        pointHistoryRepository.save(PointHistory.builder()
+                .id((String) authentication.getPrincipal())
+                .point(notice.getPrice())
+                .status(1)
+                .insertTime(LocalDateTime.now())
+                .build());
+
+        challengeRepository.save(Challenge.builder()
+                .challengeSeq(result.getNoticeSeq())
+                .money(notice.getPrice())
                 .build());
 
         if (filePartFlux != null) {
@@ -418,6 +454,12 @@ public class NoticeServiceImpl implements NoticeService {
     @Transactional
     @Override
     public int deleteNotice(long noticeSeq, Authentication authentication) {
+        Challenge challenge = challengeRepository.findById(noticeSeq).get();
+
+        if (challenge.getMoney() > 0) {
+            throw new ChallengersException(HttpStatus.CONFLICT,
+                    messageSource.getMessage("error.notice.delete.money.conflict.E0018", null, Locale.KOREA));
+        }
         checkNotice(noticeSeq, authentication);
         List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
 
