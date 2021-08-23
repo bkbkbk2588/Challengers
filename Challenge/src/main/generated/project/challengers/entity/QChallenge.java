@@ -23,6 +23,8 @@ public class QChallenge extends EntityPathBase<Challenge> {
 
     public final NumberPath<Integer> money = createNumber("money", Integer.class);
 
+    public final NumberPath<Integer> status = createNumber("status", Integer.class);
+
     public QChallenge(String variable) {
         super(Challenge.class, forVariable(variable));
     }

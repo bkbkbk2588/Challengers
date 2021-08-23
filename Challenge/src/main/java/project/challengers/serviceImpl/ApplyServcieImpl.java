@@ -73,12 +73,18 @@ public class ApplyServcieImpl implements ApplyService {
                     messageSource.getMessage("error.apply.already.master.E0016", null, Locale.KOREA));
         }
 
+        // 시작 날짜가 지났을 경우
+        if (notice.getStartTime().isBefore(LocalDateTime.now())) {
+            throw new ChallengersException(HttpStatus.CONFLICT,
+                    messageSource.getMessage("error.apply.startTime.after.E0021", null, Locale.KOREA));
+        }
+
         List<Participant> participant = participantRepository.findByNoticeSeqAndParticipantType(apply.getNoticeSeq(), ParticipantType.normal.ordinal());
 
         // 참여인원을 초과할 경우
         if (notice.getMaxPeople() - 1 <= participant.size()) {
             throw new ChallengersException(HttpStatus.FORBIDDEN,
-                    messageSource.getMessage("error.notice.max.people.E0020",null,Locale.KOREA));
+                    messageSource.getMessage("error.notice.max.people.E0020", null, Locale.KOREA));
         }
 
         // 방이 끝났을 경우

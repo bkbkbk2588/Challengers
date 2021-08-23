@@ -16,6 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.notice.*;
+import project.challengers.base.ChallengeStatus;
 import project.challengers.base.ParticipantType;
 import project.challengers.base.PointHistoryStatus;
 import project.challengers.component.FileComponent;
@@ -192,6 +193,7 @@ public class NoticeServiceImpl implements NoticeService {
         challengeRepository.save(Challenge.builder()
                 .challengeSeq(result.getNoticeSeq())
                 .money(notice.getPrice())
+                .status(ChallengeStatus.startBefore.ordinal())
                 .build());
 
         if (filePartFlux != null) {

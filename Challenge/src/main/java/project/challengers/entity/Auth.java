@@ -22,18 +22,15 @@ public class Auth {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long authSeq;
 
+    @Column(name = "notice_seq")
+    private long noticeSeq;
+
     @Column(nullable = false)
     private String id;
 
-    @Column(name = "photo_name", nullable = true)
-    private String photoName;
+    @Column(name = "file_name", nullable = true)
+    private String fileName;
 
-    @Column(name = "photo_path", nullable = true)
-    private String photoPath;
-
-    @Column(name = "video_name", nullable = true)
-    private String videoName;
-
-    @Column(name = "video_path", nullable = true)
-    private String videoPath;
+    @Column(name = "file_path")
+    private String filePath;
 }

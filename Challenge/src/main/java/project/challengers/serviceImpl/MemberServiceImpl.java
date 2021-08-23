@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.member.*;
-import project.challengers.component.JWTTokenComp;
+import project.challengers.component.JWTTokenComponent;
 import project.challengers.entity.Member;
 import project.challengers.exception.ChallengersException;
 import project.challengers.repository.MemberRepository;
@@ -32,7 +32,7 @@ public class MemberServiceImpl implements MemberService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private JWTTokenComp jwtComp;
+    private JWTTokenComponent jwtComp;
 
     @Autowired
     MessageSource messageSource;

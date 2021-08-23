@@ -21,4 +21,7 @@ public class Challenge {
 
     @Column
     int money;
+
+    @Column
+    int status;
 }

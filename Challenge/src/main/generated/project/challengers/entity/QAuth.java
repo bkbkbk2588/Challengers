@@ -21,15 +21,13 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public final NumberPath<Long> authSeq = createNumber("authSeq", Long.class);
 
+    public final StringPath fileName = createString("fileName");
+
+    public final StringPath filePath = createString("filePath");
+
     public final StringPath id = createString("id");
 
-    public final StringPath photoName = createString("photoName");
-
-    public final StringPath photoPath = createString("photoPath");
-
-    public final StringPath videoName = createString("videoName");
-
-    public final StringPath videoPath = createString("videoPath");
+    public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
 
     public QAuth(String variable) {
         super(Auth.class, forVariable(variable));

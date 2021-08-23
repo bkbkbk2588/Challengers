@@ -18,7 +18,7 @@ import java.util.function.Function;
 
 @Component
 @PropertySource("classpath:config/challengers-dev.properties")
-public class JWTTokenComp {
+public class JWTTokenComponent {
     @Value("${jwt.secret}")
     private String secretKey;
 

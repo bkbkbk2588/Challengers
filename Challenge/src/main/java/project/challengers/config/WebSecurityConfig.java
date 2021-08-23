@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authorization.AuthorizationDecision;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
@@ -17,9 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.authorization.AuthorizationContext;
-import org.springframework.security.web.server.util.matcher.NegatedServerWebExchangeMatcher;
-import org.springframework.security.web.server.util.matcher.ServerWebExchangeMatchers;
-import project.challengers.component.JWTTokenComp;
+import project.challengers.component.JWTTokenComponent;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
@@ -31,13 +28,13 @@ import java.util.List;
 @EnableReactiveMethodSecurity
 public class WebSecurityConfig {
     Logger logger = LoggerFactory.getLogger(WebSecurityConfig.class);
-    private final JWTTokenComp jwtTokenComp;
+    private final JWTTokenComponent jwtTokenComponent;
 
     @Value("${challengers.server.white.ips}")
     List<String> whiteListIp;
 
-    public WebSecurityConfig(JWTTokenComp jwtTokenComp) {
-        this.jwtTokenComp = jwtTokenComp;
+    public WebSecurityConfig(JWTTokenComponent jwtTokenComponent) {
+        this.jwtTokenComponent = jwtTokenComponent;
     }
 
     // 암호화에 필요한 PasswordEncoder 를 Bean 등록

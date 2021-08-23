@@ -10,7 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
-import project.challengers.component.JWTTokenComp;
+import project.challengers.component.JWTTokenComponent;
 import project.challengers.entity.Member;
 import project.challengers.repository.MemberRepository;
 import reactor.core.publisher.Mono;
@@ -23,7 +23,7 @@ public class AuthenticationManager implements ReactiveAuthenticationManager {
     Logger logger = LoggerFactory.getLogger(AuthenticationManager.class);
 
     @Autowired
-    private JWTTokenComp jwtComp;
+    private JWTTokenComponent jwtComp;
 
     @Autowired
     MemberRepository memberRepository;

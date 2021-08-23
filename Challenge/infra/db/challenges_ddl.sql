@@ -10,18 +10,6 @@ CREATE TABLE MEMBER(
     UNIQUE KEY(phone)
 );
 
-CREATE TABLE AUTH (
-    auth_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "인증 순번" ,
-    id VARCHAR(20) NOT NULL COMMENT "아이디" ,
-    photo_name VARCHAR(255) COMMENT "사진이름" ,
-    photo_path VARCHAR(255) COMMENT "사진경로" ,
-    video_name VARCHAR(255) COMMENT "동영상이름" ,
-    video_path VARCHAR(255) COMMENT "동영상경로" ,
-    PRIMARY KEY (auth_seq),
-    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
-);
-
-
 CREATE TABLE POINT (
     point_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "포인트 번호" ,
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
@@ -65,11 +53,23 @@ CREATE TABLE NOTICE_FILE (
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
 
+CREATE TABLE AUTH (
+    auth_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "인증 순번" ,
+    notice_seq BIGINT NOT NULL COMMENT "공지번호",
+    id VARCHAR(20) NOT NULL COMMENT "아이디" ,
+    file_name VARCHAR(255) COMMENT "파일이름" ,
+    file_path VARCHAR(255) COMMENT "파일경로" ,
+    PRIMARY KEY (auth_seq),
+    FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE,
+    FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
+);
+
 CREATE TABLE PARTICIPANT (
     patricipant_seq  BIGINT NOT NULL AUTO_INCREMENT COMMENT "참여자 순번",
     notice_seq BIGINT NOT NULL COMMENT "공지번호",
     master_id VARCHAR(20) NOT NULL COMMENT "방장아이디",
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
+    warning INT NOT NULL DEFAULT 0 COMMENT "경고 횟수 3회면 블라인드 처리, 7회 이상이면 강퇴 처리",
     participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장, 4: 방 종료)",
     PRIMARY KEY (patricipant_seq),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
@@ -88,6 +88,7 @@ CREATE TABLE APPLY (
 CREATE TABLE CHALLENGE (
     challenge_seq BIGINT NOT NULL COMMENT "도전 번호",
     money INT COMMENT "보증금 포함 모은 벌금",
+    status INT COMMENT "상태값 (0:시작 전, 1:진행중, 2:종료)",
     PRIMARY KEY (challenge_seq),
     FOREIGN KEY (challenge_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );
