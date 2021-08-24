@@ -19,6 +19,8 @@ public class QParticipant extends EntityPathBase<Participant> {
 
     public static final QParticipant participant = new QParticipant("participant");
 
+    public final NumberPath<Integer> credit = createNumber("credit", Integer.class);
+
     public final StringPath masterId = createString("masterId");
 
     public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
@@ -28,6 +30,8 @@ public class QParticipant extends EntityPathBase<Participant> {
     public final NumberPath<Long> participantSeq = createNumber("participantSeq", Long.class);
 
     public final NumberPath<Integer> participantType = createNumber("participantType", Integer.class);
+
+    public final NumberPath<Integer> warning = createNumber("warning", Integer.class);
 
     public QParticipant(String variable) {
         super(Participant.class, forVariable(variable));

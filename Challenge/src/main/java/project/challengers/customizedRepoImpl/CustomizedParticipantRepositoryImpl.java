@@ -22,4 +22,22 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
                         .and(participant.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
+
+    @Override
+    public int setCertification(List<String> idList, long noticeSeq) {
+        return (int) jpaQueryFactory.update(participant)
+                .set(participant.warning, participant.warning.add(1))
+                .where(participant.participantId.in(idList)
+                        .and(participant.noticeSeq.eq(noticeSeq)))
+                .execute();
+    }
+
+    @Override
+    public int setCredit(List<String> idList, long noticeSeq, int credit) {
+        return (int) jpaQueryFactory.update(participant)
+                .set(participant.credit, participant.credit.add(credit))
+                .where(participant.participantId.in(idList)
+                        .and(participant.noticeSeq.eq(noticeSeq)))
+                .execute();
+    }
 }

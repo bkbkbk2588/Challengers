@@ -19,6 +19,8 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public static final QAuth auth = new QAuth("auth");
 
+    public final DateTimePath<java.util.Date> authDate = createDateTime("authDate", java.util.Date.class);
+
     public final NumberPath<Long> authSeq = createNumber("authSeq", Long.class);
 
     public final StringPath fileName = createString("fileName");

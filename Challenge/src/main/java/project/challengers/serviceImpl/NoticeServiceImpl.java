@@ -190,6 +190,15 @@ public class NoticeServiceImpl implements NoticeService {
                 .insertTime(LocalDateTime.now())
                 .build());
 
+        participantRepository.save(Participant.builder()
+                .participantId((String) authentication.getPrincipal())
+                .masterId((String) authentication.getPrincipal())
+                .noticeSeq(result.getNoticeSeq())
+                .participantType(ParticipantType.normal.ordinal())
+                .credit(0)
+                .warning(0)
+                .build());
+
         challengeRepository.save(Challenge.builder()
                 .challengeSeq(result.getNoticeSeq())
                 .money(notice.getPrice())

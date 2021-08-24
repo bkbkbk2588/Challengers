@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.apply.ApplyDto;
 import project.challengers.DTO.apply.ApplyListDto;
+import project.challengers.base.ChallengeStatus;
 import project.challengers.base.ParticipantType;
 import project.challengers.base.PointHistoryStatus;
 import project.challengers.entity.*;
@@ -86,10 +87,10 @@ public class ApplyServcieImpl implements ApplyService {
             throw new ChallengersException(HttpStatus.FORBIDDEN,
                     messageSource.getMessage("error.notice.max.people.E0020", null, Locale.KOREA));
         }
-
+        Challenge challenge = challengeRepository.findById(apply.getNoticeSeq()).get();
         // 방이 끝났을 경우
-        if (!notice.getEndTime().isBefore(LocalDateTime.now())
-                || participant.size() > 0 ? participant.get(0).getParticipantType() == ParticipantType.out.ordinal() : false) {
+        if (notice.getEndTime().isBefore(LocalDateTime.now())
+                || challenge.getStatus() != ChallengeStatus.startBefore.ordinal()) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.notice.finish.E0019", null, Locale.KOREA));
         }
@@ -105,12 +106,12 @@ public class ApplyServcieImpl implements ApplyService {
         Point pointEntity = pointRepository.findById(id);
 
         // 출금 금액이 더 많을 경우
-        if (pointEntity == null || apply.getDeposit() > pointEntity.getPoint()) {
+        if (pointEntity == null || notice.getPrice() > pointEntity.getPoint()) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.point.withdraw.big.E0013", null, Locale.KOREA));
         }
 
-        pointRepository.updatePoint(pointEntity.getPoint() - apply.getDeposit(), id);
+        pointRepository.updatePoint(pointEntity.getPoint() - notice.getPrice(), id);
 
         // 이력 추가
         pointHistoryRepository.save(PointHistory.builder()

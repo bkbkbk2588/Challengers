@@ -7,6 +7,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import project.challengers.DTO.participant.ParticipantDto;
+import project.challengers.DTO.participant.ParticipantCreditDto;
 import project.challengers.base.ParticipantType;
 import project.challengers.entity.Notice;
 import project.challengers.entity.Participant;
@@ -94,6 +95,57 @@ public class ParticipantServiceImpl implements ParticipantService {
                     .build());
         });
         return result;
+    }
+
+    /**
+     * 블라인드 처리(방장만 가능)
+     *
+     * @param noticeSeq
+     * @param id
+     * @param masterId
+     * @return
+     */
+    @Override
+    public int setBlind(long noticeSeq, String id, String masterId) {
+        checkAuth(noticeSeq, masterId);
+        return 0;
+    }
+
+    /**
+     * 강퇴 처리(방장만 가능)
+     *
+     * @param noticeSeq
+     * @param id
+     * @param masterId
+     * @return
+     */
+    @Override
+    public int setDelete(long noticeSeq, String id, String masterId) {
+        checkAuth(noticeSeq, masterId);
+        return 0;
+    }
+
+    /**
+     * 참가자 벌금 조회(방장만 가능)
+     *
+     * @param noticeSeq
+     * @param id
+     * @return
+     */
+    @Override
+    public List<ParticipantCreditDto> getUserFine(long noticeSeq, String id) {
+        checkAuth(noticeSeq, id);
+
+        List<Participant> participants = participantRepository.findByNoticeSeq(noticeSeq);
+        List<ParticipantCreditDto> participantCredits = new ArrayList<>();
+
+        participants.forEach(participant -> {
+            participantCredits.add(ParticipantCreditDto.builder()
+                    .id(participant.getParticipantId())
+                    .credit(participant.getCredit())
+                    .build());
+        });
+        return participantCredits;
     }
 
     /**

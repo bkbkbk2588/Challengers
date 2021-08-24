@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -33,4 +34,12 @@ public class Participant {
 
     @Column(name = "participant_type")
     private int participantType;
+
+    @Column
+    @ColumnDefault("0")
+    private int warning;
+
+    @Column
+    @ColumnDefault("0")
+    private int credit;
 }

@@ -37,8 +37,9 @@ public class ApplyController {
     }
 
     @ApiOperation(value = "도전방 신청자 목록")
-    @GetMapping(value = "/{noticeSeq}")
-    public List<ApplyListDto> getApplyList(@ApiParam(name = "도전방 번호") @PathVariable long noticeSeq, Authentication authentication) {
+    @GetMapping(value = "/list/{noticeSeq}")
+    public List<ApplyListDto> getApplyList(@ApiParam(name = "도전방 번호") @PathVariable(value = "noticeSeq") long noticeSeq,
+                                           Authentication authentication) {
         return applyService.getApplyList(noticeSeq, (String) authentication.getPrincipal());
     }
 }

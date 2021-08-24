@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -33,4 +35,7 @@ public class Auth {
 
     @Column(name = "file_path")
     private String filePath;
+
+    @Column(name = "auth_date")
+    Date authDate;
 }

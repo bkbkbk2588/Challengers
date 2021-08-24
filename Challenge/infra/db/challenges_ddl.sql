@@ -13,7 +13,7 @@ CREATE TABLE MEMBER(
 CREATE TABLE POINT (
     point_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "포인트 번호" ,
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
-    point INT default 0 COMMENT "포인트(없을시 0)" ,
+    point INT DEFAULT 0 COMMENT "포인트(없을시 0)" ,
     PRIMARY KEY (point_seq),
     UNIQUE KEY(id),
     FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE
@@ -59,6 +59,7 @@ CREATE TABLE AUTH (
     id VARCHAR(20) NOT NULL COMMENT "아이디" ,
     file_name VARCHAR(255) COMMENT "파일이름" ,
     file_path VARCHAR(255) COMMENT "파일경로" ,
+    auth_date DATE COMMENT "인증 시간",
     PRIMARY KEY (auth_seq),
     FOREIGN KEY (id) REFERENCES MEMBER (id) ON DELETE CASCADE,
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
@@ -71,6 +72,7 @@ CREATE TABLE PARTICIPANT (
     participant_id VARCHAR(20) NOT NULL COMMENT "참가자_아이디",
     warning INT NOT NULL DEFAULT 0 COMMENT "경고 횟수 3회면 블라인드 처리, 7회 이상이면 강퇴 처리",
     participant_type INT COMMENT "유형(0 : 정상참가자, 1 : 블라인드 처리, 2 : 강퇴당한사람, 3: 중간 퇴장한 사람, 정상 퇴장, 4: 방 종료)",
+    credit INT DEFAULT 0 COMMENT "벌금 외상"
     PRIMARY KEY (patricipant_seq),
     FOREIGN KEY (notice_seq) REFERENCES NOTICE (notice_seq) ON DELETE CASCADE
 );

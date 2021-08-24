@@ -12,24 +12,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.auth.AuthDto;
 import project.challengers.DTO.auth.AuthInfoDto;
+import project.challengers.base.PointHistoryStatus;
 import project.challengers.component.FileComponent;
-import project.challengers.entity.Auth;
-import project.challengers.entity.Participant;
+import project.challengers.entity.*;
 import project.challengers.exception.ChallengersException;
-import project.challengers.repository.AuthRepository;
-import project.challengers.repository.ChallengeRepository;
-import project.challengers.repository.ParticipantRepository;
-import project.challengers.service.ChallengeService;
+import project.challengers.repository.*;
+import project.challengers.service.AuthService;
 import reactor.core.publisher.Flux;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
-public class ChallengeServiceImpl implements ChallengeService {
+public class AuthServiceImpl implements AuthService {
     @Value("${challengers.path.prefix}${challengers.path.files}")
     private String UPLOAD_FILE_PATH;
 
@@ -37,10 +36,16 @@ public class ChallengeServiceImpl implements ChallengeService {
     AuthRepository authRepository;
 
     @Autowired
-    ChallengeRepository challengeRepository;
+    ParticipantRepository participantRepository;
 
     @Autowired
-    ParticipantRepository participantRepository;
+    PointRepository pointRepository;
+
+    @Autowired
+    NoticeRepository noticeRepository;
+
+    @Autowired
+    PointHistoryRepository pointHistoryRepository;
 
     @Autowired
     FileComponent fileComponent;
@@ -104,7 +109,7 @@ public class ChallengeServiceImpl implements ChallengeService {
         });
 
         // 인증 파일 select
-        List<Auth> authList = authRepository.getAuthFile(idList, noticeSeq);
+        List<Auth> authList = authRepository.getAuthFile(idList, noticeSeq, new Date());
         Map<String, List<String>> authInfoMap = new HashMap<>();
 
         // url, id 설정
@@ -139,6 +144,7 @@ public class ChallengeServiceImpl implements ChallengeService {
 
     /**
      * 인증 파일 조회
+     *
      * @param fileName
      * @return
      * @throws IOException
@@ -153,5 +159,61 @@ public class ChallengeServiceImpl implements ChallengeService {
 
         InputStream in = new FileInputStream(UPLOAD_FILE_PATH + File.separator + fileName);
         return IOUtils.toByteArray(in);
+    }
+
+    /**
+     * 인증 처리 (방장 권한)
+     *
+     * @param noticeSeq
+     * @param id
+     * @return
+     */
+    @Override
+    public int setCertification(long noticeSeq, List<String> idList, String id) {
+        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+
+        // 방장권한 확인
+        if (participantList == null || !participantList.get(0).getMasterId().equals(id)) {
+            throw new ChallengersException(HttpStatus.UNAUTHORIZED,
+                    messageSource.getMessage("error.apply.master.conflict.E0017", null, Locale.KOREA));
+        }
+        Notice notice = noticeRepository.findById(noticeSeq).get();
+        List<String> uncertifiedId = new ArrayList<>();
+        List<String> fineList = new ArrayList<>();
+        List<String> credits = new ArrayList<>();
+        List<PointHistory> pointHistories = new ArrayList<>();
+
+        // 미인증 사용자 id 세팅
+        participantList.forEach(participant -> {
+            if (!idList.contains(participant.getParticipantId())) {
+                uncertifiedId.add(participant.getParticipantId());
+
+                Point point = pointRepository.findById(participant.getParticipantId());
+
+                // 벌금 자동 이체 값 세팅
+                if (point.getPoint() >= notice.getPrice()) {
+                    fineList.add(participant.getParticipantId());
+                    pointHistories.add(PointHistory.builder()
+                            .id(participant.getParticipantId())
+                            .point(notice.getPrice())
+                            .status(PointHistoryStatus.withdraw.ordinal())
+                            .insertTime(LocalDateTime.now())
+                            .build());
+                } else { // 외상 id 세팅
+                    credits.add(participant.getParticipantId());
+                }
+            }
+        });
+        // 벌금 자동이체
+        if (pointHistories.size() > 0) {
+            pointRepository.updateUserPoint(notice.getPrice(), fineList);
+            pointHistoryRepository.saveAll(pointHistories);
+        }
+
+        // 외상 추가
+        if (credits.size() > 0)
+            participantRepository.setCredit(idList, noticeSeq, notice.getPrice());
+
+        return participantRepository.setCertification(idList, noticeSeq);
     }
 }
