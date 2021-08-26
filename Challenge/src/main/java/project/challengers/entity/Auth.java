@@ -24,13 +24,15 @@ public class Auth {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long authSeq;
 
-    @Column(name = "notice_seq")
-    private long noticeSeq;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "notice_seq", nullable = false)
+    private Notice notice;
 
-    @Column(nullable = false)
-    private String id;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", nullable = false)
+    private Member member;
 
-    @Column(name = "file_name", nullable = true)
+    @Column(name = "file_name")
     private String fileName;
 
     @Column(name = "file_path")

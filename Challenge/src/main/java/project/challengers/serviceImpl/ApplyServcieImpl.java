@@ -1,5 +1,6 @@
 package project.challengers.serviceImpl;
 
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -69,7 +70,7 @@ public class ApplyServcieImpl implements ApplyService {
         }
 
         // 방장 자신은 신청 못함
-        if (notice.getId().equals(id)) {
+        if (notice.getMember().getId().equals(id)) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.apply.already.master.E0016", null, Locale.KOREA));
         }
@@ -80,14 +81,16 @@ public class ApplyServcieImpl implements ApplyService {
                     messageSource.getMessage("error.apply.startTime.after.E0021", null, Locale.KOREA));
         }
 
-        List<Participant> participant = participantRepository.findByNoticeSeqAndParticipantType(apply.getNoticeSeq(), ParticipantType.normal.ordinal());
+        List<Participant> participant = participantRepository.findByNoticeAndParticipantType(
+                Notice.builder().noticeSeq(apply.getNoticeSeq()).build(), ParticipantType.normal.ordinal());
 
         // 참여인원을 초과할 경우
         if (notice.getMaxPeople() - 1 <= participant.size()) {
             throw new ChallengersException(HttpStatus.FORBIDDEN,
                     messageSource.getMessage("error.notice.max.people.E0020", null, Locale.KOREA));
         }
-        Challenge challenge = challengeRepository.findById(apply.getNoticeSeq()).get();
+        Challenge challenge = challengeRepository.findById(Notice.builder()
+                .noticeSeq(apply.getNoticeSeq()).build()).get();
         // 방이 끝났을 경우
         if (notice.getEndTime().isBefore(LocalDateTime.now())
                 || challenge.getStatus() != ChallengeStatus.startBefore.ordinal()) {
@@ -103,7 +106,7 @@ public class ApplyServcieImpl implements ApplyService {
             }
         });
 
-        Point pointEntity = pointRepository.findById(id);
+        Point pointEntity = pointRepository.findByMember(Member.builder().id(id).build());
 
         // 출금 금액이 더 많을 경우
         if (pointEntity == null || notice.getPrice() > pointEntity.getPoint()) {
@@ -115,16 +118,22 @@ public class ApplyServcieImpl implements ApplyService {
 
         // 이력 추가
         pointHistoryRepository.save(PointHistory.builder()
-                .id(id)
+                .member(Member.builder()
+                        .id(id)
+                        .build())
                 .point(apply.getDeposit())
                 .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
                 .build());
 
         Apply applyEntity = applyRepository.save(Apply.builder()
-                .id(id)
+                .member(Member.builder()
+                        .id(id)
+                        .build())
                 .deposit(apply.getDeposit())
-                .noticeSeq(apply.getNoticeSeq())
+                .notice(Notice.builder()
+                        .noticeSeq(apply.getNoticeSeq())
+                        .build())
                 .build());
 
         return applyEntity != null ? 1 : 0;
@@ -142,12 +151,13 @@ public class ApplyServcieImpl implements ApplyService {
     @Override
     public int acceptApply(long noticeSeq, List<String> idList, String id) {
         checkAuth(noticeSeq, id);
-        List<Apply> applyList = applyRepository.findByNoticeSeq(noticeSeq);
+        List<Apply> applyList = applyRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
 
         // 보증금 합산한것 구하기
         int depositSum = applyList.stream()
                 .filter(apply ->
-                        idList.contains(apply.getId()))
+                        idList.contains(apply.getMember().getId()))
                 .mapToInt(Apply::getDeposit)
                 .sum();
 
@@ -156,12 +166,15 @@ public class ApplyServcieImpl implements ApplyService {
         idList.forEach(userId -> {
             participantList.add(Participant.builder()
                     .masterId(id)
-                    .noticeSeq(noticeSeq)
+                    .notice(Notice.builder()
+                            .noticeSeq(noticeSeq)
+                            .build())
                     .participantType(ParticipantType.normal.ordinal())
                     .participantId(userId)
                     .build());
         });
-        Challenge challenge = challengeRepository.findById(noticeSeq).get();
+        Challenge challenge = challengeRepository.findById(Notice.builder()
+                .noticeSeq(noticeSeq).build()).get();
 
         // 참가자로 전환
         participantRepository.saveAll(participantList);
@@ -182,13 +195,14 @@ public class ApplyServcieImpl implements ApplyService {
     @Override
     public List<ApplyListDto> getApplyList(long noticeSeq, String id) {
         checkAuth(noticeSeq, id);
-        List<Apply> applyList = applyRepository.findByNoticeSeq(noticeSeq);
+        List<Apply> applyList = applyRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
         List<ApplyListDto> resultApply = new ArrayList<>();
 
         applyList.forEach(apply -> {
             resultApply.add(ApplyListDto.builder()
                     .deposit(apply.getDeposit())
-                    .id(apply.getId())
+                    .id(apply.getMember().getId())
                     .noticeSeq(noticeSeq)
                     .build());
         });
@@ -213,7 +227,7 @@ public class ApplyServcieImpl implements ApplyService {
         }
 
         // 방장 권한이 없을 경우
-        if (!notice.getId().equals(id)) {
+        if (!notice.getMember().getId().equals(id)) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.apply.master.conflict.E0017", null, Locale.KOREA));
         }

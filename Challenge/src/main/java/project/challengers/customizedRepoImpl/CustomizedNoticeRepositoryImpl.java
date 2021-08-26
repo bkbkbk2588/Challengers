@@ -43,7 +43,7 @@ public class CustomizedNoticeRepositoryImpl implements CustomizedNoticeRepositor
     public List<Tuple> getNotice(long noticeSeq) {
         return jpaQueryFactory.select(notice, noticeFile)
                 .from(notice).rightJoin(noticeFile)
-                .on(notice.noticeSeq.eq(noticeFile.noticeSeq))
+                .on(notice.noticeSeq.eq(noticeFile.notice.noticeSeq))
                 .where(notice.noticeSeq.eq(noticeSeq)).fetch();
     }
 

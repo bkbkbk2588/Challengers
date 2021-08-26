@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -16,6 +17,8 @@ import com.querydsl.core.types.Path;
 public class QAuth extends EntityPathBase<Auth> {
 
     private static final long serialVersionUID = -5171180L;
+
+    private static final PathInits INITS = PathInits.DIRECT2;
 
     public static final QAuth auth = new QAuth("auth");
 
@@ -27,20 +30,30 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public final StringPath filePath = createString("filePath");
 
-    public final StringPath id = createString("id");
+    public final QMember member;
 
-    public final NumberPath<Long> noticeSeq = createNumber("noticeSeq", Long.class);
+    public final QNotice notice;
 
     public QAuth(String variable) {
-        super(Auth.class, forVariable(variable));
+        this(Auth.class, forVariable(variable), INITS);
     }
 
     public QAuth(Path<? extends Auth> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QAuth(PathMetadata metadata) {
-        super(Auth.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QAuth(PathMetadata metadata, PathInits inits) {
+        this(Auth.class, metadata, inits);
+    }
+
+    public QAuth(Class<? extends Auth> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.member = inits.isInitialized("member") ? new QMember(forProperty("member")) : null;
+        this.notice = inits.isInitialized("notice") ? new QNotice(forProperty("notice"), inits.get("notice")) : null;
     }
 
 }

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.point.*;
 import project.challengers.base.PointHistoryStatus;
+import project.challengers.entity.Member;
 import project.challengers.entity.Point;
 import project.challengers.entity.PointHistory;
 import project.challengers.exception.ChallengersException;
@@ -51,12 +52,14 @@ public class PointServiceImpl implements PointService {
                     messageSource.getMessage("error.point.notfound.E0012", null, Locale.KOREA));
         }
 
-        Point pointEntity = pointRepository.findById(id);
+        Point pointEntity = pointRepository.findByMember(Member.builder().id(id).build());
 
         // 포인트 처음 추가할 경우 insert
         if (pointEntity == null) {
             pointRepository.save(Point.builder()
-                    .id(id)
+                    .member(Member.builder()
+                            .id(id)
+                            .build())
                     .point(point.getPoint())
                     .build());
         } else { // 처음이 아닌 경우 update
@@ -65,7 +68,9 @@ public class PointServiceImpl implements PointService {
 
         // 이력 추가
         PointHistory pointHistory = pointHistoryRepository.save(PointHistory.builder()
-                .id(id)
+                .member(Member.builder()
+                        .id(id)
+                        .build())
                 .point(point.getPoint())
                 .status(0)
                 .insertTime(LocalDateTime.now())
@@ -90,7 +95,7 @@ public class PointServiceImpl implements PointService {
                     messageSource.getMessage("error.point.notfound.E0012", null, Locale.KOREA));
         }
 
-        Point pointEntity = pointRepository.findById(id);
+        Point pointEntity = pointRepository.findByMember(Member.builder().id(id).build());
 
         // 출금금액이 더 많을 경우
         if (pointEntity == null || point.getPoint() > pointEntity.getPoint()) {
@@ -102,7 +107,9 @@ public class PointServiceImpl implements PointService {
 
         // 이력 추가
         PointHistory pointHistory = pointHistoryRepository.save(PointHistory.builder()
-                .id(id)
+                .member(Member.builder()
+                        .id(id)
+                        .build())
                 .point(point.getPoint())
                 .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
@@ -119,7 +126,7 @@ public class PointServiceImpl implements PointService {
      */
     @Override
     public PointInfoDto getPoint(String id) {
-        Point point = pointRepository.findById(id);
+        Point point = pointRepository.findByMember(Member.builder().id(id).build());
 
         return PointInfoDto.builder()
                 .id(id)
@@ -136,7 +143,8 @@ public class PointServiceImpl implements PointService {
      */
     @Override
     public MyPointDto getHistory(String id, int status) {
-        List<PointHistory> pointHistory = pointHistoryRepository.findByIdAndStatusOrderByInsertTimeDesc(id, status);
+        List<PointHistory> pointHistory = pointHistoryRepository.findByMemberAndStatusOrderByInsertTimeDesc(
+                Member.builder().id(id).build(), status);
         List<PointHistoryDto> pointHistoryList = new ArrayList<>();
 
         pointHistory.forEach(point -> {
@@ -160,7 +168,7 @@ public class PointServiceImpl implements PointService {
      */
     @Override
     public MyAllPointDto getAllHistory(String id) {
-        List<PointHistory> pointHistory = pointHistoryRepository.findById(id);
+        List<PointHistory> pointHistory = pointHistoryRepository.findByMember(Member.builder().id(id).build());
         List<PointAllHistoryDto> pointHistoryList = new ArrayList<>();
 
         pointHistory.forEach(point -> {

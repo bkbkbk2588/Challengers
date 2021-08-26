@@ -5,23 +5,34 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Entity(name = "CHALLENGE")
 @Builder
-public class Challenge {
+public class Challenge implements Serializable {
+
     @Id
-    @Column(name = "challenge_seq")
-    long challengeSeq;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "challenge_seq")
+    Notice notice;
 
     @Column
     int money;
 
     @Column
     int status;
+
+    @Override
+    public boolean equals(Object o) {
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }

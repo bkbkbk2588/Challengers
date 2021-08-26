@@ -2,6 +2,7 @@ package project.challengers.serviceImpl;
 
 import io.micrometer.core.instrument.util.StringUtils;
 import org.apache.commons.io.IOUtils;
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
@@ -75,8 +76,12 @@ public class AuthServiceImpl implements AuthService {
         fileComponent.save(filePartFlux)
                 .subscribe(file -> {
                     auths.add(Auth.builder()
-                            .id(id)
-                            .noticeSeq(noticeSeq)
+                            .member(Member.builder()
+                                    .id(id)
+                                    .build())
+                            .notice(Notice.builder()
+                                    .noticeSeq(noticeSeq)
+                                    .build())
                             .fileName(file.getLeft())
                             .filePath(file.getRight())
                             .build());
@@ -95,7 +100,8 @@ public class AuthServiceImpl implements AuthService {
      */
     @Override
     public AuthDto getAuthFile(long noticeSeq, String masterId, ServerHttpRequest req) {
-        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+        List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
 
         // 방장권한 확인
         if (participantList == null || !participantList.get(0).getMasterId().equals(masterId)) {
@@ -115,8 +121,8 @@ public class AuthServiceImpl implements AuthService {
         // url, id 설정
         authList.forEach(auth -> {
             List<String> list;
-            if (authInfoMap.containsKey(auth.getId())) {
-                list = authInfoMap.get(auth.getId());
+            if (authInfoMap.containsKey(auth.getMember().getId())) {
+                list = authInfoMap.get(auth.getMember().getId());
             } else {
                 list = new ArrayList<>();
             }
@@ -125,7 +131,7 @@ public class AuthServiceImpl implements AuthService {
                     + "downloadFile"
                     + File.separator
                     + auth.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
-            authInfoMap.put(auth.getId(), list);
+            authInfoMap.put(auth.getMember().getId(), list);
         });
         List<AuthInfoDto> authInfoList = new ArrayList<>();
 
@@ -170,7 +176,8 @@ public class AuthServiceImpl implements AuthService {
      */
     @Override
     public int setCertification(long noticeSeq, List<String> idList, String id) {
-        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+        List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
 
         // 방장권한 확인
         if (participantList == null || !participantList.get(0).getMasterId().equals(id)) {
@@ -188,13 +195,15 @@ public class AuthServiceImpl implements AuthService {
             if (!idList.contains(participant.getParticipantId())) {
                 uncertifiedId.add(participant.getParticipantId());
 
-                Point point = pointRepository.findById(participant.getParticipantId());
+                Point point = pointRepository.findByMember(Member.builder().id(id).build());
 
                 // 벌금 자동 이체 값 세팅
                 if (point.getPoint() >= notice.getPrice()) {
                     fineList.add(participant.getParticipantId());
                     pointHistories.add(PointHistory.builder()
-                            .id(participant.getParticipantId())
+                            .member(Member.builder()
+                                    .id(participant.getParticipantId())
+                                    .build())
                             .point(notice.getPrice())
                             .status(PointHistoryStatus.withdraw.ordinal())
                             .insertTime(LocalDateTime.now())

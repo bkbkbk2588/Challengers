@@ -21,8 +21,9 @@ public class PointHistory {
     @Column(name = "point_history_seq")
     private long pointHistorySeq;
 
-    @Column(nullable = false)
-    private String id;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", nullable = false)
+    private Member member;
 
     @Column(nullable = false)
     private int status;

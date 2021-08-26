@@ -36,7 +36,7 @@ public class Member implements UserDetails {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String phone;
 
     @ElementCollection(fetch = FetchType.EAGER)

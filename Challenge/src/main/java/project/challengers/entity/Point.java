@@ -22,8 +22,9 @@ public class Point {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long pointSeq;
 
-    @Column(nullable = false)
-    private String id;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", nullable = false, unique = true)
+    private Member member;
 
     @Column
     @ColumnDefault("0")

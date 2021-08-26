@@ -19,8 +19,8 @@ public class CustomizedAuthRepositoryImpl implements CustomizedAuthRepository {
     @Override
     public List<Auth> getAuthFile(List<String> idList, long noticeSeq, Date date) {
         return jpaQueryFactory.selectFrom(auth)
-                .where(auth.id.in(idList)
-                        .and(auth.noticeSeq.eq(noticeSeq))
+                .where(auth.member.id.in(idList)
+                        .and(auth.notice.noticeSeq.eq(noticeSeq))
                         .and(auth.authDate.eq(date)))
                 .fetch();
     }

@@ -60,7 +60,9 @@ public class ParticipantServiceImpl implements ParticipantService {
     @Override
     public List<ParticipantDto> getAllParticipant(long noticeSeq, String id) {
         checkAuth(noticeSeq, id);
-        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+        List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
+        ;
         List<ParticipantDto> result = new ArrayList<>();
 
         participantList.forEach(participant -> {
@@ -84,7 +86,8 @@ public class ParticipantServiceImpl implements ParticipantService {
     @Override
     public List<ParticipantDto> getParticipantStatus(long noticeSeq, int type, String id) {
         checkAuth(noticeSeq, id);
-        List<Participant> participantList = participantRepository.findByNoticeSeqAndParticipantType(noticeSeq, type);
+        List<Participant> participantList = participantRepository.findByNoticeAndParticipantType(Notice.builder()
+                .noticeSeq(noticeSeq).build(), type);
         List<ParticipantDto> result = new ArrayList<>();
 
         participantList.forEach(participant -> {
@@ -136,7 +139,8 @@ public class ParticipantServiceImpl implements ParticipantService {
     public List<ParticipantCreditDto> getUserFine(long noticeSeq, String id) {
         checkAuth(noticeSeq, id);
 
-        List<Participant> participants = participantRepository.findByNoticeSeq(noticeSeq);
+        List<Participant> participants = participantRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
         List<ParticipantCreditDto> participantCredits = new ArrayList<>();
 
         participants.forEach(participant -> {
@@ -164,7 +168,7 @@ public class ParticipantServiceImpl implements ParticipantService {
         }
 
         // 방장 권한이 없을 경우
-        if (!notice.getId().equals(id)) {
+        if (!notice.getMember().getId().equals(id)) {
             throw new ChallengersException(HttpStatus.CONFLICT,
                     messageSource.getMessage("error.apply.master.conflict.E0017", null, Locale.KOREA));
         }

@@ -27,8 +27,9 @@ public class Notice {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
-    private String id;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", nullable = false)
+    private Member member;
 
     @Column(nullable = false)
     private String type;

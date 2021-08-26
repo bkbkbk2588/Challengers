@@ -161,7 +161,9 @@ public class NoticeServiceImpl implements NoticeService {
 
         Notice result = noticeRepository.save(Notice.builder()
                 .title(notice.getTitle())
-                .id((String) authentication.getPrincipal())
+                .member(Member.builder()
+                        .id((String) authentication.getPrincipal())
+                        .build())
                 .type(notice.getType())
                 .maxPeople(notice.getMaxPeople())
                 .price(notice.getPrice())
@@ -171,7 +173,8 @@ public class NoticeServiceImpl implements NoticeService {
                 .build());
 
         // 방장은 등록과 동시에 보증금 입금
-        Point pointEntity = pointRepository.findById((String) authentication.getPrincipal());
+        Point pointEntity = pointRepository.findByMember(Member.builder()
+                .id((String) authentication.getPrincipal()).build());
 
         // 출금 금액이 더 많을 경우
         if (pointEntity == null || notice.getPrice() > pointEntity.getPoint()) {
@@ -184,7 +187,9 @@ public class NoticeServiceImpl implements NoticeService {
 
         // 이력 추가
         pointHistoryRepository.save(PointHistory.builder()
-                .id((String) authentication.getPrincipal())
+                .member(Member.builder()
+                        .id((String) authentication.getPrincipal())
+                        .build())
                 .point(notice.getPrice())
                 .status(PointHistoryStatus.withdraw.ordinal())
                 .insertTime(LocalDateTime.now())
@@ -193,14 +198,18 @@ public class NoticeServiceImpl implements NoticeService {
         participantRepository.save(Participant.builder()
                 .participantId((String) authentication.getPrincipal())
                 .masterId((String) authentication.getPrincipal())
-                .noticeSeq(result.getNoticeSeq())
+                .notice(Notice.builder()
+                        .noticeSeq(result.getNoticeSeq())
+                        .build())
                 .participantType(ParticipantType.normal.ordinal())
                 .credit(0)
                 .warning(0)
                 .build());
 
         challengeRepository.save(Challenge.builder()
-                .challengeSeq(result.getNoticeSeq())
+                .notice(Notice.builder()
+                        .noticeSeq(result.getNoticeSeq())
+                        .build())
                 .money(notice.getPrice())
                 .status(ChallengeStatus.startBefore.ordinal())
                 .build());
@@ -211,7 +220,9 @@ public class NoticeServiceImpl implements NoticeService {
             fileComp.save(filePartFlux)
                     .subscribe(file -> {
                         noticeFiles.add(NoticeFile.builder()
-                                .noticeSeq(result.getNoticeSeq())
+                                .notice(Notice.builder()
+                                        .noticeSeq(result.getNoticeSeq())
+                                        .build())
                                 .fileName(file.getLeft())
                                 .filePath(file.getRight())
                                 .build());
@@ -256,7 +267,7 @@ public class NoticeServiceImpl implements NoticeService {
             noticeDto.add(NoticeDto.builder()
                     .noticeSeq(notice.getNoticeSeq())
                     .title(notice.getTitle())
-                    .id(notice.getId())
+                    .id(notice.getMember().getId())
                     .type(notice.getType())
                     .maxPeople(notice.getMaxPeople())
                     .price(notice.getPrice())
@@ -310,7 +321,7 @@ public class NoticeServiceImpl implements NoticeService {
                 .maxPeople(notice.getMaxPeople())
                 .price(notice.getPrice())
                 .content(notice.getContent())
-                .id(notice.getId())
+                .id(notice.getMember().getId())
                 .startTime(notice.getStartTime())
                 .endTime(notice.getEndTime())
                 .fileUrl(fileDownloadUri)
@@ -376,7 +387,7 @@ public class NoticeServiceImpl implements NoticeService {
             noticeDto.add(NoticeDto.builder()
                     .noticeSeq(notice.getNoticeSeq())
                     .title(notice.getTitle())
-                    .id(notice.getId())
+                    .id(notice.getMember().getId())
                     .type(notice.getType())
                     .maxPeople(notice.getMaxPeople())
                     .price(notice.getPrice())
@@ -436,7 +447,7 @@ public class NoticeServiceImpl implements NoticeService {
             noticeDto.add(NoticeDto.builder()
                     .noticeSeq(notice.getNoticeSeq())
                     .title(notice.getTitle())
-                    .id(notice.getId())
+                    .id(notice.getMember().getId())
                     .type(notice.getType())
                     .maxPeople(notice.getMaxPeople())
                     .price(notice.getPrice())
@@ -467,7 +478,8 @@ public class NoticeServiceImpl implements NoticeService {
     @Transactional
     @Override
     public int deleteNotice(long noticeSeq, Authentication authentication) {
-        Challenge challenge = challengeRepository.findById(noticeSeq).get();
+        Challenge challenge = challengeRepository.findById(Notice.builder()
+                .noticeSeq(noticeSeq).build()).get();
 
         // 도전방의 포인트가 남아있을 경우
         if (challenge.getMoney() > 0) {
@@ -475,13 +487,14 @@ public class NoticeServiceImpl implements NoticeService {
                     messageSource.getMessage("error.notice.delete.money.conflict.E0018", null, Locale.KOREA));
         }
         checkNotice(noticeSeq, authentication);
-        List<NoticeFile> noticeFileList = noticeFileRepository.findByNoticeSeq(noticeSeq);
+        List<NoticeFile> noticeFileList = noticeFileRepository.findByNotice(Notice.builder().noticeSeq(noticeSeq).build());
 
         List<String> filePath = new ArrayList<>();
         noticeFileList.forEach(noticeFile -> filePath.add(noticeFile.getFilePath()));
         fileComp.delete(Flux.fromIterable(filePath)).subscribe();
 
-        List<Participant> participantList = participantRepository.findByNoticeSeq(noticeSeq);
+        List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
+                .noticeSeq(noticeSeq).build());
         List<String> idList = new ArrayList<>();
         participantList.forEach(participant -> {
             idList.add(participant.getParticipantId());
@@ -530,7 +543,9 @@ public class NoticeServiceImpl implements NoticeService {
             fileComp.save(filePartFlux)
                     .subscribe(file -> {
                         noticeFiles.add(NoticeFile.builder()
-                                .noticeSeq(notice.getNoticeSeq())
+                                .notice(Notice.builder()
+                                        .noticeSeq(notice.getNoticeSeq())
+                                        .build())
                                 .fileName(file.getLeft())
                                 .filePath(file.getRight())
                                 .build());
@@ -555,7 +570,7 @@ public class NoticeServiceImpl implements NoticeService {
         });
 
         // 본인의 게시글인지 확인
-        if (!notice.getId().equals(authentication.getPrincipal())) {
+        if (!notice.getMember().getId().equals(authentication.getPrincipal())) {
             throw new ChallengersException(HttpStatus.FORBIDDEN,
                     messageSource.getMessage("error.notice.identification.fail.E0009", null,
                             Locale.KOREA));

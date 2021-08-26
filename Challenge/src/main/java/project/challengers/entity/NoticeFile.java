@@ -21,12 +21,13 @@ public class NoticeFile {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long fileSeq;
 
-    @Column(name = "notice_seq")
-    private long noticeSeq;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "notice_seq", nullable = false)
+    private Notice notice;
 
-    @Column(nullable = true, name = "file_name")
+    @Column(name = "file_name")
     private String fileName;
 
-    @Column(nullable = true, name = "file_path")
+    @Column(name = "file_path")
     private String filePath;
 }

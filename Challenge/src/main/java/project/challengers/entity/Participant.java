@@ -23,13 +23,14 @@ public class Participant {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long participantSeq;
 
-    @Column(nullable = false, name = "notice_seq")
-    private long noticeSeq;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "notice_seq", nullable = false)
+    private Notice notice;
 
     @Column(nullable = false, name = "master_id")
     private String masterId;
 
-    @Column(nullable = true, name = "participant_id")
+    @Column(name = "participant_id")
     private String participantId;
 
     @Column(name = "participant_type")
