@@ -33,7 +33,7 @@ public class Member implements UserDetails {
     @Column(nullable = false)
     private String nickname;
 
-    @Column(nullable = false)
+    @Column()
     private String email;
 
     @Column(nullable = false, unique = true)

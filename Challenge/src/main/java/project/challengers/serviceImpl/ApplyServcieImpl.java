@@ -89,8 +89,7 @@ public class ApplyServcieImpl implements ApplyService {
             throw new ChallengersException(HttpStatus.FORBIDDEN,
                     messageSource.getMessage("error.notice.max.people.E0020", null, Locale.KOREA));
         }
-        Challenge challenge = challengeRepository.findById(Notice.builder()
-                .noticeSeq(apply.getNoticeSeq()).build()).get();
+        Challenge challenge = challengeRepository.findById(apply.getNoticeSeq()).get();
         // 방이 끝났을 경우
         if (notice.getEndTime().isBefore(LocalDateTime.now())
                 || challenge.getStatus() != ChallengeStatus.startBefore.ordinal()) {
@@ -173,8 +172,7 @@ public class ApplyServcieImpl implements ApplyService {
                     .participantId(userId)
                     .build());
         });
-        Challenge challenge = challengeRepository.findById(Notice.builder()
-                .noticeSeq(noticeSeq).build()).get();
+        Challenge challenge = challengeRepository.findById(noticeSeq).get();
 
         // 참가자로 전환
         participantRepository.saveAll(participantList);

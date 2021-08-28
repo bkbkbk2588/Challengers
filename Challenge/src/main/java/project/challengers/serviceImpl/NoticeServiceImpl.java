@@ -206,10 +206,9 @@ public class NoticeServiceImpl implements NoticeService {
                 .warning(0)
                 .build());
 
+        // TODO seq add
         challengeRepository.save(Challenge.builder()
-                .notice(Notice.builder()
-                        .noticeSeq(result.getNoticeSeq())
-                        .build())
+
                 .money(notice.getPrice())
                 .status(ChallengeStatus.startBefore.ordinal())
                 .build());
@@ -478,8 +477,7 @@ public class NoticeServiceImpl implements NoticeService {
     @Transactional
     @Override
     public int deleteNotice(long noticeSeq, Authentication authentication) {
-        Challenge challenge = challengeRepository.findById(Notice.builder()
-                .noticeSeq(noticeSeq).build()).get();
+        Challenge challenge = challengeRepository.findById(noticeSeq).get();
 
         // 도전방의 포인트가 남아있을 경우
         if (challenge.getMoney() > 0) {

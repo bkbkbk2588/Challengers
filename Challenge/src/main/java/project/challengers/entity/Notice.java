@@ -1,12 +1,11 @@
 package project.challengers.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,7 +14,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Entity(name = "NOTICE")
-@Builder
+@SuperBuilder
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "DTYPE")
 @ApiModel("챌린저스 모집 게시글")
 public class Notice {
 
