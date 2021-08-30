@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -22,8 +24,9 @@ public class Point {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long pointSeq;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id", nullable = false, unique = true)
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Member member;
 
     @Column

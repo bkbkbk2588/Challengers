@@ -18,7 +18,7 @@ public class CustomizedPointRepositoryImpl implements CustomizedPointRepository 
     public int updatePoint(int deposit, String id) {
         return (int) jpaQueryFactory.update(point1)
                 .set(point1.point, deposit)
-                .where(point1.id.eq(id))
+                .where(point1.member.id.eq(id))
                 .execute();
     }
 
@@ -26,7 +26,7 @@ public class CustomizedPointRepositoryImpl implements CustomizedPointRepository 
     public int updateUserPoint(int deposit, List<String> id) {
         return (int) jpaQueryFactory.update(point1)
                 .set(point1.point, point1.point.add(deposit))
-                .where(point1.id.in(id))
+                .where(point1.member.id.in(id))
                 .execute();
     }
 }

@@ -1,6 +1,5 @@
 package project.challengers.serviceImpl;
 
-import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -90,6 +89,7 @@ public class ApplyServcieImpl implements ApplyService {
                     messageSource.getMessage("error.notice.max.people.E0020", null, Locale.KOREA));
         }
         Challenge challenge = challengeRepository.findById(apply.getNoticeSeq()).get();
+
         // 방이 끝났을 경우
         if (notice.getEndTime().isBefore(LocalDateTime.now())
                 || challenge.getStatus() != ChallengeStatus.startBefore.ordinal()) {

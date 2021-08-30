@@ -13,6 +13,7 @@ import project.challengers.entity.Member;
 import project.challengers.entity.Point;
 import project.challengers.entity.PointHistory;
 import project.challengers.exception.ChallengersException;
+import project.challengers.repository.MemberRepository;
 import project.challengers.repository.PointHistoryRepository;
 import project.challengers.repository.PointRepository;
 import project.challengers.service.PointService;
@@ -57,9 +58,7 @@ public class PointServiceImpl implements PointService {
         // 포인트 처음 추가할 경우 insert
         if (pointEntity == null) {
             pointRepository.save(Point.builder()
-                    .member(Member.builder()
-                            .id(id)
-                            .build())
+                    .member(Member.builder().id(id).build())
                     .point(point.getPoint())
                     .build());
         } else { // 처음이 아닌 경우 update

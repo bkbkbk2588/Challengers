@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -21,8 +23,9 @@ public class NoticeFile {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long fileSeq;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "notice_seq", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Notice notice;
 
     @Column(name = "file_name")

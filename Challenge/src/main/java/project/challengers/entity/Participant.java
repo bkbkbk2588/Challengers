@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -23,8 +25,9 @@ public class Participant {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long participantSeq;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "notice_seq", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Notice notice;
 
     @Column(nullable = false, name = "master_id")
