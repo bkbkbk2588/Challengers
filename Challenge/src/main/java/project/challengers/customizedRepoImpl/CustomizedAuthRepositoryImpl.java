@@ -4,6 +4,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import project.challengers.customizedRepo.CustomizedAuthRepository;
 import project.challengers.entity.Auth;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class CustomizedAuthRepositoryImpl implements CustomizedAuthRepository {
     }
 
     @Override
-    public List<Auth> getAuthFile(List<String> idList, long noticeSeq, Date date) {
+    public List<Auth> getAuthFile(List<String> idList, long noticeSeq, LocalDate date) {
         return jpaQueryFactory.selectFrom(auth)
                 .where(auth.member.id.in(idList)
                         .and(auth.notice.noticeSeq.eq(noticeSeq))

@@ -13,7 +13,6 @@ import project.challengers.entity.Member;
 import project.challengers.entity.Point;
 import project.challengers.entity.PointHistory;
 import project.challengers.exception.ChallengersException;
-import project.challengers.repository.MemberRepository;
 import project.challengers.repository.PointHistoryRepository;
 import project.challengers.repository.PointRepository;
 import project.challengers.service.PointService;
@@ -71,7 +70,7 @@ public class PointServiceImpl implements PointService {
                         .id(id)
                         .build())
                 .point(point.getPoint())
-                .status(0)
+                .status(PointHistoryStatus.deposit.ordinal())
                 .insertTime(LocalDateTime.now())
                 .build());
 
@@ -174,7 +173,7 @@ public class PointServiceImpl implements PointService {
             pointHistoryList.add(PointAllHistoryDto.builder()
                     .insertTime(point.getInsertTime())
                     .point(point.getPoint())
-                    .type(point.getStatus() == 0 ? "입금" : "출금")
+                    .type(point.getStatus() == PointHistoryStatus.deposit.ordinal() ? "입금" : "출금")
                     .build());
         });
 

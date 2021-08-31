@@ -80,6 +80,18 @@ public class ApplyServcieImpl implements ApplyService {
                     messageSource.getMessage("error.apply.startTime.after.E0021", null, Locale.KOREA));
         }
 
+        List<Apply> applyList = applyRepository.findByNotice(Notice.builder()
+                .noticeSeq(apply.getNoticeSeq())
+                .build());
+
+        // 이미 신청했을 경우
+        applyList.forEach(applier -> {
+            if (applier.getMember().getId().equals(id)) {
+                throw new ChallengersException(HttpStatus.CONFLICT,
+                        messageSource.getMessage("error.apply.already.conflict.E0023", null, Locale.KOREA));
+            }
+        });
+
         List<Participant> participant = participantRepository.findByNoticeAndParticipantType(
                 Notice.builder().noticeSeq(apply.getNoticeSeq()).build(), ParticipantType.normal.ordinal());
 
@@ -194,7 +206,8 @@ public class ApplyServcieImpl implements ApplyService {
     public List<ApplyListDto> getApplyList(long noticeSeq, String id) {
         checkAuth(noticeSeq, id);
         List<Apply> applyList = applyRepository.findByNotice(Notice.builder()
-                .noticeSeq(noticeSeq).build());
+                .noticeSeq(noticeSeq)
+                .build());
         List<ApplyListDto> resultApply = new ArrayList<>();
 
         applyList.forEach(apply -> {

@@ -23,24 +23,23 @@ public class ParticipantController {
     @Autowired
     ParticipantService participantService;
 
-    @ApiOperation(value = "참가자 상태 변경")
-    @PutMapping(value = "/out/{noticeSeq}/{id}/{type}")
-    public int setParticipantType(@ApiParam(name = "도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
-                                  @ApiParam(name = "id") @PathVariable("id") String id,
-                                  @ApiParam(name = "참가자 상태") @PathVariable("type") int type, Authentication authentication) {
-        return participantService.setParticipantType(noticeSeq, id, (String) authentication.getPrincipal(), type);
+    @ApiOperation(value = "방종료 일때 사용자 상태 변경")
+    @DeleteMapping(value = "/out/{noticeSeq}")
+    public int setParticipantType(@ApiParam("도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
+                                  @ApiParam("id") @RequestBody List<String> idList, Authentication authentication) {
+        return participantService.setParticipantType(noticeSeq, idList, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "참가자 전체 조회")
     @GetMapping(value = "/{noticeSeq}")
-    public List<ParticipantDto> getAllParticipant(@ApiParam(name = "도전방 번호")@PathVariable long noticeSeq, Authentication authentication) {
+    public List<ParticipantDto> getAllParticipant(@ApiParam("도전방 번호")@PathVariable long noticeSeq, Authentication authentication) {
         return participantService.getAllParticipant(noticeSeq, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "참가자 상태 별 조회")
     @GetMapping(value = "/{noticeSeq}/{type}")
-    public List<ParticipantDto> getParticipantStatus(@ApiParam(name = "도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
-                                                     @ApiParam(name = "참가자 상태") @PathVariable("type") int type, Authentication authentication) {
+    public List<ParticipantDto> getParticipantStatus(@ApiParam("도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
+                                                     @ApiParam("참가자 상태") @PathVariable("type") int type, Authentication authentication) {
         return participantService.getParticipantStatus(noticeSeq, type, (String) authentication.getPrincipal());
     }
 
@@ -48,14 +47,14 @@ public class ParticipantController {
     @PutMapping(value = "/blind/{noticeSeq}/{id}")
     public int setBlind(@ApiParam("도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
                         @ApiParam("블라인드 시킬 id") @PathVariable("id") String id, Authentication authentication) {
-        return 0;
+        return participantService.setBlind(noticeSeq, id, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "참가자 강퇴 처리")
     @DeleteMapping(value = "/delete/{noticeSeq}/{id}")
     public int setDelete(@ApiParam("도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
                         @ApiParam("블라인드 시킬 id") @PathVariable("id") String id, Authentication authentication) {
-        return 0;
+        return participantService.setDelete(noticeSeq, id, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "참가자 벌금 외상 조회")

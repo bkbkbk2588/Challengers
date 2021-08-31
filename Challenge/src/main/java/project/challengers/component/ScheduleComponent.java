@@ -1,6 +1,5 @@
 package project.challengers.component;
 
-import com.sun.xml.bind.v2.TODO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,13 @@ import project.challengers.repository.ParticipantRepository;
 @Component
 public class ScheduleComponent {
     Logger logger = LoggerFactory.getLogger(ScheduleComponent.class);
+
+    /*
+        TODO
+            1. 경고 횟수 3회 이상 6회 이하일 경우 블라인드 처리
+            2. 경고 횟수 7회 이상이면 강퇴 처리
+            3. entity comment 처리
+     */
 
     @Autowired
     ParticipantRepository participantRepository;

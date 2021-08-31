@@ -1,6 +1,7 @@
 package project.challengers.customizedRepoImpl;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import project.challengers.base.ParticipantType;
 import project.challengers.customizedRepo.CustomizedParticipantRepository;
 
 import java.util.List;
@@ -15,9 +16,9 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
     }
 
     @Override
-    public int updateType(List<String> idList, long noticeSeq, int type) {
+    public int updateType(List<String> idList, long noticeSeq) {
         return (int) jpaQueryFactory.update(participant)
-                .set(participant.participantType, type)
+                .set(participant.participantType, ParticipantType.end.ordinal())
                 .where(participant.participantId.in(idList)
                         .and(participant.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
@@ -37,6 +38,24 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
         return (int) jpaQueryFactory.update(participant)
                 .set(participant.credit, participant.credit.add(credit))
                 .where(participant.participantId.in(idList)
+                        .and(participant.notice.noticeSeq.eq(noticeSeq)))
+                .execute();
+    }
+
+    @Override
+    public int setBlind(long noticeSeq, String id) {
+        return (int) jpaQueryFactory.update(participant)
+                .set(participant.participantType, ParticipantType.blind.ordinal())
+                .where(participant.participantId.eq(id)
+                        .and(participant.notice.noticeSeq.eq(noticeSeq)))
+                .execute();
+    }
+
+    @Override
+    public int setDelete(long noticeSeq, String id) {
+        return (int) jpaQueryFactory.update(participant)
+                .set(participant.participantType, ParticipantType.expulsion.ordinal())
+                .where(participant.participantId.eq(id)
                         .and(participant.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
     }

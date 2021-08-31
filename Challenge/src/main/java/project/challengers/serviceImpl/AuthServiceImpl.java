@@ -2,7 +2,6 @@ package project.challengers.serviceImpl;
 
 import io.micrometer.core.instrument.util.StringUtils;
 import org.apache.commons.io.IOUtils;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
@@ -25,6 +24,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -41,9 +41,6 @@ public class AuthServiceImpl implements AuthService {
 
     @Autowired
     PointRepository pointRepository;
-
-    @Autowired
-    NoticeRepository noticeRepository;
 
     @Autowired
     PointHistoryRepository pointHistoryRepository;
@@ -65,6 +62,15 @@ public class AuthServiceImpl implements AuthService {
     @Transactional
     @Override
     public int attendanceAuth(Flux<FilePart> filePartFlux, long noticeSeq, String id) {
+        Participant participant = participantRepository.findByNoticeAndParticipantId(Notice.builder()
+                .noticeSeq(noticeSeq)
+                .build(), id);
+
+        // 정상참여 계정이 아닐 경우
+        if (participant.getParticipantType() != 0) {
+            throw new ChallengersException(HttpStatus.BAD_REQUEST,
+                    messageSource.getMessage("error.auth.not.normal.user.E0025", null, Locale.KOREA));
+        }
 
         // 인증 파일이 없을 경우
         if (filePartFlux == null) {
@@ -84,6 +90,7 @@ public class AuthServiceImpl implements AuthService {
                                     .build())
                             .fileName(file.getLeft())
                             .filePath(file.getRight())
+                            .authDate(LocalDate.now())
                             .build());
                 });
         List<Auth> insertResult = authRepository.saveAll(auths);
@@ -101,7 +108,8 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public AuthDto getAuthFile(long noticeSeq, String masterId, ServerHttpRequest req) {
         List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
-                .noticeSeq(noticeSeq).build());
+                .noticeSeq(noticeSeq)
+                .build());
 
         // 방장권한 확인
         if (participantList == null || !participantList.get(0).getMasterId().equals(masterId)) {
@@ -115,7 +123,7 @@ public class AuthServiceImpl implements AuthService {
         });
 
         // 인증 파일 select
-        List<Auth> authList = authRepository.getAuthFile(idList, noticeSeq, new Date());
+        List<Auth> authList = authRepository.getAuthFile(idList, noticeSeq, LocalDate.now());
         Map<String, List<String>> authInfoMap = new HashMap<>();
 
         // url, id 설정
@@ -175,16 +183,19 @@ public class AuthServiceImpl implements AuthService {
      * @return
      */
     @Override
+    @Transactional
     public int setCertification(long noticeSeq, List<String> idList, String id) {
         List<Participant> participantList = participantRepository.findByNotice(Notice.builder()
-                .noticeSeq(noticeSeq).build());
+                .noticeSeq(noticeSeq)
+                .build());
 
         // 방장권한 확인
         if (participantList == null || !participantList.get(0).getMasterId().equals(id)) {
             throw new ChallengersException(HttpStatus.UNAUTHORIZED,
                     messageSource.getMessage("error.apply.master.conflict.E0017", null, Locale.KOREA));
         }
-        Notice notice = noticeRepository.findById(noticeSeq).get();
+
+        int price = participantList.get(0).getNotice().getPrice();
         List<String> uncertifiedId = new ArrayList<>();
         List<String> fineList = new ArrayList<>();
         List<String> credits = new ArrayList<>();
@@ -192,19 +203,21 @@ public class AuthServiceImpl implements AuthService {
 
         // 미인증 사용자 id 세팅
         participantList.forEach(participant -> {
-            if (!idList.contains(participant.getParticipantId())) {
+            if (participant.getParticipantType() == 0 && !idList.contains(participant.getParticipantId())) {
                 uncertifiedId.add(participant.getParticipantId());
 
-                Point point = pointRepository.findByMember(Member.builder().id(id).build());
+                Point point = pointRepository.findByMember(Member.builder()
+                        .id(participant.getParticipantId())
+                        .build());
 
                 // 벌금 자동 이체 값 세팅
-                if (point.getPoint() >= notice.getPrice()) {
+                if (point.getPoint() >= price) {
                     fineList.add(participant.getParticipantId());
                     pointHistories.add(PointHistory.builder()
                             .member(Member.builder()
                                     .id(participant.getParticipantId())
                                     .build())
-                            .point(notice.getPrice())
+                            .point(price)
                             .status(PointHistoryStatus.withdraw.ordinal())
                             .insertTime(LocalDateTime.now())
                             .build());
@@ -215,14 +228,14 @@ public class AuthServiceImpl implements AuthService {
         });
         // 벌금 자동이체
         if (pointHistories.size() > 0) {
-            pointRepository.updateUserPoint(notice.getPrice(), fineList);
+            pointRepository.updateUserPoint(price, fineList);
             pointHistoryRepository.saveAll(pointHistories);
         }
 
         // 외상 추가
         if (credits.size() > 0)
-            participantRepository.setCredit(idList, noticeSeq, notice.getPrice());
+            participantRepository.setCredit(credits, noticeSeq, price);
 
-        return participantRepository.setCertification(idList, noticeSeq);
+        return participantRepository.setCertification(uncertifiedId, noticeSeq);
     }
 }

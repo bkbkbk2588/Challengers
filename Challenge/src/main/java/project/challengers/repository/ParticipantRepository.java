@@ -10,4 +10,5 @@ import java.util.List;
 public interface ParticipantRepository extends JpaRepository<Participant, Long>, CustomizedParticipantRepository {
     List<Participant> findByNoticeAndParticipantType(Notice notice, int participantType);
     List<Participant> findByNotice(Notice notice);
+    Participant findByNoticeAndParticipantId(Notice notice, String id);
 }

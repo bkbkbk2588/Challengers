@@ -206,7 +206,6 @@ public class NoticeServiceImpl implements NoticeService {
                 .warning(0)
                 .build());
 
-        // TODO seq add
         challengeRepository.save(Challenge.builder()
                 .notice(Notice.builder()
                         .noticeSeq(result.getNoticeSeq())
@@ -508,7 +507,7 @@ public class NoticeServiceImpl implements NoticeService {
         participantList.forEach(participant -> {
             idList.add(participant.getParticipantId());
         });
-        participantRepository.updateType(idList, noticeSeq, ParticipantType.out.ordinal());
+        participantRepository.updateType(idList, noticeSeq);
 
         return noticeRepository.deleteNotice(noticeSeq);
     }

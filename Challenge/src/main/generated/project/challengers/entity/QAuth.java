@@ -22,7 +22,7 @@ public class QAuth extends EntityPathBase<Auth> {
 
     public static final QAuth auth = new QAuth("auth");
 
-    public final DateTimePath<java.util.Date> authDate = createDateTime("authDate", java.util.Date.class);
+    public final DatePath<java.time.LocalDate> authDate = createDate("authDate", java.time.LocalDate.class);
 
     public final NumberPath<Long> authSeq = createNumber("authSeq", Long.class);
 

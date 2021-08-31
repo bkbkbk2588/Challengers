@@ -31,14 +31,14 @@ public class ApplyController {
 
     @ApiOperation(value = "도전 신청 수락(방장만 가능)")
     @DeleteMapping(value = "/accept/{noticeSeq}")
-    public int acceptApply(@ApiParam(name = "도전방 번호") @PathVariable long noticeSeq,
-                           @ApiParam(name = "id 리스트") @RequestBody List<String> idList, Authentication authentication) {
+    public int acceptApply(@ApiParam("도전방 번호") @PathVariable long noticeSeq,
+                           @ApiParam("id 리스트") @RequestBody List<String> idList, Authentication authentication) {
         return applyService.acceptApply(noticeSeq, idList, (String) authentication.getPrincipal());
     }
 
     @ApiOperation(value = "도전방 신청자 목록")
     @GetMapping(value = "/list/{noticeSeq}")
-    public List<ApplyListDto> getApplyList(@ApiParam(name = "도전방 번호") @PathVariable(value = "noticeSeq") long noticeSeq,
+    public List<ApplyListDto> getApplyList(@ApiParam("도전방 번호") @PathVariable("noticeSeq") long noticeSeq,
                                            Authentication authentication) {
         return applyService.getApplyList(noticeSeq, (String) authentication.getPrincipal());
     }

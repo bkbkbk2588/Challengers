@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import project.challengers.DTO.participant.ParticipantDto;
+import org.springframework.transaction.annotation.Transactional;
 import project.challengers.DTO.participant.ParticipantCreditDto;
+import project.challengers.DTO.participant.ParticipantDto;
 import project.challengers.base.ParticipantType;
 import project.challengers.entity.Notice;
 import project.challengers.entity.Participant;
@@ -37,17 +38,15 @@ public class ParticipantServiceImpl implements ParticipantService {
      * 참가자 상태변경(방장만 가능)
      *
      * @param noticeSeq
-     * @param id
+     * @param idList
      * @param masterId
      * @return
      */
     @Override
-    public int setParticipantType(long noticeSeq, String id, String masterId, int type) {
+    public int setParticipantType(long noticeSeq, List<String> idList, String masterId) {
         checkAuth(noticeSeq, masterId);
-        List<String> idList = new ArrayList<>();
-        idList.add(id);
 
-        return participantRepository.updateType(idList, noticeSeq, type);
+        return participantRepository.updateType(idList, noticeSeq);
     }
 
     /**
@@ -109,9 +108,22 @@ public class ParticipantServiceImpl implements ParticipantService {
      * @return
      */
     @Override
+    @Transactional
     public int setBlind(long noticeSeq, String id, String masterId) {
         checkAuth(noticeSeq, masterId);
-        return 0;
+
+        Participant participant = participantRepository.findByNoticeAndParticipantId(Notice.builder()
+                .noticeSeq(noticeSeq)
+                .build(), id);
+
+        // 참가중이지 않은 사용자일 경우
+        if (participant == null) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.apply.notfound.participant.E0024",
+                            new String[]{id, Long.toString(noticeSeq)}, Locale.KOREA));
+        }
+
+        return participantRepository.setBlind(noticeSeq, id);
     }
 
     /**
@@ -123,9 +135,22 @@ public class ParticipantServiceImpl implements ParticipantService {
      * @return
      */
     @Override
+    @Transactional
     public int setDelete(long noticeSeq, String id, String masterId) {
         checkAuth(noticeSeq, masterId);
-        return 0;
+
+        Participant participant = participantRepository.findByNoticeAndParticipantId(Notice.builder()
+                .noticeSeq(noticeSeq)
+                .build(), id);
+
+        // 참가중이지 않은 사용자일 경우
+        if (participant == null) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.apply.notfound.participant.E0024",
+                            new String[]{id, Long.toString(noticeSeq)}, Locale.KOREA));
+        }
+
+        return participantRepository.setDelete(noticeSeq, id);
     }
 
     /**
