@@ -17,8 +17,8 @@ public class CustomizedApplyRepositoryImpl implements CustomizedApplyRepository 
     @Override
     public int acceptApply(List<String> id, long noticeSeq) {
         return (int) jpaQueryFactory.delete(apply)
-                .where(apply.id.in(id)
-                        .and(apply.noticeSeq.eq(noticeSeq)))
+                .where(apply.member.id.in(id)
+                        .and(apply.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
 }

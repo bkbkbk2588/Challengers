@@ -19,7 +19,7 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
         return (int) jpaQueryFactory.update(participant)
                 .set(participant.participantType, type)
                 .where(participant.participantId.in(idList)
-                        .and(participant.noticeSeq.eq(noticeSeq)))
+                        .and(participant.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
 
@@ -28,7 +28,7 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
         return (int) jpaQueryFactory.update(participant)
                 .set(participant.warning, participant.warning.add(1))
                 .where(participant.participantId.in(idList)
-                        .and(participant.noticeSeq.eq(noticeSeq)))
+                        .and(participant.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
 
@@ -37,7 +37,7 @@ public class CustomizedParticipantRepositoryImpl implements CustomizedParticipan
         return (int) jpaQueryFactory.update(participant)
                 .set(participant.credit, participant.credit.add(credit))
                 .where(participant.participantId.in(idList)
-                        .and(participant.noticeSeq.eq(noticeSeq)))
+                        .and(participant.notice.noticeSeq.eq(noticeSeq)))
                 .execute();
     }
 }

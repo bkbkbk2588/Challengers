@@ -16,7 +16,7 @@ public class CustomizedChallengeRepositoryImpl implements CustomizedChallengeRep
     public int updateMoney(long noticeSeq, int money) {
         return (int) jpaQueryFactory.update(challenge)
                 .set(challenge.money, money)
-                .where(challenge.challengeSeq.eq(noticeSeq))
+                .where(challenge.notice.noticeSeq.eq(noticeSeq))
                 .execute();
     }
 }

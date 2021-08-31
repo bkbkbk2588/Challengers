@@ -16,9 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Entity(name = "NOTICE")
-@SuperBuilder
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "DTYPE")
+@Builder
 @ApiModel("챌린저스 모집 게시글")
 public class Notice {
 

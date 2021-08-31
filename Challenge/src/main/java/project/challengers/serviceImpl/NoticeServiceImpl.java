@@ -208,7 +208,9 @@ public class NoticeServiceImpl implements NoticeService {
 
         // TODO seq add
         challengeRepository.save(Challenge.builder()
-
+                .notice(Notice.builder()
+                        .noticeSeq(result.getNoticeSeq())
+                        .build())
                 .money(notice.getPrice())
                 .status(ChallengeStatus.startBefore.ordinal())
                 .build());
