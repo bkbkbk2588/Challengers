@@ -299,6 +299,13 @@ public class NoticeServiceImpl implements NoticeService {
     @Override
     public NoticeInfoDto getNotice(long noticeSeq, ServerHttpRequest req) {
         List<Tuple> noticeTuple = noticeRepository.getNotice(noticeSeq);
+
+        // 게시글 없을 경우
+        if (noticeTuple.size() == 0) {
+            throw new ChallengersException(HttpStatus.NOT_FOUND,
+                    messageSource.getMessage("error.notice.notfound.noticeList.E0006", null, Locale.KOREA));
+        }
+
         Notice notice = noticeTuple.get(0).get(0, Notice.class);
 
         List<NoticeFile> noticeFile = new ArrayList<>();
@@ -308,13 +315,15 @@ public class NoticeServiceImpl implements NoticeService {
 
         List<String> fileDownloadUri = new ArrayList<>();
 
-        noticeFile.forEach(file -> {
-            fileDownloadUri.add(req.getURI().toString()
-                    .substring(0, req.getURI().toString().length() - Long.toString(noticeSeq).length())
-                    + "downloadFile"
-                    + File.separator
-                    + file.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
-        });
+        if (noticeFile.size() != 0 && noticeFile.get(0) != null) {
+            noticeFile.forEach(file -> {
+                fileDownloadUri.add(req.getURI().toString()
+                        .substring(0, req.getURI().toString().length() - Long.toString(noticeSeq).length())
+                        + "downloadFile"
+                        + File.separator
+                        + file.getFilePath().substring(UPLOAD_FILE_PATH.length() + 1));
+            });
+        }
 
         return NoticeInfoDto.builder()
                 .title(notice.getTitle())
