@@ -1,0 +1,48 @@
+server.port: 8080
+server.forward-headers-strategy: native
+
+logging:
+  config: classpath:config/logback-dev.xml
+  level:
+    root: WARN
+    org.springframework.web.reactive.function.client: trace
+    org.hibernate.type.descriptor.sql: TRACE
+
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
+
+spring:
+  application:
+    name: challengers
+  datasource:
+    url: jdbc:mysql://ip:port/DB명?serverTimezone=UTC
+    username: 계정
+    password: 비밀번호
+  jpa:
+    database: mysql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: validate
+      format_sql: true
+      show-sql: true
+      use_sql_comments: true
+  codec:
+    max-in-memory-size: 30MB # 게시글 사진 용량
+
+challengers:
+  path:
+    prefix: /challengers
+    logs: /logs
+    files: /files
+  properties:
+    static:
+      path: classpath:/config/challengers-dev.properties
