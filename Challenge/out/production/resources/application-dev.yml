@@ -31,7 +31,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       use-new-id-generator-mappings: false
-      ddl-auto: update
+      ddl-auto: validate
       format_sql: true
       show-sql: true
       use_sql_comments: true
@@ -40,7 +40,7 @@ spring:
 
 challengers:
   path:
-    prefix: ./challengers # TODO 나중에 올릴때 수정 필요
+    prefix: /challengers
     logs: /logs
     files: /files
   properties:
