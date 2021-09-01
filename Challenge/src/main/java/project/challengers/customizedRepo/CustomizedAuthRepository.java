@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface CustomizedAuthRepository {
     List<Auth> getAuthFile(List<String> idList, long noticeSeq, LocalDate date);
+    void deleteAuthFile(List<Long> authSeqList);
 }

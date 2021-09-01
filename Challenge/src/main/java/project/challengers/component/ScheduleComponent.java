@@ -5,34 +5,42 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import project.challengers.entity.Auth;
+import project.challengers.entity.Challenge;
+import project.challengers.entity.Notice;
 import project.challengers.repository.AuthRepository;
+import project.challengers.repository.ChallengeRepository;
+import project.challengers.repository.NoticeRepository;
 import project.challengers.repository.ParticipantRepository;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class ScheduleComponent {
     Logger logger = LoggerFactory.getLogger(ScheduleComponent.class);
 
-    /*
-        TODO
-            1. 경고 횟수 3회 이상 6회 이하일 경우 블라인드 처리
-            2. 경고 횟수 7회 이상이면 강퇴 처리
-            3. entity comment 처리
-     */
-
-    @Autowired
-    ParticipantRepository participantRepository;
-
     @Autowired
     AuthRepository authRepository;
 
-    // 위의 2개는 삭제 고려
+    @Autowired
+    ChallengeRepository challengeRepository;
+
 
     /**
      * 도전방 시작 시간일 때 시작으로 상태값 변경 (단, 방장 포함 참가자 2명 이상일 경우)
      */
     @Scheduled(cron = "${challengers.schedule}")
     public void challengeStart() {
+        List<Challenge> challengeList = challengeRepository.findByChallengeBefore(LocalDateTime.now());
+        List<Long> challengeSeqList = new ArrayList<>();
 
+        challengeList.forEach(challenge -> {
+            challengeSeqList.add(challenge.getNotice().getNoticeSeq());
+        });
+        challengeRepository.startChallengeList(challengeSeqList);
     }
 
     /**
@@ -40,7 +48,13 @@ public class ScheduleComponent {
      */
     @Scheduled(cron = "${challengers.schedule}")
     public void challengeEnd() {
+        List<Challenge> challengeList = challengeRepository.findByChallengeAfter(LocalDateTime.now());
+        List<Long> challengeSeqList = new ArrayList<>();
 
+        challengeList.forEach(challenge -> {
+            challengeSeqList.add(challenge.getNotice().getNoticeSeq());
+        });
+        challengeRepository.stopChallengeList(challengeSeqList);
     }
 
     /**
@@ -48,14 +62,12 @@ public class ScheduleComponent {
      */
     @Scheduled(cron = "${challengers.schedule}")
     public void deleteAuth() {
+        List<Auth> authList = authRepository.findByAuthDateBefore(LocalDate.now().minusDays(6));
+        List<Long> authSeqList = new ArrayList<>();
 
-    }
-
-    /**
-     * 블라인드 된지 3일째 되면 블라인드 해제
-     */
-    @Scheduled(cron = "${challengers.schedule}")
-    public void setBlind() {
-
+        authList.forEach(auth -> {
+            authSeqList.add(auth.getAuthSeq());
+        });
+        authRepository.deleteAuthFile(authSeqList);
     }
 }

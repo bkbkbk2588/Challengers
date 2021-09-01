@@ -29,4 +29,13 @@ public class CustomizedPointRepositoryImpl implements CustomizedPointRepository 
                 .where(point1.member.id.in(id))
                 .execute();
     }
+
+    @Override
+    public int updateMasterPoint(int deposit, String id) {
+        return (int) jpaQueryFactory.update(point1)
+                .set(point1.point, point1.point.add(deposit))
+                .where(point1.member.id.eq(id))
+                .execute();
+    }
+
 }

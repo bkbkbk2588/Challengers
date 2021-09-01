@@ -25,4 +25,10 @@ public class CustomizedAuthRepositoryImpl implements CustomizedAuthRepository {
                         .and(auth.authDate.eq(date)))
                 .fetch();
     }
+
+    @Override
+    public void deleteAuthFile(List<Long> authSeqList) {
+        jpaQueryFactory.delete(auth)
+                .where(auth.authSeq.in(authSeqList));
+    }
 }
